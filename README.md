@@ -58,4 +58,4 @@ Your app template should now be running on [localhost:3000](http://localhost:300
 
 ## Data Schema
 
-![schema](./../assets/schema.jpeg)
+![schema](public/images/schema.jpeg)
