@@ -6,6 +6,8 @@ There are three roles in AgenticSCG, the planner writing the Chain of Thought (C
 
 There are two major techniques used in AgenticSCG are: [AI SDK](https://sdk.vercel.ai/docs) and [Next.js](https://nextjs.org/).
 
+![cover.png](public/images/cover.png)
+
 ## Features
 
 - [Next.js](https://nextjs.org) App Router
@@ -47,10 +49,9 @@ After all environment variables applied, install the dependencies and start the 
 [//]: # (Install Dependencies & Server Running.)
 
 ```shell
-yarn install			# dependencies install.
-yarn db:generate	# orm initialization.
-yarn db:migrate		# database migrate.
-yarn dev					# server running.
+yarn install    # dependencies install.
+yarn db:push    # orm initialization.
+yarn dev        # server running.
 ```
 
 Your app template should now be running on [localhost:3000](http://localhost:3000).
