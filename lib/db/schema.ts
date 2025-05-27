@@ -179,44 +179,36 @@ export const planningStep = pgTable('PlanningStep', {
 
 export type PlanningStep = InferSelectModel<typeof planningStep>;
 
-export const securityReport = pgTable(
-    'SecurityReport',
-    {
-        id: uuid('id').notNull(),
-        createdAt: timestamp('createdAt').notNull().defaultNow(),
+export const securityReport = pgTable('SecurityReport', {
+    id: uuid('id').notNull(),
+    createdAt: timestamp('createdAt').notNull().defaultNow(),
 
-        // document composite foreign keys.
-        documentId: uuid('documentId').notNull(),
-        documentCreatedAt: timestamp('documentCreatedAt').notNull(),
+    // document composite foreign keys.
+    documentId: uuid('documentId').notNull(),
+    documentCreatedAt: timestamp('documentCreatedAt').notNull(),
 
-        // scanner metadata.
-        targetLang: text('targetLang')
-            .notNull().default('python'),
-        scannerTool: text('scannerTool')
-            .notNull().default('bandit'),
+    // scanner metadata.
+    targetLang: text('targetLang')
+        .notNull().default('python'),
+    scannerTool: text('scannerTool')
+        .notNull().default('bandit'),
 
-        // report information with count and total vulnerabilities count.
-        content: jsonb('content').notNull(),
-        vulnCount: integer('vulnCount').notNull().default(0),
+    // report information with count and total vulnerabilities count.
+    content: jsonb('content').notNull(),
+    vulnCount: integer('vulnCount').notNull().default(0),
 
-        // authorized value, defined report visibility.
-        userId: uuid('userId')
-            .notNull()
-            .references(() => user.id),
+    // authorized value, defined report visibility.
+    userId: uuid('userId')
+        .notNull()
+        .references(() => user.id),
     },
-    (table) => {
-        return {
-            pk: primaryKey({ columns: [table.id, table.createdAt] }),
-            documentRef: foreignKey({
-                columns: [table.documentId, table.documentCreatedAt],
-                foreignColumns: [document.id, document.createdAt],
-            }),
-            userRef: foreignKey({
-                columns: [table.userId],
-                foreignColumns: [user.id],
-            }),
-        };
-    },
+    (table) => ({
+    pk: primaryKey({ columns: [table.id, table.createdAt] }),
+    documentRef: foreignKey({
+        columns: [table.documentId, table.documentCreatedAt],
+        foreignColumns: [document.id, document.createdAt],
+    }),
+    }),
 );
 
 export type SecurityReport = InferSelectModel<typeof securityReport>;

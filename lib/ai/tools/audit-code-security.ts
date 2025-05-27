@@ -1,4 +1,4 @@
-import {number, z} from 'zod';
+import {z} from 'zod';
 import path from "node:path";
 import fs from "node:fs";
 import {
@@ -9,9 +9,9 @@ import {
     getDocumentById,
     saveSecurityReport
 } from '@/lib/db/queries';
-import { execSync } from 'child_process';
+import { execSync } from 'node:child_process';
 import { generateUUID } from '@/lib/utils';
-import { type Session } from "next-auth";
+import type { Session } from "next-auth";
 
 // Secure Report Output Directory
 const OUTPUT_DIR = path.join(process.cwd(), ".sec-report");

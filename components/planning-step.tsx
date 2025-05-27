@@ -1,6 +1,6 @@
 "use client";
 
-import { type PlanningStep as PlanningStepType } from "@/lib/ai/tools/add-planning-step";
+import type { PlanningStep as PlanningStepType } from "@/lib/ai/tools/add-planning-step";
 import { motion } from "framer-motion";
 
 interface PlanningStepProps {

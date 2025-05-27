@@ -1,9 +1,11 @@
 import {
   customProvider,
+  createProviderRegistry,
   extractReasoningMiddleware,
   wrapLanguageModel,
 } from 'ai';
-import { openai } from '@ai-sdk/openai';
+import { openai, createOpenAI } from '@ai-sdk/openai';
+import { createAnthropic } from '@ai-sdk/anthropic';
 import { isTestEnvironment } from '@/lib/constants';
 import {
   artifactModel,
@@ -12,6 +14,16 @@ import {
   titleModel,
 } from '@/lib/ai/models.test';
 import { ragMiddleware } from '@/lib/ai/middleware/rag';
+
+const registry = createProviderRegistry(
+  {
+    anthropic: createAnthropic({apiKey: process.env.ANTHROPIC_API_KEY,}),
+    openai: createOpenAI({apiKey: process.env.OPENAI_API_KEY,}),
+  },
+  {
+  separator: ':'
+  }
+);
 
 export const myProvider = isTestEnvironment
   ? customProvider({
@@ -24,7 +36,7 @@ export const myProvider = isTestEnvironment
     })
   : customProvider({
       languageModels: {
-        'chat-model': openai('gpt-4o'),
+        'chat-model': registry.languageModel('openai:gpt-4o-mini'),
         'chat-model-reasoning': wrapLanguageModel({
           model: openai('gpt-4o-2024-08-06'),
           middleware: [
@@ -33,8 +45,11 @@ export const myProvider = isTestEnvironment
             extractReasoningMiddleware({ tagName: 'think' }),
           ],
         }),
-        'title-model': openai('gpt-4o-mini'),
+        'title-model': registry.languageModel('openai:gpt-4o-mini'),
         'artifact-model': openai('gpt-4o-mini'),
+      },
+      textEmbeddingModels: {
+        'textEmbeddingModels': registry.textEmbeddingModel('openai:text-embedding-3-small'),
       },
       imageModels: {
         'small-model': openai.image('dall-e-2'),

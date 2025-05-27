@@ -21,7 +21,7 @@ import {
   PaperclipIcon,
   StopIcon
 } from '@/components/icons';
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, } from "framer-motion";
 import { PreviewAttachment } from '@/components/preview-attachment';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
