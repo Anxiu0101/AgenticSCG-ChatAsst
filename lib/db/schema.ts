@@ -187,7 +187,7 @@ export const securityReport = pgTable(
   'SecurityReport',
   {
     id: uuid('id').notNull(),
-    createdAt: timestamp('createdAt').notNull().defaultNow(),
+    createdAt: timestamp('createdAt').notNull(),
 
     // document composite foreign keys.
     documentId: uuid('documentId').notNull(),

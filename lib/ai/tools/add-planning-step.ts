@@ -45,7 +45,6 @@ export const addPlanningStep = ({
       // console.log(`before planning step pushed: ${planningStep.content}`)
 
       planningSteps.push(planningStep);
-      // TODO: 在 tools 保存了 planning 的情况下，在渲染的时候从数据库读取 planning 而不是动态加载 planningsteps 数组会不会更好？
 
       if (session.user?.id) {
         const userId = session.user.id;

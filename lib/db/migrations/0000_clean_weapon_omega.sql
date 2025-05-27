@@ -40,6 +40,30 @@ CREATE TABLE IF NOT EXISTS "Message" (
 	"createdAt" timestamp NOT NULL
 );
 --> statement-breakpoint
+CREATE TABLE IF NOT EXISTS "PlanningStep" (
+	"id" uuid DEFAULT gen_random_uuid() NOT NULL,
+	"userId" uuid NOT NULL,
+	"chatId" uuid NOT NULL,
+	"title" text NOT NULL,
+	"content" text NOT NULL,
+	"nextStep" text NOT NULL,
+	"createdAt" timestamp DEFAULT now() NOT NULL,
+	CONSTRAINT "PlanningStep_id_pk" PRIMARY KEY("id")
+);
+--> statement-breakpoint
+CREATE TABLE IF NOT EXISTS "SecurityReport" (
+	"id" uuid NOT NULL,
+	"createdAt" timestamp NOT NULL,
+	"documentId" uuid NOT NULL,
+	"documentCreatedAt" timestamp NOT NULL,
+	"targetLang" text DEFAULT 'python' NOT NULL,
+	"scannerTool" text DEFAULT 'bandit' NOT NULL,
+	"content" jsonb NOT NULL,
+	"vulnCount" integer DEFAULT 0 NOT NULL,
+	"userId" uuid NOT NULL,
+	CONSTRAINT "SecurityReport_id_createdAt_pk" PRIMARY KEY("id","createdAt")
+);
+--> statement-breakpoint
 CREATE TABLE IF NOT EXISTS "Suggestion" (
 	"id" uuid DEFAULT gen_random_uuid() NOT NULL,
 	"documentId" uuid NOT NULL,
@@ -93,6 +117,24 @@ END $$;
 --> statement-breakpoint
 DO $$ BEGIN
  ALTER TABLE "Message" ADD CONSTRAINT "Message_chatId_Chat_id_fk" FOREIGN KEY ("chatId") REFERENCES "public"."Chat"("id") ON DELETE no action ON UPDATE no action;
+EXCEPTION
+ WHEN duplicate_object THEN null;
+END $$;
+--> statement-breakpoint
+DO $$ BEGIN
+ ALTER TABLE "PlanningStep" ADD CONSTRAINT "PlanningStep_userId_User_id_fk" FOREIGN KEY ("userId") REFERENCES "public"."User"("id") ON DELETE no action ON UPDATE no action;
+EXCEPTION
+ WHEN duplicate_object THEN null;
+END $$;
+--> statement-breakpoint
+DO $$ BEGIN
+ ALTER TABLE "SecurityReport" ADD CONSTRAINT "SecurityReport_userId_User_id_fk" FOREIGN KEY ("userId") REFERENCES "public"."User"("id") ON DELETE no action ON UPDATE no action;
+EXCEPTION
+ WHEN duplicate_object THEN null;
+END $$;
+--> statement-breakpoint
+DO $$ BEGIN
+ ALTER TABLE "SecurityReport" ADD CONSTRAINT "SecurityReport_documentId_documentCreatedAt_Document_id_createdAt_fk" FOREIGN KEY ("documentId","documentCreatedAt") REFERENCES "public"."Document"("id","createdAt") ON DELETE no action ON UPDATE no action;
 EXCEPTION
  WHEN duplicate_object THEN null;
 END $$;
