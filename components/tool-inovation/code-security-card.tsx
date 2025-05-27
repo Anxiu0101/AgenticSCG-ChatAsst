@@ -44,7 +44,7 @@ export default function SecurityReportCard({
     >
       <Card className="w-full max-w-sm shadow-md">
         <CardHeader className="flex flex-row items-center gap-2">
-          <ShieldAlert className="h-5 w-5 shrink-0" />
+          <ShieldAlert className="size-5 shrink-0" />
           <CardTitle className="text-xl font-semibold">
             Security Report
           </CardTitle>
