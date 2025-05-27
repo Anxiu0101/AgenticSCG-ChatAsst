@@ -1,6 +1,6 @@
 {
   "name": "ai-chatbot",
-  "version": "3.0.6",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "next dev --turbo",
@@ -16,6 +16,11 @@
     "db:pull": "drizzle-kit pull",
     "db:check": "drizzle-kit check",
     "db:up": "drizzle-kit up",
+    "pyvenv:init": "python -m venv .venv",
+    "pyvenv:linux-sh": "source .venv/bin/activate",
+    "pyvenv:win-sh": ".venv/Scripts/Activate.ps1",
+    "pyvenv:install": "pip install -r requirements.txt",
+    "pyvenv:run": "uvicorn main:app --reload",
     "test": "export PLAYWRIGHT=True && pnpm exec playwright test"
   },
   "dependencies": {
