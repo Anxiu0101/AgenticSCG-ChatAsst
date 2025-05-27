@@ -19,8 +19,8 @@ import { MessageEditor } from './message-editor';
 import { DocumentPreview } from './document-preview';
 import { MessageReasoning } from './message-reasoning';
 import type { UseChatHelpers } from '@ai-sdk/react';
-import { PlanningStep } from "@/components/planning-step";
-import SecurityReportCard from "@/components/tool-inovation/code-security-card";
+import { PlanningStep } from '@/components/planning-step';
+import SecurityReportCard from '@/components/tool-inovation/code-security-card';
 
 const PurePreviewMessage = ({
   chatId,
@@ -180,7 +180,7 @@ const PurePreviewMessage = ({
                           isReadonly={isReadonly}
                         />
                       ) : toolName === 'addPlanningStep' ? (
-                          <PlanningStep step={args}/>
+                        <PlanningStep step={args} />
                       ) : null}
                     </div>
                   );
@@ -211,9 +211,9 @@ const PurePreviewMessage = ({
                           isReadonly={isReadonly}
                         />
                       ) : toolName === 'addPlanningStep' ? (
-                          <PlanningStep step={result}/>
+                        <PlanningStep step={result} />
                       ) : toolName === 'auditCodeSecurity' ? (
-                          <SecurityReportCard report={result}/>
+                        <SecurityReportCard report={result} />
                       ) : (
                         <pre>{JSON.stringify(result, null, 2)}</pre>
                       )}

@@ -10,8 +10,15 @@ import { SidebarToggle } from '@/components/sidebar-toggle';
 import { GithubIcon, PlusIcon } from '@/components/icons';
 import { Button } from '@/components/ui/button';
 import { useSidebar } from '@/components/ui/sidebar';
-import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
-import { type VisibilityType, VisibilitySelector } from '@/components/visibility-selector';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from '@/components/ui/tooltip';
+import {
+  type VisibilityType,
+  VisibilitySelector,
+} from '@/components/visibility-selector';
 
 function PureChatHeader({
   chatId,

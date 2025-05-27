@@ -341,7 +341,7 @@ function PureArtifact({
                     append={append}
                     className="bg-background dark:bg-muted"
                     setMessages={setMessages}
-                    />
+                  />
                 </form>
               </div>
             </motion.div>

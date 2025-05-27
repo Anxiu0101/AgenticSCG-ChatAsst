@@ -17,12 +17,12 @@ import { ragMiddleware } from '@/lib/ai/middleware/rag';
 
 const registry = createProviderRegistry(
   {
-    anthropic: createAnthropic({apiKey: process.env.ANTHROPIC_API_KEY,}),
-    openai: createOpenAI({apiKey: process.env.OPENAI_API_KEY,}),
+    anthropic: createAnthropic({ apiKey: process.env.ANTHROPIC_API_KEY }),
+    openai: createOpenAI({ apiKey: process.env.OPENAI_API_KEY }),
   },
   {
-  separator: ':'
-  }
+    separator: ':',
+  },
 );
 
 export const myProvider = isTestEnvironment
@@ -49,7 +49,9 @@ export const myProvider = isTestEnvironment
         'artifact-model': openai('gpt-4o-mini'),
       },
       textEmbeddingModels: {
-        'textEmbeddingModels': registry.textEmbeddingModel('openai:text-embedding-3-small'),
+        textEmbeddingModels: registry.textEmbeddingModel(
+          'openai:text-embedding-3-small',
+        ),
       },
       imageModels: {
         'small-model': openai.image('dall-e-2'),

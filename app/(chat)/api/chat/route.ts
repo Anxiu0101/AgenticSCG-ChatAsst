@@ -23,9 +23,9 @@ import { createDocument } from '@/lib/ai/tools/create-document';
 import { updateDocument } from '@/lib/ai/tools/update-document';
 import { requestSuggestions } from '@/lib/ai/tools/request-suggestions';
 import { getWeather } from '@/lib/ai/tools/get-weather';
-import { addPlanningStep } from "@/lib/ai/tools/add-planning-step";
+import { addPlanningStep } from '@/lib/ai/tools/add-planning-step';
 import { myProvider } from '@/lib/ai/providers';
-import {auditCodeSecurity} from "@/lib/ai/tools/audit-code-security";
+import { auditCodeSecurity } from '@/lib/ai/tools/audit-code-security';
 
 // export const maxDuration = 60;
 
@@ -35,12 +35,12 @@ export async function POST(request: Request) {
       id,
       messages,
       selectedChatModel,
-      selectedFilePathnames
+      selectedFilePathnames,
     }: {
       id: string;
       messages: Array<UIMessage>;
       selectedChatModel: string;
-      selectedFilePathnames: string,
+      selectedFilePathnames: string;
     } = await request.json();
 
     const session = await auth();
@@ -110,7 +110,11 @@ export async function POST(request: Request) {
           experimental_generateMessageId: generateUUID,
           tools: {
             getWeather,
-            addPlanningStep: addPlanningStep({ session, dataStream, chatId: id }),
+            addPlanningStep: addPlanningStep({
+              session,
+              dataStream,
+              chatId: id,
+            }),
             auditCodeSecurity: auditCodeSecurity({ session, dataStream }),
             createDocument: createDocument({ session, dataStream }),
             updateDocument: updateDocument({ session, dataStream }),

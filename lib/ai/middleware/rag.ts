@@ -36,7 +36,7 @@ export const ragMiddleware: LanguageModelV1Middleware = {
 
     const selection = data.files.selection;
 
-    console.log('RAG Info: ragMiddleware selection:', selection)
+    console.log('RAG Info: ragMiddleware selection:', selection);
 
     const recentMessage = messages.pop();
 

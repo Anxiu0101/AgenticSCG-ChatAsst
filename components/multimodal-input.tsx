@@ -19,16 +19,16 @@ import {
   ArrowUpIcon,
   BookIcon,
   PaperclipIcon,
-  StopIcon
+  StopIcon,
 } from '@/components/icons';
-import { AnimatePresence, } from "framer-motion";
+import { AnimatePresence } from 'framer-motion';
 import { PreviewAttachment } from '@/components/preview-attachment';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { SuggestedActions } from '@/components/suggested-actions';
 import equal from 'fast-deep-equal';
 import type { UseChatHelpers } from '@ai-sdk/react';
-import { KnowledgeBases } from "@/components/knowledgebase/knowledgebase-dialog";
+import { KnowledgeBases } from '@/components/knowledgebase/knowledgebase-dialog';
 
 function PureMultimodalInput({
   chatId,
@@ -113,7 +113,7 @@ function PureMultimodalInput({
   const imageInputRef = useRef<HTMLInputElement>(null);
   const [uploadQueue, setUploadQueue] = useState<Array<string>>([]);
 
-  const [isFilesVisible, setIsFilesVisible] = useState(false)
+  const [isFilesVisible, setIsFilesVisible] = useState(false);
 
   const submitForm = useCallback(() => {
     console.log('multi-input > selectedFilePathnames', selectedFilePathnames);
@@ -273,9 +273,9 @@ function PureMultimodalInput({
       */}
       <div className="absolute bottom-0 p-2 w-fit flex flex-row justify-start">
         <AttachmentsButton imageInputRef={imageInputRef} status={status} />
-        <KnowledgeBaseButton 
+        <KnowledgeBaseButton
           setIsFilesVisible={setIsFilesVisible}
-          status={status} 
+          status={status}
         />
       </div>
 
@@ -293,11 +293,11 @@ function PureMultimodalInput({
 
       <AnimatePresence>
         {isFilesVisible && (
-            <KnowledgeBases
-                setIsFilesVisible={setIsFilesVisible}
-                selectedFilePathnames={selectedFilePathnames}
-                setSelectedFilePathnames={setSelectedFilePathnames}
-            />
+          <KnowledgeBases
+            setIsFilesVisible={setIsFilesVisible}
+            selectedFilePathnames={selectedFilePathnames}
+            setSelectedFilePathnames={setSelectedFilePathnames}
+          />
         )}
       </AnimatePresence>
     </div>
@@ -310,7 +310,10 @@ export const MultimodalInput = memo(
     if (prevProps.input !== nextProps.input) return false;
     if (prevProps.status !== nextProps.status) return false;
     if (!equal(prevProps.attachments, nextProps.attachments)) return false;
-    if (!equal(prevProps.selectedFilePathnames, nextProps.selectedFilePathnames)) return false;
+    if (
+      !equal(prevProps.selectedFilePathnames, nextProps.selectedFilePathnames)
+    )
+      return false;
     return true;
   },
 );
@@ -341,28 +344,28 @@ function PureAttachmentsButton({
 const AttachmentsButton = memo(PureAttachmentsButton);
 
 function PureKnowledgeBaseButton({
-                        setIsFilesVisible,
-                        status,
-                      }: {
-  setIsFilesVisible: Dispatch<SetStateAction<boolean>>
-  status: UseChatHelpers['status']
+  setIsFilesVisible,
+  status,
+}: {
+  setIsFilesVisible: Dispatch<SetStateAction<boolean>>;
+  status: UseChatHelpers['status'];
 }) {
   return (
-      <Button
-          data-testid="kb-button"
-          className="ml-1 rounded-md p-[7px] h-fit dark:border-zinc-700 hover:dark:bg-zinc-900 hover:bg-zinc-200"
-          variant="ghost"
-          disabled={status !== 'ready'}
-          onClick={(e) => {
-            e.preventDefault()
-            setIsFilesVisible(true)
-          }}
-      >
-        <BookIcon size={14} />
-      </Button>
-  )
+    <Button
+      data-testid="kb-button"
+      className="ml-1 rounded-md p-[7px] h-fit dark:border-zinc-700 hover:dark:bg-zinc-900 hover:bg-zinc-200"
+      variant="ghost"
+      disabled={status !== 'ready'}
+      onClick={(e) => {
+        e.preventDefault();
+        setIsFilesVisible(true);
+      }}
+    >
+      <BookIcon size={14} />
+    </Button>
+  );
 }
-const KnowledgeBaseButton = memo(PureKnowledgeBaseButton)
+const KnowledgeBaseButton = memo(PureKnowledgeBaseButton);
 
 function PureStopButton({
   stop,

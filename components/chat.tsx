@@ -2,7 +2,7 @@
 
 import type { Attachment, UIMessage } from 'ai';
 import { useChat } from '@ai-sdk/react';
-import { useState, } from 'react';
+import { useState } from 'react';
 import useSWR, { useSWRConfig } from 'swr';
 import { ChatHeader } from '@/components/chat-header';
 import type { Vote } from '@/lib/db/schema';
@@ -30,10 +30,9 @@ export function Chat({
   isReadonly: boolean;
 }) {
   const { mutate } = useSWRConfig();
-  const [
-    selectedFilePathnames,
-    setSelectedFilePathnames
-  ] = useState<Array<string>>([])
+  const [selectedFilePathnames, setSelectedFilePathnames] = useState<
+    Array<string>
+  >([]);
   const {
     messages,
     setMessages,
@@ -51,7 +50,7 @@ export function Chat({
       selectedChatModel: selectedChatModel,
       providerMetadata: {
         files: { selection: selectedFilePathnames },
-      }
+      },
     },
     initialMessages,
     experimental_throttle: 100,

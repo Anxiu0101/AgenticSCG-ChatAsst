@@ -28,7 +28,9 @@ import {
   chat,
   type Chat,
   planningStep,
-  type PlanningStep, securityReport, type SecurityReport,
+  type PlanningStep,
+  securityReport,
+  type SecurityReport,
 } from '@/lib/db/schema';
 import type { ArtifactKind } from '@/components/artifact';
 import { generateHashedPassword } from '@/lib/db/utils';

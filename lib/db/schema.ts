@@ -1,17 +1,17 @@
 import type { InferSelectModel } from 'drizzle-orm';
 import {
-    pgTable,
-    uuid,
-    text,
-    real,
-    json,
-    jsonb,
-    integer,
-    boolean,
-    varchar,
-    primaryKey,
-    foreignKey,
-    timestamp,
+  pgTable,
+  uuid,
+  text,
+  real,
+  json,
+  jsonb,
+  integer,
+  boolean,
+  varchar,
+  primaryKey,
+  foreignKey,
+  timestamp,
 } from 'drizzle-orm/pg-core';
 
 export const user = pgTable('User', {
@@ -128,7 +128,9 @@ export const document = pgTable(
 
 export type Document = InferSelectModel<typeof document>;
 
-export const suggestion = pgTable('Suggestion', {
+export const suggestion = pgTable(
+  'Suggestion',
+  {
     id: uuid('id').notNull().defaultRandom(),
     documentId: uuid('documentId').notNull(),
     documentCreatedAt: timestamp('documentCreatedAt').notNull(),
@@ -161,25 +163,29 @@ export const chunk = pgTable('Chunk', {
 
 export type Chunk = InferSelectModel<typeof chunk>;
 
-export const planningStep = pgTable('PlanningStep', {
-        id: uuid('id').notNull().defaultRandom(),
-        userId: uuid('userId')
-            .notNull()
-            .references(() => user.id),
-        chatId: uuid('chatId').notNull(),
-        title: text('title').notNull(),
-        content: text('content').notNull(),
-        nextStep: text('nextStep').notNull(),
-        createdAt: timestamp('createdAt').notNull().defaultNow(),
-    },
-    (table) => ({
-        pk: primaryKey({ columns: [table.id] }),
-    }),
+export const planningStep = pgTable(
+  'PlanningStep',
+  {
+    id: uuid('id').notNull().defaultRandom(),
+    userId: uuid('userId')
+      .notNull()
+      .references(() => user.id),
+    chatId: uuid('chatId').notNull(),
+    title: text('title').notNull(),
+    content: text('content').notNull(),
+    nextStep: text('nextStep').notNull(),
+    createdAt: timestamp('createdAt').notNull().defaultNow(),
+  },
+  (table) => ({
+    pk: primaryKey({ columns: [table.id] }),
+  }),
 );
 
 export type PlanningStep = InferSelectModel<typeof planningStep>;
 
-export const securityReport = pgTable('SecurityReport', {
+export const securityReport = pgTable(
+  'SecurityReport',
+  {
     id: uuid('id').notNull(),
     createdAt: timestamp('createdAt').notNull().defaultNow(),
 
@@ -188,10 +194,8 @@ export const securityReport = pgTable('SecurityReport', {
     documentCreatedAt: timestamp('documentCreatedAt').notNull(),
 
     // scanner metadata.
-    targetLang: text('targetLang')
-        .notNull().default('python'),
-    scannerTool: text('scannerTool')
-        .notNull().default('bandit'),
+    targetLang: text('targetLang').notNull().default('python'),
+    scannerTool: text('scannerTool').notNull().default('bandit'),
 
     // report information with count and total vulnerabilities count.
     content: jsonb('content').notNull(),
@@ -199,16 +203,16 @@ export const securityReport = pgTable('SecurityReport', {
 
     // authorized value, defined report visibility.
     userId: uuid('userId')
-        .notNull()
-        .references(() => user.id),
-    },
-    (table) => ({
+      .notNull()
+      .references(() => user.id),
+  },
+  (table) => ({
     pk: primaryKey({ columns: [table.id, table.createdAt] }),
     documentRef: foreignKey({
-        columns: [table.documentId, table.documentCreatedAt],
-        foreignColumns: [document.id, document.createdAt],
+      columns: [table.documentId, table.documentCreatedAt],
+      foreignColumns: [document.id, document.createdAt],
     }),
-    }),
+  }),
 );
 
 export type SecurityReport = InferSelectModel<typeof securityReport>;
