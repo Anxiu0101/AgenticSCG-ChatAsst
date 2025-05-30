@@ -56,6 +56,8 @@ yarn dev        # server running.
 
 Your app template should now be running on [localhost:3000](http://localhost:3000).
 
+For using secure scanning feature, please deploy the [AgenticSCG-PyAPI](https://github.com/Anxiu0101/AgenticSCG-PyAPI) server, which running in localhost:8000.
+
 ## Data Schema
 
 ![schema](public/images/schema.jpeg)

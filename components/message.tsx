@@ -19,8 +19,8 @@ import { MessageEditor } from './message-editor';
 import { DocumentPreview } from './document-preview';
 import { MessageReasoning } from './message-reasoning';
 import type { UseChatHelpers } from '@ai-sdk/react';
-import { PlanningStep } from '@/components/planning-step';
-import SecurityReportCard from '@/components/tool-inovation/code-security-card';
+import { PlanningStep } from '@/components/tool-inovation/planning-step';
+import { SecurityReportCard } from '@/components/tool-inovation/code-security-card';
 
 const PurePreviewMessage = ({
   chatId,

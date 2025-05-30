@@ -3,13 +3,6 @@ import { Badge } from '@/components/ui/badge';
 import { ShieldAlert } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-// ---------------------------------------------------------------------------
-// SecurityReportCard
-// ---------------------------------------------------------------------------
-// Minimal, responsive component for visualising the result returned by the
-// auditCodeSecurity tool.  Uses shadcn/ui, TailwindCSS & framer‑motion.
-// ---------------------------------------------------------------------------
-
 interface SecurityReport {
   reportId: string;
   vulnCount: number;
@@ -17,15 +10,10 @@ interface SecurityReport {
 }
 
 interface SecurityReportCardProps {
-  /** JSON object returned from the tool */
   report: SecurityReport;
 }
 
-/**
- * Renders the scanner summary as a compact card with a coloured badge that
- * changes according to the vulnerability count.
- */
-export default function SecurityReportCard({
+export function SecurityReportCard({
   report,
 }: SecurityReportCardProps) {
   // Pick badge colour based on vuln count
