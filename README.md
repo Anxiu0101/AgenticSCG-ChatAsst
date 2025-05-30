@@ -62,7 +62,7 @@ Your app template should now be running on [localhost:3000](http://localhost:300
 
 ## Features Ongoing
 
-- [ ] bandit for more system adaption.
+- [x] bandit for more system adaption.
 - [ ] performances monitor for time cost and token usage.
 - [ ] security card: more cve information.
 - [ ] 

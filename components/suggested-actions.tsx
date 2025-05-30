@@ -13,24 +13,24 @@ interface SuggestedActionsProps {
 function PureSuggestedActions({ chatId, append }: SuggestedActionsProps) {
   const suggestedActions = [
     {
-      title: 'What are the advantages',
-      label: 'of using Next.js?',
-      action: 'What are the advantages of using Next.js?',
+      title: 'Access control system',
+      label: 'for 11 employees.',
+      action: 'I want to do a payroll for 11 employees with password based access control.',
     },
     {
-      title: 'Write code to',
-      label: `demonstrate djikstra's algorithm`,
-      action: `Write code to demonstrate djikstra's algorithm`,
+      title: 'JWT Authentication API',
+      label: 'with login and token refresh.',
+      action: 'Build a RESTful API that supports JWT-based login and token refresh functionality.',
     },
     {
-      title: 'Help me write an essay',
-      label: `about silicon valley`,
-      action: `Help me write an essay about silicon valley`,
+      title: 'Image processing API',
+      label: 'for resizing and format conversion.',
+      action: 'Build a Python-based FastAPI service that allows users to upload an image and get it back resized or converted to another format like WebP or PNG.',
     },
     {
-      title: 'What is the weather',
-      label: 'in San Francisco?',
-      action: 'What is the weather in San Francisco?',
+      title: 'Log monitoring script',
+      label: 'for suspicious SSH login attempts.',
+      action: 'Write a Python script that monitors auth.log and flags multiple failed SSH login attempts from the same IP.',
     },
   ];
 
