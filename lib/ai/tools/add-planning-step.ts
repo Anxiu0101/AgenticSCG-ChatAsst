@@ -42,13 +42,12 @@ export const addPlanningStep = ({
         type: 'planningStep',
         content: planningStep,
       });
-      // console.log(`before planning step pushed: ${planningStep.content}`)
 
       planningSteps.push(planningStep);
 
       if (session.user?.id) {
         const userId = session.user.id;
-        // console.log("before save planning step")
+
         await savePlanningStep({
           steps: planningSteps.map((planningStep) => ({
             id: generateUUID(),
@@ -59,7 +58,6 @@ export const addPlanningStep = ({
           })),
         });
       }
-      // console.log("finish save planning step.")
 
       return planningSteps;
     },

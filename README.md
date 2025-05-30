@@ -59,3 +59,10 @@ Your app template should now be running on [localhost:3000](http://localhost:300
 ## Data Schema
 
 ![schema](public/images/schema.jpeg)
+
+## Features Ongoing
+
+- [ ] bandit for more system adaption.
+- [ ] performances monitor for time cost and token usage.
+- [ ] security card: more cve information.
+- [ ] 
