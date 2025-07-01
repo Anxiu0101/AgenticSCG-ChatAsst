@@ -84,6 +84,11 @@ export const systemPrompt = ({
 }: {
   selectedChatModel: string;
 }) => {
+  // const isReasoning = [ 'chat-model-reasoning',
+  //   'gpt-reasoning-model',
+  //   'gemini-reasoning-model',
+  //   'deepseak-reasoning-model',]
+  //     .includes(selectedChatModel)
   if (selectedChatModel === 'chat-model-reasoning') {
     return regularPrompt;
   } else {
