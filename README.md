@@ -67,4 +67,11 @@ For using secure scanning feature, please deploy the [AgenticSCG-PyAPI](https://
 - [x] bandit for more system adaption.
 - [ ] performances monitor for time cost and token usage.
 - [ ] security card: more cve information.
-- [ ] 
+
+
+## Telemetry
+
+```shell
+#docker run --rm --name jaeger -e COLLECTOR_OTLP_ENABLED=true -p 16686:16686 -p 4318:4318 jaegertracing/all-in-one:latest 
+docker run --rm --name jaeger -p 16686:16686 -p 4317:4317 -p 4318:4318 -p 5778:5778 -p 9411:9411 cr.jaegertracing.io/jaegertracing/jaeger:2.8.0
+```

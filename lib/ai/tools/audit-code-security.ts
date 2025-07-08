@@ -1,9 +1,6 @@
 import { z } from 'zod';
 import { tool, type DataStreamWriter } from 'ai';
-import {
-  getDocumentById,
-  saveSecurityReport
-} from '@/lib/db/queries';
+import { getDocumentById, saveSecurityReport } from '@/lib/db/queries';
 import { generateUUID } from '@/lib/utils';
 import type { Session } from 'next-auth';
 
@@ -18,8 +15,8 @@ import type { Session } from 'next-auth';
 // Read Scanner server api address from .env,
 // Otherwise using the default value.
 const SCANNER_API_URL =
-    process.env.SECURE_SCAN_API_URL ??
-    'http://localhost:8000/api/v1/secure-scan/python';
+  process.env.SECURE_SCAN_API_URL ??
+  'http://localhost:8000/api/v1/secure-scan/python';
 
 interface AuditCodeSecurityProps {
   session: Session;
@@ -53,37 +50,6 @@ export const auditCodeSecurity = ({
         };
       }
 
-      // // Write document content to a temporary file
-      // const tempFilePath = path.join(OUTPUT_DIR, documentId, 'main.py');
-      //
-      // try {
-      //   await fs.promises.mkdir(path.join(OUTPUT_DIR, documentId), {
-      //     recursive: true,
-      //   });
-      //
-      //   fs.writeFileSync(tempFilePath, document.content, 'utf8');
-      //   console.log(
-      //     `[Tool|auditCodeSecurity] Temp file written: ${tempFilePath}`,
-      //   );
-      // } catch (err) {
-      //   console.error('[Tool|auditCodeSecurity] File write error:', err);
-      //   return {
-      //     error: 'Failed to write temporary file for security scanning.',
-      //   };
-      // }
-      //
-      // // fs.writeFileSync(tempFilePath, document.content, "utf8");
-      //
-      // console.log(`[Tool|EXEC]: ${SATBIN_DIR} -r ${tempFilePath} -f json`);
-      //
-      // // Execute the security scanner (Bandit) and capture JSON output
-      // const scannerOutput = execSync(
-      //   `${SATBIN_DIR} -r ${tempFilePath} -f json --exit-zero`,
-      //   {
-      //     encoding: 'utf-8',
-      //   },
-      // );
-
       let reportContent: any;
       try {
         const apiRes = await fetch(SCANNER_API_URL, {
@@ -94,7 +60,10 @@ export const auditCodeSecurity = ({
         });
 
         if (!apiRes.ok) {
-          console.error('[Tools|auditCodeSecurity] API error', await apiRes.text());
+          console.error(
+            '[Tools|auditCodeSecurity] API error',
+            await apiRes.text(),
+          );
           return { error: 'Security scanner API returned an error.' };
         }
         reportContent = await apiRes.json();
@@ -145,3 +114,34 @@ export const auditCodeSecurity = ({
       };
     },
   });
+
+// // Write document content to a temporary file
+// const tempFilePath = path.join(OUTPUT_DIR, documentId, 'main.py');
+//
+// try {
+//   await fs.promises.mkdir(path.join(OUTPUT_DIR, documentId), {
+//     recursive: true,
+//   });
+//
+//   fs.writeFileSync(tempFilePath, document.content, 'utf8');
+//   console.log(
+//     `[Tool|auditCodeSecurity] Temp file written: ${tempFilePath}`,
+//   );
+// } catch (err) {
+//   console.error('[Tool|auditCodeSecurity] File write error:', err);
+//   return {
+//     error: 'Failed to write temporary file for security scanning.',
+//   };
+// }
+//
+// // fs.writeFileSync(tempFilePath, document.content, "utf8");
+//
+// console.log(`[Tool|EXEC]: ${SATBIN_DIR} -r ${tempFilePath} -f json`);
+//
+// // Execute the security scanner (Bandit) and capture JSON output
+// const scannerOutput = execSync(
+//   `${SATBIN_DIR} -r ${tempFilePath} -f json --exit-zero`,
+//   {
+//     encoding: 'utf-8',
+//   },
+// );
