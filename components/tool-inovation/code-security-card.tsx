@@ -13,9 +13,7 @@ interface SecurityReportCardProps {
   report: SecurityReport;
 }
 
-export function SecurityReportCard({
-  report,
-}: SecurityReportCardProps) {
+export function SecurityReportCard({ report }: SecurityReportCardProps) {
   // Pick badge colour based on vuln count
   const badgeClasses =
     report.vulnCount === 0

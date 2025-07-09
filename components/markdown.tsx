@@ -7,34 +7,21 @@ import { CodeBlock } from '@/components/code-block';
 const components: Partial<Components> = {
   // @ts-expect-error
   code: CodeBlock,
-
-
-  // code: ({ node, inline, className, children, ...props }) => {
-  //   if (inline) {
-  //     // 行内代码
-  //     return (
-  //       <code
-  //         className="text-sm bg-zinc-100 dark:bg-zinc-800 py-0.5 px-1 rounded-md whitespace-pre break-words"
-  //         {...props}
-  //       >
-  //         {children}
-  //       </code>
-  //     );
-  //   }
-  //   // 多行代码块
-  //   return (
-  //     <CodeBlock
-  //       node={node}
-  //       inline={inline}
-  //       className={className || ''}
-  //       {...props}
-  //     >
-  //       {children}
-  //     </CodeBlock>
-  //   );
-  // },
-
-  pre: ({ children }) => <>{children}</>,
+  p: ({ children }) => {
+    const isPreTag =
+      Array.isArray(children) &&
+      children.length > 0 &&
+      (children[0] as any)?.type === 'pre';
+    if (isPreTag) {
+      return <>{children}</>;
+    }
+    return <p className="leading-6">{children}</p>;
+  },
+  pre: ({ children }) => (
+    <pre className="overflow-x-auto p-4 bg-zinc-50 text-white rounded-lg">
+      {children}
+    </pre>
+  ),
   ol: ({ node, children, ...props }) => {
     return (
       <ol className="list-decimal list-outside ml-4" {...props}>

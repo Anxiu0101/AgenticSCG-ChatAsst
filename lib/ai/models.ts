@@ -36,5 +36,5 @@ export const chatModels: Array<ChatModel> = [
     id: 'deepseak-reasoning-model',
     name: 'Deepseak based Agent',
     description: 'Uses advanced reasoning',
-  }
+  },
 ];

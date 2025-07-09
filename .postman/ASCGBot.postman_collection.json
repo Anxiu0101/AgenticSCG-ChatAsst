@@ -1,564 +1,490 @@
 {
-	"info": {
-		"_postman_id": "f99b22f8-4bbc-4da6-a953-c2b6d5e3d90d",
-		"name": "ASCGBot",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "16949749"
-	},
-	"item": [
-		{
-			"name": "KnowledgeBase",
-			"item": [
-				{
-					"name": "file-list",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{localurl}}api/files/list",
-							"host": [
-								"{{localurl}}api"
-							],
-							"path": [
-								"files",
-								"list"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "file-list",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:4000/api/files/list",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "4000",
-									"path": [
-										"api",
-										"files",
-										"list"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "set-cookie",
-									"value": "authjs.session-token=eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2Q0JDLUhTNTEyIiwia2lkIjoiZEFFOUprRGFYNVBERXJnX3hXTk5TQVQwZUtMWmZCLW05RlE2ZjV4UGFhX0o3Z0dwM191c0VxcXZDWmk0bHZ6ZEdUZWxWZHVMN3pLZmlxNHZudDYwNkEifQ..LSkiJ4G9nhQSAtUZb16e3w.qptS-SbjNSVlWq0xnAR8JINy7hb9FXl7SbkznEeM8MmBw7Nl-p2xp1c5yQRse8OefU1PdwR04VvWkVZZ-0Fh4vdUEATWo8x4se4kAQxcCKhahdnvMIUmtskAf0j63APbP7yTp42P5-WV9axaSfkd1yTiYROJqZZU65Y1x4VwktsBkeQIwjUbq3OuzFziy399VPgSjmgZtxtEQD6y8lJUefqI39cUc1odxBkb2wKtyBiM0_9-ZZm0wyPpcJnhysDu32jMaBeL27kIenBnwZn9DQ.l2pwgPnDPtuP3yNOsZ11UkbY19bcdYFow6c8JKxxbrE; Path=/; Expires=Sun, 25 May 2025 12:04:03 GMT; HttpOnly; SameSite=Lax"
-								},
-								{
-									"key": "vary",
-									"value": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch"
-								},
-								{
-									"key": "content-type",
-									"value": "application/json"
-								},
-								{
-									"key": "Date",
-									"value": "Fri, 25 Apr 2025 12:04:03 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=5"
-								},
-								{
-									"key": "Transfer-Encoding",
-									"value": "chunked"
-								}
-							],
-							"cookie": [],
-							"body": "[\n    {\n        \"url\": \"https://yklxgbcrnpzcphwp.public.blob.vercel-storage.com/anxiu%40example.com/pep-0008.rst.pdf\",\n        \"downloadUrl\": \"https://yklxgbcrnpzcphwp.public.blob.vercel-storage.com/anxiu%40example.com/pep-0008.rst.pdf?download=1\",\n        \"pathname\": \"pep-0008.rst.pdf\",\n        \"size\": 104719,\n        \"uploadedAt\": \"2025-04-25T11:05:40.000Z\"\n    }\n]"
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Auth",
-			"item": [
-				{
-					"name": "login",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"csrfToken\": \"e639f5e3bfd61bcd11237c77572afa06cf9fedb6f15c39a5499c79aa0b98c5e3\",\r\n    \"email\": \"anxiu@example.com\",\r\n    \"password\": \"anxiu0101\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{localurl}}api/auth/callback/credentials?json=true",
-							"host": [
-								"{{localurl}}api"
-							],
-							"path": [
-								"auth",
-								"callback",
-								"credentials"
-							],
-							"query": [
-								{
-									"key": "json",
-									"value": "true"
-								}
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "login",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"csrfToken\": \"e639f5e3bfd61bcd11237c77572afa06cf9fedb6f15c39a5499c79aa0b98c5e3\",\r\n    \"email\": \"anxiu@example.com\",\r\n    \"password\": \"anxiu0101\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "http://localhost:4000/api/auth/callback/credentials?json=true",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "4000",
-									"path": [
-										"api",
-										"auth",
-										"callback",
-										"credentials"
-									],
-									"query": [
-										{
-											"key": "json",
-											"value": "true"
-										}
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "html",
-							"header": [
-								{
-									"key": "set-cookie",
-									"value": "authjs.session-token=eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2Q0JDLUhTNTEyIiwia2lkIjoiZEFFOUprRGFYNVBERXJnX3hXTk5TQVQwZUtMWmZCLW05RlE2ZjV4UGFhX0o3Z0dwM191c0VxcXZDWmk0bHZ6ZEdUZWxWZHVMN3pLZmlxNHZudDYwNkEifQ..ILmKNzwYDqQfDlH9O3NBtw.HKqmtTM-iXA5ljYSBK5K9sMhuj5PGib3l3HGEtsUeqwWrJn-UFMusiGbXDkO7OXtZ3723kImqhTjvSRGSMlQKkT-7U4PqRyFoSeRhJYrkRUkH2wboGTlURLuWNE2jwYUPkIFzjtGmadD5NxZmY66LIY7-8MHebvasG8JQWCa-1htwL2hrJPEEcwXcfYuI8CP_D66vtWfBvz7h6R_YM1f4nFnlep-IwAM6OWWwwCa7ZjTqgqGHLAxZIcmzV9pBqftYuOnaorugQENhf-ZJnehNw.MKpWO7NdQPvW4kR8KGo3yZhCmVIsb-9qjO9_hR0JUfA; Path=/; Expires=Sun, 25 May 2025 12:03:43 GMT; HttpOnly; SameSite=Lax"
-								},
-								{
-									"key": "Vary",
-									"value": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Accept-Encoding"
-								},
-								{
-									"key": "link",
-									"value": "</_next/static/media/gyByhwUxId8gMEwcGFWNOITd-s.p.da1ebef7.woff2>; rel=preload; as=\"font\"; crossorigin=\"\"; type=\"font/woff2\", </_next/static/media/or3nQ6H_1_WfwkMZI_qYFrcdmhHkjko-s.p.be19f591.woff2>; rel=preload; as=\"font\"; crossorigin=\"\"; type=\"font/woff2\""
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-store, must-revalidate"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "Next.js"
-								},
-								{
-									"key": "Content-Type",
-									"value": "text/html; charset=utf-8"
-								},
-								{
-									"key": "Content-Encoding",
-									"value": "gzip"
-								},
-								{
-									"key": "Date",
-									"value": "Fri, 25 Apr 2025 12:03:44 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=5"
-								},
-								{
-									"key": "Transfer-Encoding",
-									"value": "chunked"
-								}
-							],
-							"cookie": [],
-							"body": "<!DOCTYPE html>\n<html lang=\"en\" class=\"geist_530f5508-module__OOnSwq__variable geist_mono_8f4ee38b-module__1fn3BW__variable\">\n    <head>\n        <meta charSet=\"utf-8\"/>\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\"/>\n        <link rel=\"stylesheet\" href=\"/_next/static/chunks/%5Broot-of-the-server%5D__4d3d4bd4._.css\" data-precedence=\"next_static/chunks/[root-of-the-server]__4d3d4bd4._.css\"/>\n        <link rel=\"stylesheet\" href=\"/_next/static/chunks/node_modules_react-data-grid_lib_styles_fb0a7daf.css\" data-precedence=\"next_static/chunks/node_modules_react-data-grid_lib_styles_fb0a7daf.css\"/>\n        <link rel=\"preload\" as=\"script\" fetchPriority=\"low\" href=\"/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_01c45518._.js\"/>\n        <script src=\"/_next/static/chunks/node_modules_next_dist_compiled_react-dom-experimental_375bf58e._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_next_dist_compiled_26b06edd._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_next_dist_client_8f19e6fb._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_next_dist_2ecbf5fa._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_%40swc_helpers_cjs_00636ac3._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/_e69f0d32._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/_c4115651._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_next_dist_1a6ee436._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/app_favicon_ico_mjs_feb59115._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/_33c6a35b._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/app_layout_tsx_26c2bb0e._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/_866deadc._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_next_c85fb1f2._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_framer-motion_dist_es_92139a2a._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_swr_dist_a9801644._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_e38022db._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/app_(chat)_layout_tsx_b685bb48._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/_78c74842._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_next_dist_compiled_db152a47._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_zod_lib_index_mjs_ee760afb._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_micromark-core-commonmark_dev_lib_36a4b45d._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_prosemirror-view_dist_index_212d9a9b.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_entities_lib_esm_3b43f604._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_markdown-it_c9117e0a._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_%40codemirror_state_dist_index_9b015ec1.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_%40codemirror_view_dist_index_201017eb.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_react-data-grid_lib_bundle_f8bf325b.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_%40ai-sdk_react_1a5af7fb._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_%40lezer_e0dd4b0b._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_%40codemirror_4de5c195._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_342b5cd0._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/app_(chat)_page_tsx_ba3270d6._.js\" async=\"\"></script>\n        <link rel=\"preload\" href=\"https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js\" as=\"script\"/>\n        <meta name=\"next-size-adjust\" content=\"\"/>\n        <script>(function() {\n  var html = document.documentElement;\n  var meta = document.querySelector('meta[name=\"theme-color\"]');\n  if (!meta) {\n    meta = document.createElement('meta');\n    meta.setAttribute('name', 'theme-color');\n    document.head.appendChild(meta);\n  }\n  function updateThemeColor() {\n    var isDark = html.classList.contains('dark');\n    meta.setAttribute('content', isDark ? 'hsl(240deg 10% 3.92%)' : 'hsl(0 0% 100%)');\n  }\n  var observer = new MutationObserver(updateThemeColor);\n  observer.observe(html, { attributes: true, attributeFilter: ['class'] });\n  updateThemeColor();\n})();</script>\n        <title>Next.js Chatbot Template</title>\n        <meta name=\"description\" content=\"Next.js chatbot template using the AI SDK.\"/>\n        <link rel=\"icon\" href=\"/favicon.ico?favicon.46d6a819.ico\" sizes=\"48x48\" type=\"image/x-icon\"/>\n        <script>document.querySelectorAll('body link[rel=\"icon\"], body link[rel=\"apple-touch-icon\"]').forEach(el => document.head.appendChild(el))</script>\n        <script src=\"/_next/static/chunks/node_modules_next_dist_build_polyfills_polyfill-nomodule.js\" noModule=\"\"></script>\n    </head>\n    <body class=\"antialiased\">\n        <script>!function(){try{var d=document.documentElement,c=d.classList;c.remove('light','dark');var e=localStorage.getItem('theme');if('system'===e||(!e&&true)){var t='(prefers-color-scheme: dark)',m=window.matchMedia(t);if(m.media!==t||m.matches){d.style.colorScheme = 'dark';c.add('dark')}else{d.style.colorScheme = 'light';c.add('light')}}else if(e){c.add(e|| '')}if(e==='light'||e==='dark')d.style.colorScheme=e}catch(e){}}()</script>\n        <section aria-label=\"Notifications alt+T\" tabindex=\"-1\" aria-live=\"polite\" aria-relevant=\"additions text\" aria-atomic=\"false\"></section>\n        <script>(self.__next_s=self.__next_s||[]).push([\"https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js\",{}])</script>\n        <div style=\"--sidebar-width:16rem;--sidebar-width-icon:3rem\" class=\"group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar\">\n            <div class=\"group peer hidden md:block text-sidebar-foreground\" data-state=\"collapsed\" data-collapsible=\"offcanvas\" data-variant=\"sidebar\" data-side=\"left\">\n                <div class=\"duration-200 relative h-svh w-[--sidebar-width] bg-transparent transition-[width] ease-linear group-data-[collapsible=offcanvas]:w-0 group-data-[side=right]:rotate-180 group-data-[collapsible=icon]:w-[--sidebar-width-icon]\"></div>\n                <div class=\"duration-200 fixed inset-y-0 z-10 hidden h-svh w-[--sidebar-width] transition-[left,right,width] ease-linear md:flex left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)] group-data-[collapsible=icon]:w-[--sidebar-width-icon] group-data-[side=right]:border-l group-data-[side=left]:border-r-0\">\n                    <div data-sidebar=\"sidebar\" class=\"flex h-full w-full flex-col bg-sidebar group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:border-sidebar-border group-data-[variant=floating]:shadow\">\n                        <div data-sidebar=\"header\" class=\"flex flex-col gap-2 p-2\">\n                            <ul data-sidebar=\"menu\" class=\"flex w-full min-w-0 flex-col gap-1\">\n                                <div class=\"flex flex-row justify-between items-center\">\n                                    <a class=\"flex flex-row gap-3 items-center\" href=\"/\">\n                                        <span class=\"text-lg font-semibold px-2 hover:bg-muted rounded-md cursor-pointer\">Chatbot</span>\n                                    </a>\n                                    <button class=\"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground p-2 h-fit\" type=\"button\" data-state=\"closed\">\n                                        <svg height=\"16\" stroke-linejoin=\"round\" viewBox=\"0 0 16 16\" width=\"16\" style=\"color:currentcolor\">\n                                            <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M 8.75,1 H7.25 V7.25 H1.5 V8.75 H7.25 V15 H8.75 V8.75 H14.5 V7.25 H8.75 V1.75 Z\" fill=\"currentColor\"></path>\n                                        </svg>\n                                    </button>\n                                </div>\n                            </ul>\n                        </div>\n                        <div data-sidebar=\"content\" class=\"flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden\">\n                            <div data-sidebar=\"group\" class=\"relative flex w-full min-w-0 flex-col p-2\">\n                                <div class=\"px-2 py-1 text-xs text-sidebar-foreground/50\">Today</div>\n                                <div data-sidebar=\"group-content\" class=\"w-full text-sm\">\n                                    <div class=\"flex flex-col\">\n                                        <div class=\"rounded-md h-8 flex gap-2 px-2 items-center\">\n                                            <div class=\"h-4 rounded-md flex-1 max-w-[--skeleton-width] bg-sidebar-accent-foreground/10\" style=\"--skeleton-width:44%\"></div>\n                                        </div>\n                                        <div class=\"rounded-md h-8 flex gap-2 px-2 items-center\">\n                                            <div class=\"h-4 rounded-md flex-1 max-w-[--skeleton-width] bg-sidebar-accent-foreground/10\" style=\"--skeleton-width:32%\"></div>\n                                        </div>\n                                        <div class=\"rounded-md h-8 flex gap-2 px-2 items-center\">\n                                            <div class=\"h-4 rounded-md flex-1 max-w-[--skeleton-width] bg-sidebar-accent-foreground/10\" style=\"--skeleton-width:28%\"></div>\n                                        </div>\n                                        <div class=\"rounded-md h-8 flex gap-2 px-2 items-center\">\n                                            <div class=\"h-4 rounded-md flex-1 max-w-[--skeleton-width] bg-sidebar-accent-foreground/10\" style=\"--skeleton-width:64%\"></div>\n                                        </div>\n                                        <div class=\"rounded-md h-8 flex gap-2 px-2 items-center\">\n                                            <div class=\"h-4 rounded-md flex-1 max-w-[--skeleton-width] bg-sidebar-accent-foreground/10\" style=\"--skeleton-width:52%\"></div>\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                        <div data-sidebar=\"footer\" class=\"flex flex-col gap-2 p-2\">\n                            <ul data-sidebar=\"menu\" class=\"flex w-full min-w-0 flex-col gap-1\">\n                                <li data-sidebar=\"menu-item\" class=\"group/menu-item relative\">\n                                    <button data-sidebar=\"menu-button\" data-size=\"default\" data-active=\"false\" class=\"peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-none ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-[[data-sidebar=menu-action]]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:!size-8 group-data-[collapsible=icon]:!p-2 [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground text-sm data-[state=open]:bg-sidebar-accent bg-background data-[state=open]:text-sidebar-accent-foreground h-10\" type=\"button\" id=\"radix-«R76nal7»\" aria-haspopup=\"menu\" aria-expanded=\"false\" data-state=\"closed\">\n                                        <img alt=\"anxiu@example.com\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"rounded-full\" style=\"color:transparent\" srcSet=\"/_next/image?url=https%3A%2F%2Favatar.vercel.sh%2Fanxiu%40example.com&amp;w=32&amp;q=75 1x, /_next/image?url=https%3A%2F%2Favatar.vercel.sh%2Fanxiu%40example.com&amp;w=48&amp;q=75 2x\" src=\"/_next/image?url=https%3A%2F%2Favatar.vercel.sh%2Fanxiu%40example.com&amp;w=48&amp;q=75\"/>\n                                        <span class=\"truncate\">anxiu@example.com</span>\n                                        <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-chevron-up ml-auto\">\n                                            <path d=\"m18 15-6-6-6 6\"></path>\n                                        </svg>\n                                    </button>\n                                </li>\n                            </ul>\n                        </div>\n                    </div>\n                </div>\n            </div>\n            <main class=\"relative flex min-h-svh flex-1 flex-col bg-background peer-data-[variant=inset]:min-h-[calc(100svh-theme(spacing.4))] md:peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow\">\n                <div class=\"flex flex-col min-w-0 h-dvh bg-background\">\n                    <header class=\"flex sticky top-0 bg-background py-1.5 items-center px-2 md:px-2 gap-2\">\n                        <button class=\"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 md:px-2 md:h-fit\" data-state=\"closed\">\n                            <svg height=\"16\" stroke-linejoin=\"round\" viewBox=\"0 0 16 16\" width=\"16\" style=\"color:currentcolor\">\n                                <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6.245 2.5H14.5V12.5C14.5 13.0523 14.0523 13.5 13.5 13.5H6.245V2.5ZM4.995 2.5H1.5V12.5C1.5 13.0523 1.94772 13.5 2.5 13.5H4.995V2.5ZM0 1H1.5H14.5H16V2.5V12.5C16 13.8807 14.8807 15 13.5 15H2.5C1.11929 15 0 13.8807 0 12.5V2.5V1Z\" fill=\"currentColor\"></path>\n                            </svg>\n                        </button>\n                        <button class=\"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 py-2 order-2 md:order-1 md:px-2 px-2 md:h-fit ml-auto md:ml-0\" data-state=\"closed\">\n                            <svg height=\"16\" stroke-linejoin=\"round\" viewBox=\"0 0 16 16\" width=\"16\" style=\"color:currentcolor\">\n                                <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M 8.75,1 H7.25 V7.25 H1.5 V8.75 H7.25 V15 H8.75 V8.75 H14.5 V7.25 H8.75 V1.75 Z\" fill=\"currentColor\"></path>\n                            </svg>\n                            <span class=\"md:sr-only\">New Chat</span>\n                        </button>\n                        <button class=\"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 w-fit data-[state=open]:bg-accent data-[state=open]:text-accent-foreground order-1 md:order-2 md:px-2 md:h-[34px]\" data-testid=\"model-selector\" type=\"button\" id=\"radix-«R3ajqnal7»\" aria-haspopup=\"menu\" aria-expanded=\"false\" data-state=\"closed\">Chat model\n                            <svg height=\"16\" stroke-linejoin=\"round\" viewBox=\"0 0 16 16\" width=\"16\" style=\"color:currentcolor\">\n                                <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12.0607 6.74999L11.5303 7.28032L8.7071 10.1035C8.31657 10.4941 7.68341 10.4941 7.29288 10.1035L4.46966 7.28032L3.93933 6.74999L4.99999 5.68933L5.53032 6.21966L7.99999 8.68933L10.4697 6.21966L11 5.68933L12.0607 6.74999Z\" fill=\"currentColor\"></path>\n                            </svg>\n                        </button>\n                        <button class=\"items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 w-fit data-[state=open]:bg-accent data-[state=open]:text-accent-foreground order-1 md:order-3 hidden md:flex md:px-2 md:h-[34px]\" type=\"button\" id=\"radix-«R4ajqnal7»\" aria-haspopup=\"menu\" aria-expanded=\"false\" data-state=\"closed\">\n                            <svg height=\"16\" stroke-linejoin=\"round\" viewBox=\"0 0 16 16\" width=\"16\" style=\"color:currentcolor\">\n                                <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10 4.5V6H6V4.5C6 3.39543 6.89543 2.5 8 2.5C9.10457 2.5 10 3.39543 10 4.5ZM4.5 6V4.5C4.5 2.567 6.067 1 8 1C9.933 1 11.5 2.567 11.5 4.5V6H12.5H14V7.5V12.5C14 13.8807 12.8807 15 11.5 15H4.5C3.11929 15 2 13.8807 2 12.5V7.5V6H3.5H4.5ZM11.5 7.5H10H6H4.5H3.5V12.5C3.5 13.0523 3.94772 13.5 4.5 13.5H11.5C12.0523 13.5 12.5 13.0523 12.5 12.5V7.5H11.5Z\" fill=\"currentColor\"></path>\n                            </svg>Private\n                            <svg height=\"16\" stroke-linejoin=\"round\" viewBox=\"0 0 16 16\" width=\"16\" style=\"color:currentcolor\">\n                                <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12.0607 6.74999L11.5303 7.28032L8.7071 10.1035C8.31657 10.4941 7.68341 10.4941 7.29288 10.1035L4.46966 7.28032L3.93933 6.74999L4.99999 5.68933L5.53032 6.21966L7.99999 8.68933L10.4697 6.21966L11 5.68933L12.0607 6.74999Z\" fill=\"currentColor\"></path>\n                            </svg>\n                        </button>\n                        <a target=\"_noblank\" class=\"items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-zinc-900 dark:bg-zinc-100 hover:bg-zinc-800 dark:hover:bg-zinc-200 text-zinc-50 dark:text-zinc-900 hidden md:flex py-1.5 px-2 h-fit md:h-[34px] order-4 md:ml-auto\" href=\"https://vercel.com/new/clone?repository-url=https://github.com/vercel/ai-chatbot&amp;env=AUTH_SECRET&amp;envDescription=Learn more about how to get the API Keys for the application&amp;envLink=https://github.com/vercel/ai-chatbot/blob/main/.env.example&amp;demo-title=AI Chatbot&amp;demo-description=An Open-Source AI Chatbot Template Built With Next.js and the AI SDK by Vercel.&amp;demo-url=https://chat.vercel.ai&amp;products=[{&quot;type&quot;:&quot;integration&quot;,&quot;protocol&quot;:&quot;ai&quot;,&quot;productSlug&quot;:&quot;grok&quot;,&quot;integrationSlug&quot;:&quot;xai&quot;},{&quot;type&quot;:&quot;integration&quot;,&quot;protocol&quot;:&quot;storage&quot;,&quot;productSlug&quot;:&quot;neon&quot;,&quot;integrationSlug&quot;:&quot;neon&quot;},{&quot;type&quot;:&quot;blob&quot;}]\">\n                            <svg height=\"16\" stroke-linejoin=\"round\" viewBox=\"0 0 16 16\" width=\"16\" style=\"color:currentcolor\">\n                                <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8 1L16 15H0L8 1Z\" fill=\"currentColor\"></path>\n                            </svg>Deploy with Vercel\n                        </a>\n                    </header>\n                    <div class=\"flex flex-col min-w-0 gap-6 flex-1 overflow-y-scroll pt-4\">\n                        <div class=\"max-w-3xl mx-auto md:mt-20 px-8 size-full flex flex-col justify-center\">\n                            <div class=\"text-2xl font-semibold\" style=\"opacity:0;transform:translateY(10px)\">Hello there!</div>\n                            <div class=\"text-2xl text-zinc-500\" style=\"opacity:0;transform:translateY(10px)\">How can I help you today?</div>\n                        </div>\n                        <div class=\"shrink-0 min-w-[24px] min-h-[24px]\"></div>\n                    </div>\n                    <form class=\"flex mx-auto px-4 bg-background pb-4 md:pb-6 gap-2 w-full md:max-w-3xl\">\n                        <div class=\"relative w-full flex flex-col gap-4\">\n                            <div data-testid=\"suggested-actions\" class=\"grid sm:grid-cols-2 gap-2 w-full\">\n                                <div class=\"block\" style=\"opacity:0;transform:translateY(20px)\">\n                                    <button class=\"inline-flex whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground text-left border rounded-xl px-4 py-3.5 text-sm flex-1 gap-1 sm:flex-col w-full h-auto justify-start items-start\">\n                                        <span class=\"font-medium\">What are the advantages</span>\n                                        <span class=\"text-muted-foreground\">of using Next.js?</span>\n                                    </button>\n                                </div>\n                                <div class=\"block\" style=\"opacity:0;transform:translateY(20px)\">\n                                    <button class=\"inline-flex whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground text-left border rounded-xl px-4 py-3.5 text-sm flex-1 gap-1 sm:flex-col w-full h-auto justify-start items-start\">\n                                        <span class=\"font-medium\">Write code to</span>\n                                        <span class=\"text-muted-foreground\">demonstrate djikstra&#x27;s algorithm</span>\n                                    </button>\n                                </div>\n                                <div class=\"hidden sm:block\" style=\"opacity:0;transform:translateY(20px)\">\n                                    <button class=\"inline-flex whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground text-left border rounded-xl px-4 py-3.5 text-sm flex-1 gap-1 sm:flex-col w-full h-auto justify-start items-start\">\n                                        <span class=\"font-medium\">Help me write an essay</span>\n                                        <span class=\"text-muted-foreground\">about silicon valley</span>\n                                    </button>\n                                </div>\n                                <div class=\"hidden sm:block\" style=\"opacity:0;transform:translateY(20px)\">\n                                    <button class=\"inline-flex whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground text-left border rounded-xl px-4 py-3.5 text-sm flex-1 gap-1 sm:flex-col w-full h-auto justify-start items-start\">\n                                        <span class=\"font-medium\">What is the weather</span>\n                                        <span class=\"text-muted-foreground\">in San Francisco?</span>\n                                    </button>\n                                </div>\n                            </div>\n                            <input type=\"file\" accept=\"image/*\" class=\"fixed -top-4 -left-4 size-0.5 opacity-0 pointer-events-none\" multiple=\"\" tabindex=\"-1\"/>\n                            <textarea class=\"flex w-full border border-input px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm min-h-[24px] max-h-[calc(75dvh)] overflow-hidden resize-none rounded-2xl !text-base bg-muted pb-10 dark:border-zinc-700\" data-testid=\"multimodal-input\" placeholder=\"Send a message...\" rows=\"2\" autofocus=\"\"></textarea>\n                            <div class=\"absolute bottom-0 p-2 w-fit flex flex-row justify-start\">\n                                <button class=\"inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:text-accent-foreground rounded-md rounded-bl-lg p-[7px] h-fit dark:border-zinc-700 hover:dark:bg-zinc-900 hover:bg-zinc-200\" data-testid=\"attachments-button\">\n                                    <svg height=\"14\" stroke-linejoin=\"round\" viewBox=\"0 0 16 16\" width=\"14\" style=\"color:currentcolor\" class=\"-rotate-45\">\n                                        <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10.8591 1.70735C10.3257 1.70735 9.81417 1.91925 9.437 2.29643L3.19455 8.53886C2.56246 9.17095 2.20735 10.0282 2.20735 10.9222C2.20735 11.8161 2.56246 12.6734 3.19455 13.3055C3.82665 13.9376 4.68395 14.2927 5.57786 14.2927C6.47178 14.2927 7.32908 13.9376 7.96117 13.3055L14.2036 7.06304L14.7038 6.56287L15.7041 7.56321L15.204 8.06337L8.96151 14.3058C8.06411 15.2032 6.84698 15.7074 5.57786 15.7074C4.30875 15.7074 3.09162 15.2032 2.19422 14.3058C1.29682 13.4084 0.792664 12.1913 0.792664 10.9222C0.792664 9.65305 1.29682 8.43592 2.19422 7.53852L8.43666 1.29609C9.07914 0.653606 9.95054 0.292664 10.8591 0.292664C11.7678 0.292664 12.6392 0.653606 13.2816 1.29609C13.9241 1.93857 14.2851 2.80997 14.2851 3.71857C14.2851 4.62718 13.9241 5.49858 13.2816 6.14106L13.2814 6.14133L7.0324 12.3835C7.03231 12.3836 7.03222 12.3837 7.03213 12.3838C6.64459 12.7712 6.11905 12.9888 5.57107 12.9888C5.02297 12.9888 4.49731 12.7711 4.10974 12.3835C3.72217 11.9959 3.50444 11.4703 3.50444 10.9222C3.50444 10.3741 3.72217 9.8484 4.10974 9.46084L4.11004 9.46054L9.877 3.70039L10.3775 3.20051L11.3772 4.20144L10.8767 4.70131L5.11008 10.4612C5.11005 10.4612 5.11003 10.4612 5.11 10.4613C4.98779 10.5835 4.91913 10.7493 4.91913 10.9222C4.91913 11.0951 4.98782 11.2609 5.11008 11.3832C5.23234 11.5054 5.39817 11.5741 5.57107 11.5741C5.74398 11.5741 5.9098 11.5054 6.03206 11.3832L6.03233 11.3829L12.2813 5.14072C12.2814 5.14063 12.2815 5.14054 12.2816 5.14045C12.6586 4.7633 12.8704 4.25185 12.8704 3.71857C12.8704 3.18516 12.6585 2.6736 12.2813 2.29643C11.9041 1.91925 11.3926 1.70735 10.8591 1.70735Z\" fill=\"currentColor\"></path>\n                                    </svg>\n                                </button>\n                                <button class=\"inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:text-accent-foreground ml-1 rounded-md p-[7px] h-fit dark:border-zinc-700 hover:dark:bg-zinc-900 hover:bg-zinc-200\" data-testid=\"kb-button\">\n                                    <svg height=\"14\" stroke-linejoin=\"round\" viewBox=\"0 0 16 16\" width=\"14\" style=\"color:currentcolor\">\n                                        <path fill-rule=\"evenodd\" d=\"M6 8V1h1v6.117L8.743 6.07a.5.5 0 0 1 .514 0L11 7.117V1h1v7a.5.5 0 0 1-.757.429L9 7.083 6.757 8.43A.5.5 0 0 1 6 8\"></path>\n                                        <path d=\"M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2\"></path>\n                                        <path d=\"M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z\"></path>\n                                    </svg>\n                                </button>\n                            </div>\n                            <div class=\"absolute bottom-0 right-0 p-2 w-fit flex flex-row justify-end\">\n                                <button class=\"inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 rounded-full p-1.5 h-fit border dark:border-zinc-600\" data-testid=\"send-button\" disabled=\"\">\n                                    <svg height=\"14\" stroke-linejoin=\"round\" viewBox=\"0 0 16 16\" width=\"14\" style=\"color:currentcolor\">\n                                        <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8.70711 1.39644C8.31659 1.00592 7.68342 1.00592 7.2929 1.39644L2.21968 6.46966L1.68935 6.99999L2.75001 8.06065L3.28034 7.53032L7.25001 3.56065V14.25V15H8.75001V14.25V3.56065L12.7197 7.53032L13.25 8.06065L14.3107 6.99999L13.7803 6.46966L8.70711 1.39644Z\" fill=\"currentColor\"></path>\n                                    </svg>\n                                </button>\n                            </div>\n                        </div>\n                    </form>\n                </div>\n                <!--$-->\n                <!--/$-->\n                <!--$-->\n                <!--/$-->\n            </main>\n        </div>\n        <script src=\"/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_01c45518._.js\" async=\"\"></script>\n        <script>(self.__next_f=self.__next_f||[]).push([0])</script>\n        <script>self.__next_f.push([1,\"3:\\\"$Sreact.fragment\\\"\\n5:I[\\\"[project]/node_modules/next/dist/client/components/layout-router.js [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/node_modules_next_dist_1a6ee436._.js\\\",\\\"/_next/static/chunks/app_favicon_ico_mjs_feb59115._.js\\\"],\\\"default\\\"]\\n6:I[\\\"[project]/node_modules/next/dist/client/components/render-from-template-context.js [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/node_modules_next_dist_1a6ee436._.js\\\",\\\"/_next/static/chunks/app_favicon_ico_mjs_feb59115._.js\\\"],\\\"default\\\"]\\nf:I[\\\"[project]/node_modules/next/dist/client/components/metadata/metadata-boundary.js [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/node_modules_next_dist_1a6ee436._.js\\\",\\\"/_next/static/chunks/app_favicon_ico_mjs_feb59115._.js\\\"],\\\"MetadataBoundary\\\"]\\n12:I[\\\"[project]/node_modules/next/dist/client/components/metadata/metadata-boundary.js [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/node_modules_next_dist_1a6ee436._.js\\\",\\\"/_next/static/chunks/app_favicon_ico_mjs_feb59115._.js\\\"],\\\"OutletBoundary\\\"]\\n19:I[\\\"[project]/node_modules/next/dist/client/components/metadata/async-metadata.js [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/node_modules_next_dist_1a6ee436._.js\\\",\\\"/_next/static/chunks/app_favicon_ico_mjs_feb59115._.js\\\"],\\\"AsyncMetadataOutlet\\\"]\\n1f:I[\\\"[project]/node_modules/next/dist/client/components/metadata/metadata-boundary.js [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/node_modules_next_dist_1a6ee436._.js\\\",\\\"/_next/static/chunks/app_favicon_ico_mjs_feb59115._.js\\\"],\\\"ViewportBoundary\\\"]\\n25:I[\\\"[project]/node_modules/next/dist/client/components/error-boundary.js [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/node_modules_next_dist_1a6ee436._.js\\\",\\\"/_next/static/chunks/app_favicon_ico_mjs_feb59115._.js\\\"],\\\"default\\\"]\\n26:I[\\\"[project]/components/theme-provider.tsx [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/_33c6a35b._.js\\\",\\\"/_next/static/chunks/app_layout_tsx_26c2bb0e._.js\\\"],\\\"ThemeProvider\\\"]\\n27:I[\\\"[project]/node_modules/sonner/dist/index.mjs [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/_33c6a35b._.js\\\",\\\"/_next/stat\"])</script>\n        <script>self.__next_f.push([1,\"ic/chunks/app_layout_tsx_26c2bb0e._.js\\\"],\\\"Toaster\\\"]\\n2b:\\\"$Sreact.suspense\\\"\\n2c:I[\\\"[project]/node_modules/next/dist/client/components/metadata/async-metadata.js [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/node_modules_next_dist_1a6ee436._.js\\\",\\\"/_next/static/chunks/app_favicon_ico_mjs_feb59115._.js\\\"],\\\"AsyncMetadata\\\"]\\n:HL[\\\"/_next/static/chunks/%5Broot-of-the-server%5D__4d3d4bd4._.css\\\",\\\"style\\\"]\\n:HL[\\\"/_next/static/media/gyByhwUxId8gMEwcGFWNOITd-s.p.da1ebef7.woff2\\\",\\\"font\\\",{\\\"crossOrigin\\\":\\\"\\\",\\\"type\\\":\\\"font/woff2\\\"}]\\n:HL[\\\"/_next/static/media/or3nQ6H_1_WfwkMZI_qYFrcdmhHkjko-s.p.be19f591.woff2\\\",\\\"font\\\",{\\\"crossOrigin\\\":\\\"\\\",\\\"type\\\":\\\"font/woff2\\\"}]\\n:HL[\\\"/_next/static/chunks/node_modules_react-data-grid_lib_styles_fb0a7daf.css\\\",\\\"style\\\"]\\n:N1745582624085.7869\\n2:{\\\"name\\\":\\\"Preloads\\\",\\\"env\\\":\\\"Server\\\",\\\"key\\\":null,\\\"owner\\\":null,\\\"stack\\\":[],\\\"props\\\":{\\\"preloadCallbacks\\\":[\\\"$E(()=\\u003e{ctx.componentMod.preloadStyle(fullHref,ctx.renderOpts.crossOrigin,ctx.nonce)})\\\",\\\"$E(()=\\u003e{ctx.componentMod.preloadFont(href,type,ctx.renderOpts.crossOrigin,ctx.nonce)})\\\",\\\"$E(()=\\u003e{ctx.componentMod.preloadFont(href,type,ctx.renderOpts.crossOrigin,ctx.nonce)})\\\",\\\"$E(()=\\u003e{ctx.componentMod.preloadStyle(fullHref,ctx.renderOpts.crossOrigin,ctx.nonce)})\\\"]}}\\n1:D{\\\"time\\\":8.234600000083447}\\n1:D\\\"$2\\\"\\n1:D{\\\"time\\\":9.376999999862164}\\n1:null\\n7:{\\\"name\\\":\\\"RootLayout\\\",\\\"env\\\":\\\"Server\\\",\\\"key\\\":null,\\\"owner\\\":null,\\\"stack\\\":[],\\\"props\\\":{\\\"children\\\":[\\\"$\\\",\\\"$L5\\\",null,{\\\"parallelRouterKey\\\":\\\"children\\\",\\\"error\\\":\\\"$undefined\\\",\\\"errorStyles\\\":\\\"$undefined\\\",\\\"errorScripts\\\":\\\"$undefined\\\",\\\"template\\\":[\\\"$\\\",\\\"$3\\\",null,{\\\"children\\\":[\\\"$\\\",\\\"$L6\\\",null,{},null,[],1]},null,[],0],\\\"templateStyles\\\":\\\"$undefined\\\",\\\"templateScripts\\\":\\\"$undefined\\\",\\\"notFound\\\":\\\"$Y\\\",\\\"forbidden\\\":\\\"$undefined\\\",\\\"unauthorized\\\":\\\"$undefined\\\"},null,[],1],\\\"params\\\":\\\"$Y\\\"}}\\n4:D{\\\"time\\\":12.268099999986589}\\n4:D\\\"$7\\\"\\n9:{\\\"name\\\":\\\"Layout\\\",\\\"env\\\":\\\"Server\\\",\\\"key\\\":null,\\\"owner\\\":null,\\\"stack\\\":[],\\\"props\\\":{\\\"children\\\":[\\\"$\\\",\\\"$L5\\\",null,{\\\"parallelRouterKey\\\":\\\"children\\\",\\\"error\\\":\\\"$undefined\\\",\\\"errorStyles\\\":\\\"$undefined\\\",\\\"errorScripts\\\":\\\"$undefined\\\",\\\"template\\\":[\\\"$\\\",\\\"$3\\\",null,{\\\"children\\\":[\\\"$\\\",\\\"$L6\\\",null,{},n\"])</script>\n        <script>self.__next_f.push([1,\"ull,[],1]},null,[],0],\\\"templateStyles\\\":\\\"$undefined\\\",\\\"templateScripts\\\":\\\"$undefined\\\",\\\"notFound\\\":\\\"$Y\\\",\\\"forbidden\\\":\\\"$undefined\\\",\\\"unauthorized\\\":\\\"$undefined\\\"},null,[],1],\\\"params\\\":\\\"$Y\\\"}}\\n8:D{\\\"time\\\":15.608099999837577}\\n8:D\\\"$9\\\"\\nb:{\\\"name\\\":\\\"Page\\\",\\\"env\\\":\\\"Server\\\",\\\"key\\\":null,\\\"owner\\\":null,\\\"stack\\\":[],\\\"props\\\":{\\\"params\\\":\\\"$@\\\",\\\"searchParams\\\":\\\"$@\\\"}}\\na:D{\\\"time\\\":18.30519999982789}\\na:D\\\"$b\\\"\\nd:{\\\"name\\\":\\\"\\\",\\\"env\\\":\\\"Server\\\",\\\"key\\\":null,\\\"owner\\\":null,\\\"stack\\\":[],\\\"props\\\":{}}\\nc:D{\\\"time\\\":18.88290000008419}\\nc:D\\\"$d\\\"\\ne:{\\\"name\\\":\\\"MetadataTree\\\",\\\"env\\\":\\\"Server\\\",\\\"key\\\":null,\\\"owner\\\":null,\\\"stack\\\":[],\\\"props\\\":{}}\\nc:D{\\\"time\\\":19.126300000119954}\\nc:D\\\"$e\\\"\\nc:D{\\\"time\\\":21.29300000006333}\\n11:{\\\"name\\\":\\\"__next_metadata_boundary__\\\",\\\"env\\\":\\\"Server\\\",\\\"key\\\":null,\\\"owner\\\":\\\"$e\\\",\\\"stack\\\":[],\\\"props\\\":{}}\\n10:D{\\\"time\\\":21.565899999812245}\\n10:D\\\"$11\\\"\\nc:[\\\"$\\\",\\\"$Lf\\\",null,{\\\"children\\\":\\\"$L10\\\"},\\\"$e\\\",[],1]\\n14:{\\\"name\\\":\\\"__next_outlet_boundary__\\\",\\\"env\\\":\\\"Server\\\",\\\"key\\\":null,\\\"owner\\\":null,\\\"stack\\\":[],\\\"props\\\":{\\\"ready\\\":\\\"$E(async function getViewportReady() {\\\\n        await viewport();\\\\n        return undefined;\\\\n    })\\\"}}\\n13:D{\\\"time\\\":26.31900000013411}\\n13:D\\\"$14\\\"\\n16:{\\\"name\\\":\\\"__next_outlet_boundary__\\\",\\\"env\\\":\\\"Server\\\",\\\"key\\\":null,\\\"owner\\\":null,\\\"stack\\\":[],\\\"props\\\":{\\\"ready\\\":\\\"$E(async function getMetadataReady() {\\\\n        // Only warm up metadata() call when it's blocking metadata,\\\\n        // otherwise it will be fully managed by AsyncMetadata component.\\\\n        if (!serveStreamingMetadata) {\\\\n            await metadata();\\\\n        }\\\\n        return undefined;\\\\n    })\\\"}}\\n15:D{\\\"time\\\":27.33229999989271}\\n15:D\\\"$16\\\"\\n18:{\\\"name\\\":\\\"StreamingMetadataOutlet\\\",\\\"env\\\":\\\"Server\\\",\\\"key\\\":null,\\\"owner\\\":null,\\\"stack\\\":[],\\\"props\\\":{}}\\n17:D{\\\"time\\\":27.925799999851733}\\n17:D\\\"$18\\\"\\n17:D{\\\"time\\\":28.237199999857694}\\n17:[\\\"$\\\",\\\"$L19\\\",null,{\\\"promise\\\":\\\"$@1a\\\"},\\\"$18\\\",[],1]\\n1c:{\\\"name\\\":\\\"NonIndex\\\",\\\"env\\\":\\\"Server\\\",\\\"key\\\":null,\\\"owner\\\":null,\\\"stack\\\":[],\\\"props\\\":{\\\"pagePath\\\":\\\"/\\\",\\\"statusCode\\\":200,\\\"isAction\\\":false}}\\n1b:D{\\\"time\\\":28.90789999999106}\\n1b:D\\\"$1c\\\"\\n1b:D{\\\"time\\\":29.06389999995008}\\n1b:null\\n1e:{\\\"name\\\":\\\"ViewportTree\\\",\\\"env\\\":\\\"Server\\\",\\\"key\\\":\\\"s8amyc8-fT69PJWjP6dzx\\\",\\\"owner\\\":\"])</script>\n        <script>self.__next_f.push([1,\"null,\\\"stack\\\":[],\\\"props\\\":{}}\\n1d:D{\\\"time\\\":29.311199999880046}\\n1d:D\\\"$1e\\\"\\n1d:D{\\\"time\\\":29.82590000005439}\\n21:{\\\"name\\\":\\\"__next_viewport_boundary__\\\",\\\"env\\\":\\\"Server\\\",\\\"key\\\":null,\\\"owner\\\":\\\"$1e\\\",\\\"stack\\\":[],\\\"props\\\":{}}\\n20:D{\\\"time\\\":30.07979999994859}\\n20:D\\\"$21\\\"\\n1d:[\\\"$\\\",\\\"$3\\\",\\\"s8amyc8-fT69PJWjP6dzx\\\",{\\\"children\\\":[[\\\"$\\\",\\\"$L1f\\\",null,{\\\"children\\\":\\\"$L20\\\"},\\\"$1e\\\",[],1],[\\\"$\\\",\\\"meta\\\",null,{\\\"name\\\":\\\"next-size-adjust\\\",\\\"content\\\":\\\"\\\"},\\\"$1e\\\",[],1]]},null,null,0]\\n23:{\\\"name\\\":\\\"\\\",\\\"env\\\":\\\"Server\\\",\\\"key\\\":null,\\\"owner\\\":null,\\\"stack\\\":[],\\\"props\\\":{}}\\n22:D{\\\"time\\\":30.59929999988526}\\n22:D\\\"$23\\\"\\n22:D{\\\"time\\\":30.64060000004247}\\n22:null\\n24:[]\\n\"])</script>\n        <script>self.__next_f.push([1,\"0:{\\\"P\\\":\\\"$1\\\",\\\"b\\\":\\\"development\\\",\\\"p\\\":\\\"\\\",\\\"c\\\":[\\\"\\\",\\\"\\\"],\\\"i\\\":false,\\\"f\\\":[[[\\\"\\\",{\\\"children\\\":[\\\"(chat)\\\",{\\\"children\\\":[\\\"__PAGE__\\\",{}]}]},\\\"$undefined\\\",\\\"$undefined\\\",true],[\\\"\\\",[\\\"$\\\",\\\"$3\\\",\\\"c\\\",{\\\"children\\\":[[[\\\"$\\\",\\\"link\\\",\\\"0\\\",{\\\"rel\\\":\\\"stylesheet\\\",\\\"href\\\":\\\"/_next/static/chunks/%5Broot-of-the-server%5D__4d3d4bd4._.css\\\",\\\"precedence\\\":\\\"next_static/chunks/[root-of-the-server]__4d3d4bd4._.css\\\",\\\"crossOrigin\\\":\\\"$undefined\\\",\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/_33c6a35b._.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/app_layout_tsx_26c2bb0e._.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0]],\\\"$L4\\\"]},null,[],0],{\\\"children\\\":[\\\"(chat)\\\",[\\\"$\\\",\\\"$3\\\",\\\"c\\\",{\\\"children\\\":[[[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/_866deadc._.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/node_modules_next_c85fb1f2._.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-2\\\",{\\\"src\\\":\\\"/_next/static/chunks/node_modules_framer-motion_dist_es_92139a2a._.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-3\\\",{\\\"src\\\":\\\"/_next/static/chunks/node_modules_swr_dist_a9801644._.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-4\\\",{\\\"src\\\":\\\"/_next/static/chunks/node_modules_e38022db._.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-5\\\",{\\\"src\\\":\\\"/_next/static/chunks/app_(chat)_layout_tsx_b685bb48._.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0]],\\\"$L8\\\"]},null,[],0],{\\\"children\\\":[\\\"__PAGE__\\\",[\\\"$\\\",\\\"$3\\\",\\\"c\\\",{\\\"children\\\":[\\\"$La\\\",\\\"$c\\\",[[\\\"$\\\",\\\"link\\\",\\\"0\\\",{\\\"rel\\\":\\\"stylesheet\\\",\\\"href\\\":\\\"/_next/static/chunks/node_modules_react-data-grid_lib_styles_fb0a7daf.css\\\",\\\"precedence\\\":\\\"next_static/chunks/node_modules_react-data-grid_lib_styles_fb0a7daf.css\\\",\\\"crossOrigin\\\":\\\"$undefined\\\",\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/_78c74842._.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/node_modules_next_dist_compiled_db152a47._.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-2\\\",{\\\"src\\\":\\\"/_next/static/chunks/node_modules_zod_lib_index_mjs_ee760afb._.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-3\\\",{\\\"src\\\":\\\"/_next/static/chunks/node_modules_micromark-core-commonmark_dev_lib_36a4b45d._.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-4\\\",{\\\"src\\\":\\\"/_next/static/chunks/node_modules_prosemirror-view_dist_index_212d9a9b.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-5\\\",{\\\"src\\\":\\\"/_next/static/chunks/node_modules_entities_lib_esm_3b43f604._.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-6\\\",{\\\"src\\\":\\\"/_next/static/chunks/node_modules_markdown-it_c9117e0a._.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-7\\\",{\\\"src\\\":\\\"/_next/static/chunks/node_modules_%40codemirror_state_dist_index_9b015ec1.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-8\\\",{\\\"src\\\":\\\"/_next/static/chunks/node_modules_%40codemirror_view_dist_index_201017eb.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-9\\\",{\\\"src\\\":\\\"/_next/static/chunks/node_modules_react-data-grid_lib_bundle_f8bf325b.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-10\\\",{\\\"src\\\":\\\"/_next/static/chunks/node_modules_%40ai-sdk_react_1a5af7fb._.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-11\\\",{\\\"src\\\":\\\"/_next/static/chunks/node_modules_%40lezer_e0dd4b0b._.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-12\\\",{\\\"src\\\":\\\"/_next/static/chunks/node_modules_%40codemirror_4de5c195._.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-13\\\",{\\\"src\\\":\\\"/_next/static/chunks/node_modules_342b5cd0._.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-14\\\",{\\\"src\\\":\\\"/_next/static/chunks/app_(chat)_page_tsx_ba3270d6._.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0]],[\\\"$\\\",\\\"$L12\\\",null,{\\\"children\\\":[\\\"$L13\\\",\\\"$L15\\\",\\\"$17\\\"]},null,[],1]]},null,[],0],{},null,false]},null,false]},null,false],[\\\"$\\\",\\\"$3\\\",\\\"h\\\",{\\\"children\\\":[\\\"$1b\\\",\\\"$1d\\\",\\\"$22\\\"]},null,[],0],false]],\\\"m\\\":\\\"$W24\\\",\\\"G\\\":[\\\"$25\\\",\\\"$undefined\\\"],\\\"s\\\":false,\\\"S\\\":false}\\n\"])</script>\n        <script>self.__next_f.push([1,\"4:D{\\\"time\\\":31.468100000172853}\\n29:{\\\"name\\\":\\\"NotFound\\\",\\\"env\\\":\\\"Server\\\",\\\"key\\\":null,\\\"owner\\\":null,\\\"stack\\\":[],\\\"props\\\":{}}\\n28:D{\\\"time\\\":32.41649999981746}\\n28:D\\\"$29\\\"\\n2a:{\\\"name\\\":\\\"HTTPAccessErrorFallback\\\",\\\"env\\\":\\\"Server\\\",\\\"key\\\":null,\\\"owner\\\":\\\"$29\\\",\\\"stack\\\":[],\\\"props\\\":{\\\"status\\\":404,\\\"message\\\":\\\"This page could not be found.\\\"}}\\n28:D{\\\"time\\\":32.73549999995157}\\n28:D\\\"$2a\\\"\\n28:D{\\\"time\\\":33.39559999993071}\\n28:[[\\\"$\\\",\\\"title\\\",null,{\\\"children\\\":\\\"404: This page could not be found.\\\"},\\\"$2a\\\",[],1],[\\\"$\\\",\\\"div\\\",null,{\\\"style\\\":{\\\"fontFamily\\\":\\\"system-ui,\\\\\\\"Segoe UI\\\\\\\",Roboto,Helvetica,Arial,sans-serif,\\\\\\\"Apple Color Emoji\\\\\\\",\\\\\\\"Segoe UI Emoji\\\\\\\"\\\",\\\"height\\\":\\\"100vh\\\",\\\"textAlign\\\":\\\"center\\\",\\\"display\\\":\\\"flex\\\",\\\"flexDirection\\\":\\\"column\\\",\\\"alignItems\\\":\\\"center\\\",\\\"justifyContent\\\":\\\"center\\\"},\\\"children\\\":[\\\"$\\\",\\\"div\\\",null,{\\\"children\\\":[[\\\"$\\\",\\\"style\\\",null,{\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\\\"}},\\\"$2a\\\",[],1],[\\\"$\\\",\\\"h1\\\",null,{\\\"className\\\":\\\"next-error-h1\\\",\\\"style\\\":{\\\"display\\\":\\\"inline-block\\\",\\\"margin\\\":\\\"0 20px 0 0\\\",\\\"padding\\\":\\\"0 23px 0 0\\\",\\\"fontSize\\\":24,\\\"fontWeight\\\":500,\\\"verticalAlign\\\":\\\"top\\\",\\\"lineHeight\\\":\\\"49px\\\"},\\\"children\\\":404},\\\"$2a\\\",[],1],[\\\"$\\\",\\\"div\\\",null,{\\\"style\\\":{\\\"display\\\":\\\"inline-block\\\"},\\\"children\\\":[\\\"$\\\",\\\"h2\\\",null,{\\\"style\\\":{\\\"fontSize\\\":14,\\\"fontWeight\\\":400,\\\"lineHeight\\\":\\\"49px\\\",\\\"margin\\\":0},\\\"children\\\":\\\"This page could not be found.\\\"},\\\"$2a\\\",[],1]},\\\"$2a\\\",[],1]]},\\\"$2a\\\",[],1]},\\\"$2a\\\",[],1]]\\n\"])</script>\n        <script>self.__next_f.push([1,\"4:[\\\"$\\\",\\\"html\\\",null,{\\\"lang\\\":\\\"en\\\",\\\"suppressHydrationWarning\\\":true,\\\"className\\\":\\\"geist_530f5508-module__OOnSwq__variable geist_mono_8f4ee38b-module__1fn3BW__variable\\\",\\\"children\\\":[[\\\"$\\\",\\\"head\\\",null,{\\\"children\\\":[\\\"$\\\",\\\"script\\\",null,{\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"(function() {\\\\n  var html = document.documentElement;\\\\n  var meta = document.querySelector('meta[name=\\\\\\\"theme-color\\\\\\\"]');\\\\n  if (!meta) {\\\\n    meta = document.createElement('meta');\\\\n    meta.setAttribute('name', 'theme-color');\\\\n    document.head.appendChild(meta);\\\\n  }\\\\n  function updateThemeColor() {\\\\n    var isDark = html.classList.contains('dark');\\\\n    meta.setAttribute('content', isDark ? 'hsl(240deg 10% 3.92%)' : 'hsl(0 0% 100%)');\\\\n  }\\\\n  var observer = new MutationObserver(updateThemeColor);\\\\n  observer.observe(html, { attributes: true, attributeFilter: ['class'] });\\\\n  updateThemeColor();\\\\n})();\\\"}},\\\"$7\\\",[[\\\"RootLayout\\\",\\\"D:\\\\\\\\Lecture\\\\\\\\FinalProject\\\\\\\\7-DevEnv\\\\\\\\ASCGBot\\\\\\\\.next\\\\\\\\server\\\\\\\\chunks\\\\\\\\ssr\\\\\\\\[root-of-the-server]__c7679922._.js\\\",162,278]],1]},\\\"$7\\\",[[\\\"RootLayout\\\",\\\"D:\\\\\\\\Lecture\\\\\\\\FinalProject\\\\\\\\7-DevEnv\\\\\\\\ASCGBot\\\\\\\\.next\\\\\\\\server\\\\\\\\chunks\\\\\\\\ssr\\\\\\\\[root-of-the-server]__c7679922._.js\\\",161,264]],1],[\\\"$\\\",\\\"body\\\",null,{\\\"className\\\":\\\"antialiased\\\",\\\"children\\\":[\\\"$\\\",\\\"$L26\\\",null,{\\\"attribute\\\":\\\"class\\\",\\\"defaultTheme\\\":\\\"system\\\",\\\"enableSystem\\\":true,\\\"disableTransitionOnChange\\\":true,\\\"children\\\":[[\\\"$\\\",\\\"$L27\\\",null,{\\\"position\\\":\\\"top-center\\\"},\\\"$7\\\",[[\\\"RootLayout\\\",\\\"D:\\\\\\\\Lecture\\\\\\\\FinalProject\\\\\\\\7-DevEnv\\\\\\\\ASCGBot\\\\\\\\.next\\\\\\\\server\\\\\\\\chunks\\\\\\\\ssr\\\\\\\\[root-of-the-server]__c7679922._.js\\\",184,276]],1],[\\\"$\\\",\\\"$L5\\\",null,{\\\"parallelRouterKey\\\":\\\"children\\\",\\\"error\\\":\\\"$undefined\\\",\\\"errorStyles\\\":\\\"$undefined\\\",\\\"errorScripts\\\":\\\"$undefined\\\",\\\"template\\\":[\\\"$\\\",\\\"$L6\\\",null,{},null,[],1],\\\"templateStyles\\\":\\\"$undefined\\\",\\\"templateScripts\\\":\\\"$undefined\\\",\\\"notFound\\\":[\\\"$28\\\",[]],\\\"forbidden\\\":\\\"$undefined\\\",\\\"unauthorized\\\":\\\"$undefined\\\"},null,[],1]]},\\\"$7\\\",[[\\\"RootLayout\\\",\\\"D:\\\\\\\\Lecture\\\\\\\\FinalProject\\\\\\\\7-DevEnv\\\\\\\\ASCGBot\\\\\\\\.next\\\\\\\\server\\\\\\\\chunks\\\\\\\\ssr\\\\\\\\[root-of-the-server]__c7679922._.js\\\",178,278]],1]},\\\"$7\\\",[[\\\"RootLayout\\\",\\\"D:\\\\\\\\Lecture\\\\\\\\FinalProject\\\\\\\\7-DevEnv\\\\\\\\ASCGBot\\\\\\\\.next\\\\\\\\server\\\\\\\\chunks\\\\\\\\ssr\\\\\\\\[root-of-the-server]__c7679922._.js\\\",176,264]],1]]},\\\"$7\\\",[[\\\"RootLayout\\\",\\\"D:\\\\\\\\Lecture\\\\\\\\FinalProject\\\\\\\\7-DevEnv\\\\\\\\ASCGBot\\\\\\\\.next\\\\\\\\server\\\\\\\\chunks\\\\\\\\ssr\\\\\\\\[root-of-the-server]__c7679922._.js\\\",152,263]],1]\\n\"])</script>\n        <script>self.__next_f.push([1,\"10:D{\\\"time\\\":34.13430000003427}\\n10:[\\\"$\\\",\\\"$2b\\\",null,{\\\"fallback\\\":null,\\\"children\\\":[\\\"$\\\",\\\"$L2c\\\",null,{\\\"promise\\\":\\\"$@2d\\\"},\\\"$11\\\",[],1]},\\\"$11\\\",[],1]\\n15:D{\\\"time\\\":35.01269999984652}\\n15:null\\n20:D{\\\"time\\\":36.37790000019595}\\n20:[[\\\"$\\\",\\\"meta\\\",\\\"0\\\",{\\\"charSet\\\":\\\"utf-8\\\"},\\\"$14\\\",[],0],[\\\"$\\\",\\\"meta\\\",\\\"1\\\",{\\\"name\\\":\\\"viewport\\\",\\\"content\\\":\\\"width=device-width, initial-scale=1, maximum-scale=1\\\"},\\\"$14\\\",[],0]]\\n13:D{\\\"time\\\":36.548200000077486}\\n13:null\\n\"])</script>\n        <script>self.__next_f.push([1,\"2e:I[\\\"[project]/components/chat.tsx [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/_33c6a35b._.js\\\",\\\"/_next/static/chunks/app_layout_tsx_26c2bb0e._.js\\\",\\\"/_next/static/chunks/_866deadc._.js\\\",\\\"/_next/static/chunks/node_modules_next_c85fb1f2._.js\\\",\\\"/_next/static/chunks/node_modules_framer-motion_dist_es_92139a2a._.js\\\",\\\"/_next/static/chunks/node_modules_swr_dist_a9801644._.js\\\",\\\"/_next/static/chunks/node_modules_e38022db._.js\\\",\\\"/_next/static/chunks/app_(chat)_layout_tsx_b685bb48._.js\\\",\\\"/_next/static/chunks/_78c74842._.js\\\",\\\"/_next/static/chunks/node_modules_next_dist_compiled_db152a47._.js\\\",\\\"/_next/static/chunks/node_modules_zod_lib_index_mjs_ee760afb._.js\\\",\\\"/_next/static/chunks/node_modules_micromark-core-commonmark_dev_lib_36a4b45d._.js\\\",\\\"/_next/static/chunks/node_modules_prosemirror-view_dist_index_212d9a9b.js\\\",\\\"/_next/static/chunks/node_modules_entities_lib_esm_3b43f604._.js\\\",\\\"/_next/static/chunks/node_modules_markdown-it_c9117e0a._.js\\\",\\\"/_next/static/chunks/node_modules_%40codemirror_state_dist_index_9b015ec1.js\\\",\\\"/_next/static/chunks/node_modules_%40codemirror_view_dist_index_201017eb.js\\\",\\\"/_next/static/chunks/node_modules_react-data-grid_lib_bundle_f8bf325b.js\\\",\\\"/_next/static/chunks/node_modules_%40ai-sdk_react_1a5af7fb._.js\\\",\\\"/_next/static/chunks/node_modules_%40lezer_e0dd4b0b._.js\\\",\\\"/_next/static/chunks/node_modules_%40codemirror_4de5c195._.js\\\",\\\"/_next/static/chunks/node_modules_342b5cd0._.js\\\",\\\"/_next/static/chunks/app_(chat)_page_tsx_ba3270d6._.js\\\"],\\\"Chat\\\"]\\n2f:I[\\\"[project]/components/data-stream-handler.tsx [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/_33c6a35b._.js\\\",\\\"/_next/static/chunks/app_layout_tsx_26c2bb0e._.js\\\",\\\"/_next/static/chunks/_866deadc._.js\\\",\\\"/_next/static/chunks/node_modules_next_c85fb1f2._.js\\\",\\\"/_next/static/chunks/node_modules_framer-motion_dist_es_92139a2a._.js\\\",\\\"/_next/static/chunks/node_modules_swr_dist_a9801644._.js\\\",\\\"/_next/static/chunks/node_modules_e38022db._.js\\\",\\\"/_next/static/chunks/app_(chat)_layout_tsx_b685bb48._.js\\\",\\\"/_next/static/chunks/_78c74842._.js\\\",\\\"/_next/static/chunk\"])</script>\n        <script>self.__next_f.push([1,\"s/node_modules_next_dist_compiled_db152a47._.js\\\",\\\"/_next/static/chunks/node_modules_zod_lib_index_mjs_ee760afb._.js\\\",\\\"/_next/static/chunks/node_modules_micromark-core-commonmark_dev_lib_36a4b45d._.js\\\",\\\"/_next/static/chunks/node_modules_prosemirror-view_dist_index_212d9a9b.js\\\",\\\"/_next/static/chunks/node_modules_entities_lib_esm_3b43f604._.js\\\",\\\"/_next/static/chunks/node_modules_markdown-it_c9117e0a._.js\\\",\\\"/_next/static/chunks/node_modules_%40codemirror_state_dist_index_9b015ec1.js\\\",\\\"/_next/static/chunks/node_modules_%40codemirror_view_dist_index_201017eb.js\\\",\\\"/_next/static/chunks/node_modules_react-data-grid_lib_bundle_f8bf325b.js\\\",\\\"/_next/static/chunks/node_modules_%40ai-sdk_react_1a5af7fb._.js\\\",\\\"/_next/static/chunks/node_modules_%40lezer_e0dd4b0b._.js\\\",\\\"/_next/static/chunks/node_modules_%40codemirror_4de5c195._.js\\\",\\\"/_next/static/chunks/node_modules_342b5cd0._.js\\\",\\\"/_next/static/chunks/app_(chat)_page_tsx_ba3270d6._.js\\\"],\\\"DataStreamHandler\\\"]\\na:D{\\\"time\\\":74.61549999983981}\\na:[[\\\"$\\\",\\\"$L2e\\\",\\\"bbe67584-008a-4cf2-adba-77784310e5be\\\",{\\\"id\\\":\\\"bbe67584-008a-4cf2-adba-77784310e5be\\\",\\\"initialMessages\\\":[],\\\"selectedChatModel\\\":\\\"chat-model\\\",\\\"selectedVisibilityType\\\":\\\"private\\\",\\\"isReadonly\\\":false},\\\"$b\\\",[[\\\"Page\\\",\\\"D:\\\\\\\\Lecture\\\\\\\\FinalProject\\\\\\\\7-DevEnv\\\\\\\\ASCGBot\\\\\\\\.next\\\\\\\\server\\\\\\\\chunks\\\\\\\\ssr\\\\\\\\_7947e6e2._.js\\\",1070,268]],1],[\\\"$\\\",\\\"$L2f\\\",null,{\\\"id\\\":\\\"bbe67584-008a-4cf2-adba-77784310e5be\\\"},\\\"$b\\\",[[\\\"Page\\\",\\\"D:\\\\\\\\Lecture\\\\\\\\FinalProject\\\\\\\\7-DevEnv\\\\\\\\ASCGBot\\\\\\\\.next\\\\\\\\server\\\\\\\\chunks\\\\\\\\ssr\\\\\\\\_7947e6e2._.js\\\",1081,268]],1]]\\n2d:D{\\\"time\\\":75.3609000002034}\\n2d:{\\\"metadata\\\":[[\\\"$\\\",\\\"title\\\",\\\"0\\\",{\\\"children\\\":\\\"Next.js Chatbot Template\\\"},\\\"$11\\\",[],0],[\\\"$\\\",\\\"meta\\\",\\\"1\\\",{\\\"name\\\":\\\"description\\\",\\\"content\\\":\\\"Next.js chatbot template using the AI SDK.\\\"},\\\"$11\\\",[],0],[\\\"$\\\",\\\"link\\\",\\\"2\\\",{\\\"rel\\\":\\\"icon\\\",\\\"href\\\":\\\"/favicon.ico?favicon.46d6a819.ico\\\",\\\"sizes\\\":\\\"48x48\\\",\\\"type\\\":\\\"image/x-icon\\\"},\\\"$11\\\",[],0]],\\\"error\\\":null,\\\"digest\\\":\\\"$undefined\\\"}\\n1a:D{\\\"time\\\":75.6414999999106}\\n1a:{\\\"metadata\\\":\\\"$2d:metadata\\\",\\\"error\\\":null,\\\"digest\\\":\\\"$undefined\\\"}\\n\"])</script>\n        <script>self.__next_f.push([1,\"30:I[\\\"[project]/node_modules/next/dist/client/script.js [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/_33c6a35b._.js\\\",\\\"/_next/static/chunks/app_layout_tsx_26c2bb0e._.js\\\",\\\"/_next/static/chunks/_866deadc._.js\\\",\\\"/_next/static/chunks/node_modules_next_c85fb1f2._.js\\\",\\\"/_next/static/chunks/node_modules_framer-motion_dist_es_92139a2a._.js\\\",\\\"/_next/static/chunks/node_modules_swr_dist_a9801644._.js\\\",\\\"/_next/static/chunks/node_modules_e38022db._.js\\\",\\\"/_next/static/chunks/app_(chat)_layout_tsx_b685bb48._.js\\\"],\\\"\\\"]\\n31:I[\\\"[project]/components/ui/sidebar.tsx [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/_33c6a35b._.js\\\",\\\"/_next/static/chunks/app_layout_tsx_26c2bb0e._.js\\\",\\\"/_next/static/chunks/_866deadc._.js\\\",\\\"/_next/static/chunks/node_modules_next_c85fb1f2._.js\\\",\\\"/_next/static/chunks/node_modules_framer-motion_dist_es_92139a2a._.js\\\",\\\"/_next/static/chunks/node_modules_swr_dist_a9801644._.js\\\",\\\"/_next/static/chunks/node_modules_e38022db._.js\\\",\\\"/_next/static/chunks/app_(chat)_layout_tsx_b685bb48._.js\\\"],\\\"SidebarProvider\\\"]\\n32:I[\\\"[project]/components/app-sidebar.tsx [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/_33c6a35b._.js\\\",\\\"/_next/static/chunks/app_layout_tsx_26c2bb0e._.js\\\",\\\"/_next/static/chunks/_866deadc._.js\\\",\\\"/_next/static/chunks/node_modules_next_c85fb1f2._.js\\\",\\\"/_next/static/chunks/node_modules_framer-motion_dist_es_92139a2a._.js\\\",\\\"/_next/static/chunks/node_modules_swr_dist_a9801644._.js\\\",\\\"/_next/static/chunks/node_modules_e38022db._.js\\\",\\\"/_next/static/chunks/app_(chat)_layout_tsx_b685bb48._.js\\\"],\\\"AppSidebar\\\"]\\n33:I[\\\"[project]/components/ui/sidebar.tsx [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/_33c6a35b._.js\\\",\\\"/_next/static/chunks/app_layout_tsx_26c2bb0e._.js\\\",\\\"/_next/static/chunks/_866deadc._.js\\\",\\\"/_next/static/chunks/node_modules_next_c85fb1f2._.js\\\",\\\"/_next/static/chunks/node_modules_framer-motion_dist_es_92139a2a._.js\\\",\\\"/_next/static/chunks/node_modules_swr_dist_a9801644._.js\\\",\\\"/_next/static/chunks/node_modules_e38022db._.js\\\",\\\"/_next/static/chunks/app_(chat)_layout_tsx_b685bb48._.js\\\"],\\\"SidebarInset\\\"]\\n8:D{\"])</script>\n        <script>self.__next_f.push([1,\"\\\"time\\\":103.35030000004917}\\n35:{\\\"name\\\":\\\"NotFound\\\",\\\"env\\\":\\\"Server\\\",\\\"key\\\":null,\\\"owner\\\":null,\\\"stack\\\":[],\\\"props\\\":{}}\\n34:D{\\\"time\\\":104.70919999992475}\\n34:D\\\"$35\\\"\\n36:{\\\"name\\\":\\\"HTTPAccessErrorFallback\\\",\\\"env\\\":\\\"Server\\\",\\\"key\\\":null,\\\"owner\\\":\\\"$35\\\",\\\"stack\\\":[],\\\"props\\\":{\\\"status\\\":404,\\\"message\\\":\\\"This page could not be found.\\\"}}\\n34:D{\\\"time\\\":105.03729999996722}\\n34:D\\\"$36\\\"\\n34:D{\\\"time\\\":105.76679999986663}\\n34:[[\\\"$\\\",\\\"title\\\",null,{\\\"children\\\":\\\"404: This page could not be found.\\\"},\\\"$36\\\",[],1],[\\\"$\\\",\\\"div\\\",null,{\\\"style\\\":\\\"$28:1:props:style\\\",\\\"children\\\":[\\\"$\\\",\\\"div\\\",null,{\\\"children\\\":[[\\\"$\\\",\\\"style\\\",null,{\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\\\"}},\\\"$36\\\",[],1],[\\\"$\\\",\\\"h1\\\",null,{\\\"className\\\":\\\"next-error-h1\\\",\\\"style\\\":\\\"$28:1:props:children:props:children:1:props:style\\\",\\\"children\\\":404},\\\"$36\\\",[],1],[\\\"$\\\",\\\"div\\\",null,{\\\"style\\\":\\\"$28:1:props:children:props:children:2:props:style\\\",\\\"children\\\":[\\\"$\\\",\\\"h2\\\",null,{\\\"style\\\":\\\"$28:1:props:children:props:children:2:props:children:props:style\\\",\\\"children\\\":\\\"This page could not be found.\\\"},\\\"$36\\\",[],1]},\\\"$36\\\",[],1]]},\\\"$36\\\",[],1]},\\\"$36\\\",[],1]]\\n8:[[\\\"$\\\",\\\"$L30\\\",null,{\\\"src\\\":\\\"https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js\\\",\\\"strategy\\\":\\\"beforeInteractive\\\"},\\\"$9\\\",[[\\\"Layout\\\",\\\"D:\\\\\\\\Lecture\\\\\\\\FinalProject\\\\\\\\7-DevEnv\\\\\\\\ASCGBot\\\\\\\\.next\\\\\\\\server\\\\\\\\chunks\\\\\\\\ssr\\\\\\\\[root-of-the-server]__204ea9f9._.js\\\",948,264]],1],[\\\"$\\\",\\\"$L31\\\",null,{\\\"defaultOpen\\\":false,\\\"children\\\":[[\\\"$\\\",\\\"$L32\\\",null,{\\\"user\\\":{\\\"email\\\":\\\"anxiu@example.com\\\",\\\"id\\\":\\\"fb1fed9b-865a-4efd-8ecf-a84c0d86c995\\\"}},\\\"$9\\\",[[\\\"Layout\\\",\\\"D:\\\\\\\\Lecture\\\\\\\\FinalProject\\\\\\\\7-DevEnv\\\\\\\\ASCGBot\\\\\\\\.next\\\\\\\\server\\\\\\\\chunks\\\\\\\\ssr\\\\\\\\[root-of-the-server]__204ea9f9._.js\\\",959,272]],1],[\\\"$\\\",\\\"$L33\\\",null,{\\\"children\\\":[\\\"$\\\",\\\"$L5\\\",null,{\\\"parallelRouterKey\\\":\\\"children\\\",\\\"error\\\":\\\"$undefined\\\",\\\"errorStyles\\\":\\\"$undefined\\\",\\\"errorScripts\\\":\\\"$undefined\\\",\\\"template\\\":[\\\"$\\\",\\\"$L6\\\",null,{},null,[],1],\\\"templateStyles\\\":\\\"$undefined\\\",\\\"templateScripts\\\":\\\"$und\"])</script>\n        <script>self.__next_f.push([1,\"efined\\\",\\\"notFound\\\":[\\\"$34\\\",[]],\\\"forbidden\\\":\\\"$undefined\\\",\\\"unauthorized\\\":\\\"$undefined\\\"},null,[],1]},\\\"$9\\\",[[\\\"Layout\\\",\\\"D:\\\\\\\\Lecture\\\\\\\\FinalProject\\\\\\\\7-DevEnv\\\\\\\\ASCGBot\\\\\\\\.next\\\\\\\\server\\\\\\\\chunks\\\\\\\\ssr\\\\\\\\[root-of-the-server]__204ea9f9._.js\\\",966,272]],1]]},\\\"$9\\\",[[\\\"Layout\\\",\\\"D:\\\\\\\\Lecture\\\\\\\\FinalProject\\\\\\\\7-DevEnv\\\\\\\\ASCGBot\\\\\\\\.next\\\\\\\\server\\\\\\\\chunks\\\\\\\\ssr\\\\\\\\[root-of-the-server]__204ea9f9._.js\\\",956,264]],1]]\\n\"])</script>\n    </body>\n</html>"
-						}
-					]
-				},
-				{
-					"name": "csrf",
-					"request": {
-						"auth": {
-							"type": "bearer"
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{localurl}}api/auth/csrf",
-							"host": [
-								"{{localurl}}api"
-							],
-							"path": [
-								"auth",
-								"csrf"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "csrf",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:4000/api/auth/csrf",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "4000",
-									"path": [
-										"api",
-										"auth",
-										"csrf"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "vary",
-									"value": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch"
-								},
-								{
-									"key": "content-type",
-									"value": "application/json"
-								},
-								{
-									"key": "Date",
-									"value": "Fri, 25 Apr 2025 11:59:32 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=5"
-								},
-								{
-									"key": "Transfer-Encoding",
-									"value": "chunked"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"csrfToken\": \"e639f5e3bfd61bcd11237c77572afa06cf9fedb6f15c39a5499c79aa0b98c5e3\"\n}"
-						}
-					]
-				}
-			],
-			"description": "Using Auth.js in this feature implementation.\n\nIf you need to login to this system. Please follow the following steps:\n\n1. GET [http://localhost:4000/api/auth/csrf](http://localhost:4000/api/auth/csrfEndFragment) for the csrf token and cookies.\n    \n2. POST [http://localhost:4000/api/auth/callback/credentials?json=true](http://localhost:4000/api/auth/callback/credentials?json=true) for login in, with three necessary attributions.\n    \n    1. email\n        \n    2. password\n        \n    3. csrfToken"
-		},
-		{
-			"name": "Document",
-			"item": [
-				{
-					"name": "GetDocumentById",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{localurl}}api/document?id=84534ce1-84cb-4f87-9c03-c1d46ad30d92",
-							"host": [
-								"{{localurl}}api"
-							],
-							"path": [
-								"document"
-							],
-							"query": [
-								{
-									"key": "id",
-									"value": "84534ce1-84cb-4f87-9c03-c1d46ad30d92"
-								}
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Successful Response",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:4000/api/document?id=84534ce1-84cb-4f87-9c03-c1d46ad30d92",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "4000",
-									"path": [
-										"api",
-										"document"
-									],
-									"query": [
-										{
-											"key": "id",
-											"value": "84534ce1-84cb-4f87-9c03-c1d46ad30d92"
-										}
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "set-cookie",
-									"value": "authjs.session-token=eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2Q0JDLUhTNTEyIiwia2lkIjoiZEFFOUprRGFYNVBERXJnX3hXTk5TQVQwZUtMWmZCLW05RlE2ZjV4UGFhX0o3Z0dwM191c0VxcXZDWmk0bHZ6ZEdUZWxWZHVMN3pLZmlxNHZudDYwNkEifQ..AbTp1UiccYLaKrHgmUgBGA.ZjbHmhaus4bD_6kBbpQLdOpsNOt3LmKbktrkOR0RhsV4eR1KFcgRwuQJKN8bL2WOvGZO-DHbWQdMIIGtm2vVRmE6XPwFhhpF3lAVjFIOIv7xRidzNELNyUgJq2e9u59OG78Rh73sRU4auhDqrOFXxd1XrdvOrr7g6e3vPFJBEt7cyf3N4vugQUsdvIWnO8GbNbli0y7VwhFPjphRSOTVzz8mQp7R3bf9Pm3hDJxIStvxXFPenjuBpvW4HHPOVAaeivbDZ9fZlrPPgiDME9cgsw.TUiWPdiju7h-FK0pCWt8cIMkh2JQz9_7-KnPuqefZ1E; Path=/; Expires=Tue, 10 Jun 2025 18:09:21 GMT; HttpOnly; SameSite=Lax"
-								},
-								{
-									"key": "vary",
-									"value": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch"
-								},
-								{
-									"key": "content-type",
-									"value": "application/json"
-								},
-								{
-									"key": "Date",
-									"value": "Sun, 11 May 2025 18:09:21 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=5"
-								},
-								{
-									"key": "Transfer-Encoding",
-									"value": "chunked"
-								}
-							],
-							"cookie": [],
-							"body": "[\n    {\n        \"id\": \"84534ce1-84cb-4f87-9c03-c1d46ad30d92\",\n        \"createdAt\": \"2025-05-11T14:48:32.942Z\",\n        \"title\": \"Payroll System with Password-Based Access Control\",\n        \"content\": \"# Simple Payroll System with Password-Based Access Control\\n\\n# Function to check password\\ndef check_password(input_password):\\n    # Predefined password\\n    correct_password = 'securepassword'\\n    return input_password == correct_password\\n\\n# Function to calculate payroll\\ndef calculate_payroll(hours_worked, hourly_rate):\\n    return hours_worked * hourly_rate\\n\\n# Main function to simulate payroll access\\ndef payroll_system(input_password, hours_worked, hourly_rate):\\n    if check_password(input_password):\\n        # Calculate payroll if password is correct\\n        payroll = calculate_payroll(hours_worked, hourly_rate)\\n        print(f'Payroll calculated: ${payroll:.2f}')\\n    else:\\n        print('Access denied: Incorrect password')\\n\\n# Example usage\\ninput_password = 'securepassword'  # Simulated user input\\nhours_worked = 40  # Example hours worked\\nhourly_rate = 15.00  # Example hourly rate\\npayroll_system(input_password, hours_worked, hourly_rate)\",\n        \"kind\": \"code\",\n        \"userId\": \"fb1fed9b-865a-4efd-8ecf-a84c0d86c995\"\n    },\n    {\n        \"id\": \"84534ce1-84cb-4f87-9c03-c1d46ad30d92\",\n        \"createdAt\": \"2025-05-11T18:06:27.746Z\",\n        \"title\": \"Payroll System with Password-Based Access Control\",\n        \"content\": \"from flask import Flask, render_template, redirect, url_for, request, flash\\nfrom flask_sqlalchemy import SQLAlchemy\\nfrom flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user\\nfrom werkzeug.security import generate_password_hash, check_password_hash\\n\\n# Initialize the Flask application\\napp = Flask(__name__)\\n\\n# Set the secret key for session management\\napp.config['SECRET_KEY'] = 'your_secret_key'\\n\\n# Configure the SQLite database\\napp.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///payroll.db'\\n\\n# Initialize the database\\n# SQLAlchemy is used for ORM (Object Relational Mapping) to interact with the database\\n# Here, we are using SQLite as our database\\n\\ndb = SQLAlchemy(app)\\n\\n# Initialize the login manager for handling user sessions\\nlogin_manager = LoginManager()\\nlogin_manager.init_app(app)\\nlogin_manager.login_view = 'login'  # Redirect to login page if not authenticated\\n\\n# Define the User model for authentication\\n# This model represents the users in the system\\nclass User(UserMixin, db.Model):\\n    id = db.Column(db.Integer, primary_key=True)  # Unique identifier for each user\\n    username = db.Column(db.String(150), unique=True, nullable=False)  # Username must be unique\\n    password = db.Column(db.String(150), nullable=False)  # Password for the user\\n\\n# Define the Payroll model to store payroll information\\n# This model represents the payroll records associated with users\\nclass Payroll(db.Model):\\n    id = db.Column(db.Integer, primary_key=True)  # Unique identifier for each payroll record\\n    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)  # Foreign key to link to User\\n    salary = db.Column(db.Float, nullable=False)  # Salary amount for the payroll record\\n\\n# User loader callback for Flask-Login\\n# This function is called to load a user from the user ID stored in the session\\n@login_manager.user_loader\\ndef load_user(user_id):\\n    return User.query.get(int(user_id))  # Retrieve user by ID from the database\\n\\n# Route for handling login logic\\n@app.route('/login', methods=['GET', 'POST'])\\ndef login():\\n    if request.method == 'POST':  # Check if the request method is POST\\n        username = request.form.get('username')  # Get username from form\\n        password = request.form.get('password')  # Get password from form\\n        user = User.query.filter_by(username=username).first()  # Query user by username\\n        # Check if user exists and password is correct\\n        if user and check_password_hash(user.password, password):  # Verify password\\n            login_user(user)  # Log the user in\\n            return redirect(url_for('dashboard'))  # Redirect to dashboard\\n        else:\\n            flash('Login Unsuccessful. Please check username and password', 'danger')  # Flash error message\\n    return render_template('login.html')  # Render login template\\n\\n# Route for the user dashboard, requires login\\n@app.route('/dashboard')\\n@login_required  # Ensure user is logged in to access this route\\ndef dashboard():\\n    # Fetch payroll information for the logged-in user\\n    payroll = Payroll.query.filter_by(user_id=current_user.id).first()  # Get payroll record for current user\\n    return render_template('dashboard.html', payroll=payroll)  # Render dashboard template with payroll data\\n\\n# Route for logging out the user\\n@app.route('/logout')\\n@login_required  # Ensure user is logged in to access this route\\ndef logout():\\n    logout_user()  # Log the user out\\n    return redirect(url_for('login'))  # Redirect to login page\\n\\n# Main entry point of the application\\nif __name__ == '__main__':\\n    db.create_all()  # Create database tables if they don't exist\\n    app.run(debug=True)  # Run the Flask app in debug mode\",\n        \"kind\": \"code\",\n        \"userId\": \"fb1fed9b-865a-4efd-8ecf-a84c0d86c995\"\n    }\n]"
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Suggestion",
-			"item": [
-				{
-					"name": "GetSuggestionsByDocumentId",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{localurl}}api/suggestions/?documentId=74111652-0896-4311-98b8-78e4c3a3b0cd",
-							"host": [
-								"{{localurl}}api"
-							],
-							"path": [
-								"suggestions",
-								""
-							],
-							"query": [
-								{
-									"key": "documentId",
-									"value": "74111652-0896-4311-98b8-78e4c3a3b0cd"
-								}
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Successful Response",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:4000/api/suggestions/?documentId=74111652-0896-4311-98b8-78e4c3a3b0cd",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "4000",
-									"path": [
-										"api",
-										"suggestions",
-										""
-									],
-									"query": [
-										{
-											"key": "documentId",
-											"value": "74111652-0896-4311-98b8-78e4c3a3b0cd"
-										}
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "set-cookie",
-									"value": "authjs.session-token=eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2Q0JDLUhTNTEyIiwia2lkIjoiZEFFOUprRGFYNVBERXJnX3hXTk5TQVQwZUtMWmZCLW05RlE2ZjV4UGFhX0o3Z0dwM191c0VxcXZDWmk0bHZ6ZEdUZWxWZHVMN3pLZmlxNHZudDYwNkEifQ..5BciJIvcDsY836Xtzz68zg.M0gPpNkDOD1SMgJArV-AYTFJt8kXoCStEcvbHVJRjruh5lKJ7AFSY4hOeQds6l9g5HSVEgGJviLMFPO84iLfu1nBiW_j35MW2QDF-xByHue3A6QfQsua6rqtdL-h6Umx00yOQfbVDzmiWsRpi344kqTq-s9vgFFy8LH50KuI_7vpq3uIcpFuaCWBQFifFqCu7REdzIEBOlDf-yvR_4G09u48PKTaOwhZpxt1QnzmxWLgEQxWVcz5suTkKj2tKjvz0sJ2rRZrU9pv2Iwj18xhgQ.xD1a2dKK7QOxyq-3MstJdmXNaFinhcmlCygG6uz4ob0; Path=/; Expires=Tue, 10 Jun 2025 15:46:02 GMT; HttpOnly; SameSite=Lax"
-								},
-								{
-									"key": "vary",
-									"value": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch"
-								},
-								{
-									"key": "content-type",
-									"value": "application/json"
-								},
-								{
-									"key": "Date",
-									"value": "Sun, 11 May 2025 15:46:03 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=5"
-								},
-								{
-									"key": "Transfer-Encoding",
-									"value": "chunked"
-								}
-							],
-							"cookie": [],
-							"body": "[\n    {\n        \"id\": \"61134103-f786-4780-acd4-e6a7266cac49\",\n        \"documentId\": \"74111652-0896-4311-98b8-78e4c3a3b0cd\",\n        \"documentCreatedAt\": \"2025-04-25T12:16:41.093Z\",\n        \"originalText\": \"PEP 8, or Python Enhancement Proposal 8, is the style guide for Python code.\",\n        \"suggestedText\": \"PEP 8, which stands for Python Enhancement Proposal 8, serves as the official style guide for Python code.\",\n        \"description\": \"This change clarifies the meaning of PEP 8 by explaining the acronym and emphasizes its role as the official style guide.\",\n        \"isResolved\": false,\n        \"userId\": \"fb1fed9b-865a-4efd-8ecf-a84c0d86c995\",\n        \"createdAt\": \"2025-04-25T12:16:50.171Z\"\n    },\n    {\n        \"id\": \"c12f91cb-f5ee-4c58-bb45-3a9fadcc8169\",\n        \"documentId\": \"74111652-0896-4311-98b8-78e4c3a3b0cd\",\n        \"documentCreatedAt\": \"2025-04-25T12:16:41.093Z\",\n        \"originalText\": \"Following PEP 8 helps developers maintain a uniform coding style, making it easier to read and understand code written by others.\",\n        \"suggestedText\": \"Adhering to PEP 8 enables developers to maintain a consistent coding style, thereby enhancing the readability and comprehensibility of code written by others.\",\n        \"description\": \"The revision uses 'Adhering to' instead of 'Following' for a more formal tone and replaces 'easier to read and understand' with 'enhancing the readability and comprehensibility' for improved clarity.\",\n        \"isResolved\": false,\n        \"userId\": \"fb1fed9b-865a-4efd-8ecf-a84c0d86c995\",\n        \"createdAt\": \"2025-04-25T12:16:50.171Z\"\n    },\n    {\n        \"id\": \"ebbc0fc6-d81d-44e1-a95e-1176a98a5479\",\n        \"documentId\": \"74111652-0896-4311-98b8-78e4c3a3b0cd\",\n        \"documentCreatedAt\": \"2025-04-25T12:16:41.093Z\",\n        \"originalText\": \"Use 4 spaces per indentation level; do not use tabs.\",\n        \"suggestedText\": \"Always use 4 spaces for each level of indentation and avoid using tabs altogether.\",\n        \"description\": \"This change emphasizes the importance of consistency in indentation and clarifies the instruction by using 'always' and 'altogether'.\",\n        \"isResolved\": false,\n        \"userId\": \"fb1fed9b-865a-4efd-8ecf-a84c0d86c995\",\n        \"createdAt\": \"2025-04-25T12:16:50.171Z\"\n    },\n    {\n        \"id\": \"211fa1a8-82b6-4883-bb78-4bb09e43aae4\",\n        \"documentId\": \"74111652-0896-4311-98b8-78e4c3a3b0cd\",\n        \"documentCreatedAt\": \"2025-04-25T12:16:41.093Z\",\n        \"originalText\": \"Prefer absolute imports over relative imports.\",\n        \"suggestedText\": \"It is recommended to prefer absolute imports instead of relative imports for better clarity and maintainability.\",\n        \"description\": \"This suggestion adds context to the guideline by explaining why absolute imports are preferred, enhancing the reader's understanding.\",\n        \"isResolved\": false,\n        \"userId\": \"fb1fed9b-865a-4efd-8ecf-a84c0d86c995\",\n        \"createdAt\": \"2025-04-25T12:16:50.171Z\"\n    },\n    {\n        \"id\": \"525b1cd0-42fc-406a-afba-e58c23086ab5\",\n        \"documentId\": \"74111652-0896-4311-98b8-78e4c3a3b0cd\",\n        \"documentCreatedAt\": \"2025-04-25T12:16:41.093Z\",\n        \"originalText\": \"By adhering to these conventions, developers can ensure that their code is not only functional but also easy to read and understand by others in the Python community.\",\n        \"suggestedText\": \"By following these conventions, developers can ensure that their code is not only functional but also easily readable and understandable by others within the Python community.\",\n        \"description\": \"The revision replaces 'adhering to' with 'following' for simplicity and changes 'easy to read and understand' to 'easily readable and understandable' for improved flow.\",\n        \"isResolved\": false,\n        \"userId\": \"fb1fed9b-865a-4efd-8ecf-a84c0d86c995\",\n        \"createdAt\": \"2025-04-25T12:16:50.171Z\"\n    }\n]"
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Third'Party",
-			"item": [
-				{
-					"name": "SecureScan",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"code\": \"import getpass\\n\\n# Employee data\\nemployees = [\\n    {\\\"name\\\": \\\"Alice\\\", \\\"salary\\\": 5000, \\\"password\\\": \\\"alice123\\\"},\\n    {\\\"name\\\": \\\"Bob\\\", \\\"salary\\\": 5500, \\\"password\\\": \\\"bob123\\\"},\\n    {\\\"name\\\": \\\"Charlie\\\", \\\"salary\\\": 6000, \\\"password\\\": \\\"charlie123\\\"},\\n    {\\\"name\\\": \\\"David\\\", \\\"salary\\\": 6500, \\\"password\\\": \\\"david123\\\"},\\n    {\\\"name\\\": \\\"Eve\\\", \\\"salary\\\": 7000, \\\"password\\\": \\\"eve123\\\"},\\n    {\\\"name\\\": \\\"Frank\\\", \\\"salary\\\": 7500, \\\"password\\\": \\\"frank123\\\"},\\n    {\\\"name\\\": \\\"Grace\\\", \\\"salary\\\": 8000, \\\"password\\\": \\\"grace123\\\"},\\n    {\\\"name\\\": \\\"Heidi\\\", \\\"salary\\\": 8500, \\\"password\\\": \\\"heidi123\\\"},\\n    {\\\"name\\\": \\\"Ivan\\\", \\\"salary\\\": 9000, \\\"password\\\": \\\"ivan123\\\"},\\n    {\\\"name\\\": \\\"Judy\\\", \\\"salary\\\": 9500, \\\"password\\\": \\\"judy123\\\"},\\n    {\\\"name\\\": \\\"Mallory\\\", \\\"salary\\\": 10000, \\\"password\\\": \\\"mallory123\\\"}\\n]\\n\\ndef authenticate_employee():\\n    username = input(\\\"Enter your name: \\\")\\n    password = getpass.getpass(\\\"Enter your password: \\\")\\n\\n    for employee in employees:\\n        if employee[\\\"name\\\"] == username and employee[\\\"password\\\"] == password:\\n            return employee\\n    return None\\n\\ndef display_payroll(employee):\\n    print(f\\\"Welcome {employee['name']}!\\\")\\n    print(f\\\"Your salary is: ${employee['salary']}\\\")\\n\\ndef main():\\n    employee = authenticate_employee()\\n    if employee:\\n        display_payroll(employee)\\n    else:\\n        print(\\\"Authentication failed. Please check your credentials.\\\")\\n\\nif __name__ == \\\"__main__\\\":\\n    main()\\n\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "https://agenticscg-pyapi.onrender.com/api/v1/secure-scan/python",
-							"protocol": "https",
-							"host": [
-								"agenticscg-pyapi",
-								"onrender",
-								"com"
-							],
-							"path": [
-								"api",
-								"v1",
-								"secure-scan",
-								"python"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "success",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"code\": \"import getpass\\n\\n# Employee data\\nemployees = [\\n    {\\\"name\\\": \\\"Alice\\\", \\\"salary\\\": 5000, \\\"password\\\": \\\"alice123\\\"},\\n    {\\\"name\\\": \\\"Bob\\\", \\\"salary\\\": 5500, \\\"password\\\": \\\"bob123\\\"},\\n    {\\\"name\\\": \\\"Charlie\\\", \\\"salary\\\": 6000, \\\"password\\\": \\\"charlie123\\\"},\\n    {\\\"name\\\": \\\"David\\\", \\\"salary\\\": 6500, \\\"password\\\": \\\"david123\\\"},\\n    {\\\"name\\\": \\\"Eve\\\", \\\"salary\\\": 7000, \\\"password\\\": \\\"eve123\\\"},\\n    {\\\"name\\\": \\\"Frank\\\", \\\"salary\\\": 7500, \\\"password\\\": \\\"frank123\\\"},\\n    {\\\"name\\\": \\\"Grace\\\", \\\"salary\\\": 8000, \\\"password\\\": \\\"grace123\\\"},\\n    {\\\"name\\\": \\\"Heidi\\\", \\\"salary\\\": 8500, \\\"password\\\": \\\"heidi123\\\"},\\n    {\\\"name\\\": \\\"Ivan\\\", \\\"salary\\\": 9000, \\\"password\\\": \\\"ivan123\\\"},\\n    {\\\"name\\\": \\\"Judy\\\", \\\"salary\\\": 9500, \\\"password\\\": \\\"judy123\\\"},\\n    {\\\"name\\\": \\\"Mallory\\\", \\\"salary\\\": 10000, \\\"password\\\": \\\"mallory123\\\"}\\n]\\n\\ndef authenticate_employee():\\n    username = input(\\\"Enter your name: \\\")\\n    password = getpass.getpass(\\\"Enter your password: \\\")\\n\\n    for employee in employees:\\n        if employee[\\\"name\\\"] == username and employee[\\\"password\\\"] == password:\\n            return employee\\n    return None\\n\\ndef display_payroll(employee):\\n    print(f\\\"Welcome {employee['name']}!\\\")\\n    print(f\\\"Your salary is: ${employee['salary']}\\\")\\n\\ndef main():\\n    employee = authenticate_employee()\\n    if employee:\\n        display_payroll(employee)\\n    else:\\n        print(\\\"Authentication failed. Please check your credentials.\\\")\\n\\nif __name__ == \\\"__main__\\\":\\n    main()\\n\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "http://127.0.0.1:8000/api/v1/secure-scan/python",
-									"protocol": "http",
-									"host": [
-										"127",
-										"0",
-										"0",
-										"1"
-									],
-									"port": "8000",
-									"path": [
-										"api",
-										"v1",
-										"secure-scan",
-										"python"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "date",
-									"value": "Mon, 26 May 2025 07:09:55 GMT"
-								},
-								{
-									"key": "server",
-									"value": "uvicorn"
-								},
-								{
-									"key": "content-length",
-									"value": "549"
-								},
-								{
-									"key": "content-type",
-									"value": "application/json"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"errors\": [],\n    \"generated_at\": \"2025-05-26T07:09:56Z\",\n    \"metrics\": {\n        \"C:\\\\Users\\\\Anxiu\\\\AppData\\\\Local\\\\Temp\\\\tmpc41yrq4y.py\": {\n            \"CONFIDENCE.HIGH\": 0,\n            \"CONFIDENCE.LOW\": 0,\n            \"CONFIDENCE.MEDIUM\": 0,\n            \"CONFIDENCE.UNDEFINED\": 0,\n            \"SEVERITY.HIGH\": 0,\n            \"SEVERITY.LOW\": 0,\n            \"SEVERITY.MEDIUM\": 0,\n            \"SEVERITY.UNDEFINED\": 0,\n            \"loc\": 32,\n            \"nosec\": 0,\n            \"skipped_tests\": 0\n        },\n        \"_totals\": {\n            \"CONFIDENCE.HIGH\": 0,\n            \"CONFIDENCE.LOW\": 0,\n            \"CONFIDENCE.MEDIUM\": 0,\n            \"CONFIDENCE.UNDEFINED\": 0,\n            \"SEVERITY.HIGH\": 0,\n            \"SEVERITY.LOW\": 0,\n            \"SEVERITY.MEDIUM\": 0,\n            \"SEVERITY.UNDEFINED\": 0,\n            \"loc\": 32,\n            \"nosec\": 0,\n            \"skipped_tests\": 0\n        }\n    },\n    \"results\": []\n}"
-						}
-					]
-				}
-			]
-		}
-	]
+  "info": {
+    "_postman_id": "f99b22f8-4bbc-4da6-a953-c2b6d5e3d90d",
+    "name": "ASCGBot",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "16949749"
+  },
+  "item": [
+    {
+      "name": "KnowledgeBase",
+      "item": [
+        {
+          "name": "file-list",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{localurl}}api/files/list",
+              "host": ["{{localurl}}api"],
+              "path": ["files", "list"]
+            }
+          },
+          "response": [
+            {
+              "name": "file-list",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:4000/api/files/list",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "4000",
+                  "path": ["api", "files", "list"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "set-cookie",
+                  "value": "authjs.session-token=eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2Q0JDLUhTNTEyIiwia2lkIjoiZEFFOUprRGFYNVBERXJnX3hXTk5TQVQwZUtMWmZCLW05RlE2ZjV4UGFhX0o3Z0dwM191c0VxcXZDWmk0bHZ6ZEdUZWxWZHVMN3pLZmlxNHZudDYwNkEifQ..LSkiJ4G9nhQSAtUZb16e3w.qptS-SbjNSVlWq0xnAR8JINy7hb9FXl7SbkznEeM8MmBw7Nl-p2xp1c5yQRse8OefU1PdwR04VvWkVZZ-0Fh4vdUEATWo8x4se4kAQxcCKhahdnvMIUmtskAf0j63APbP7yTp42P5-WV9axaSfkd1yTiYROJqZZU65Y1x4VwktsBkeQIwjUbq3OuzFziy399VPgSjmgZtxtEQD6y8lJUefqI39cUc1odxBkb2wKtyBiM0_9-ZZm0wyPpcJnhysDu32jMaBeL27kIenBnwZn9DQ.l2pwgPnDPtuP3yNOsZ11UkbY19bcdYFow6c8JKxxbrE; Path=/; Expires=Sun, 25 May 2025 12:04:03 GMT; HttpOnly; SameSite=Lax"
+                },
+                {
+                  "key": "vary",
+                  "value": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 25 Apr 2025 12:04:03 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"url\": \"https://yklxgbcrnpzcphwp.public.blob.vercel-storage.com/anxiu%40example.com/pep-0008.rst.pdf\",\n        \"downloadUrl\": \"https://yklxgbcrnpzcphwp.public.blob.vercel-storage.com/anxiu%40example.com/pep-0008.rst.pdf?download=1\",\n        \"pathname\": \"pep-0008.rst.pdf\",\n        \"size\": 104719,\n        \"uploadedAt\": \"2025-04-25T11:05:40.000Z\"\n    }\n]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"csrfToken\": \"e639f5e3bfd61bcd11237c77572afa06cf9fedb6f15c39a5499c79aa0b98c5e3\",\r\n    \"email\": \"anxiu@example.com\",\r\n    \"password\": \"anxiu0101\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{localurl}}api/auth/callback/credentials?json=true",
+              "host": ["{{localurl}}api"],
+              "path": ["auth", "callback", "credentials"],
+              "query": [
+                {
+                  "key": "json",
+                  "value": "true"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "login",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"csrfToken\": \"e639f5e3bfd61bcd11237c77572afa06cf9fedb6f15c39a5499c79aa0b98c5e3\",\r\n    \"email\": \"anxiu@example.com\",\r\n    \"password\": \"anxiu0101\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:4000/api/auth/callback/credentials?json=true",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "4000",
+                  "path": ["api", "auth", "callback", "credentials"],
+                  "query": [
+                    {
+                      "key": "json",
+                      "value": "true"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "html",
+              "header": [
+                {
+                  "key": "set-cookie",
+                  "value": "authjs.session-token=eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2Q0JDLUhTNTEyIiwia2lkIjoiZEFFOUprRGFYNVBERXJnX3hXTk5TQVQwZUtMWmZCLW05RlE2ZjV4UGFhX0o3Z0dwM191c0VxcXZDWmk0bHZ6ZEdUZWxWZHVMN3pLZmlxNHZudDYwNkEifQ..ILmKNzwYDqQfDlH9O3NBtw.HKqmtTM-iXA5ljYSBK5K9sMhuj5PGib3l3HGEtsUeqwWrJn-UFMusiGbXDkO7OXtZ3723kImqhTjvSRGSMlQKkT-7U4PqRyFoSeRhJYrkRUkH2wboGTlURLuWNE2jwYUPkIFzjtGmadD5NxZmY66LIY7-8MHebvasG8JQWCa-1htwL2hrJPEEcwXcfYuI8CP_D66vtWfBvz7h6R_YM1f4nFnlep-IwAM6OWWwwCa7ZjTqgqGHLAxZIcmzV9pBqftYuOnaorugQENhf-ZJnehNw.MKpWO7NdQPvW4kR8KGo3yZhCmVIsb-9qjO9_hR0JUfA; Path=/; Expires=Sun, 25 May 2025 12:03:43 GMT; HttpOnly; SameSite=Lax"
+                },
+                {
+                  "key": "Vary",
+                  "value": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Accept-Encoding"
+                },
+                {
+                  "key": "link",
+                  "value": "</_next/static/media/gyByhwUxId8gMEwcGFWNOITd-s.p.da1ebef7.woff2>; rel=preload; as=\"font\"; crossorigin=\"\"; type=\"font/woff2\", </_next/static/media/or3nQ6H_1_WfwkMZI_qYFrcdmhHkjko-s.p.be19f591.woff2>; rel=preload; as=\"font\"; crossorigin=\"\"; type=\"font/woff2\""
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-store, must-revalidate"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "Next.js"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "text/html; charset=utf-8"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 25 Apr 2025 12:03:44 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "body": "<!DOCTYPE html>\n<html lang=\"en\" class=\"geist_530f5508-module__OOnSwq__variable geist_mono_8f4ee38b-module__1fn3BW__variable\">\n    <head>\n        <meta charSet=\"utf-8\"/>\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\"/>\n        <link rel=\"stylesheet\" href=\"/_next/static/chunks/%5Broot-of-the-server%5D__4d3d4bd4._.css\" data-precedence=\"next_static/chunks/[root-of-the-server]__4d3d4bd4._.css\"/>\n        <link rel=\"stylesheet\" href=\"/_next/static/chunks/node_modules_react-data-grid_lib_styles_fb0a7daf.css\" data-precedence=\"next_static/chunks/node_modules_react-data-grid_lib_styles_fb0a7daf.css\"/>\n        <link rel=\"preload\" as=\"script\" fetchPriority=\"low\" href=\"/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_01c45518._.js\"/>\n        <script src=\"/_next/static/chunks/node_modules_next_dist_compiled_react-dom-experimental_375bf58e._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_next_dist_compiled_26b06edd._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_next_dist_client_8f19e6fb._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_next_dist_2ecbf5fa._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_%40swc_helpers_cjs_00636ac3._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/_e69f0d32._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/_c4115651._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_next_dist_1a6ee436._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/app_favicon_ico_mjs_feb59115._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/_33c6a35b._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/app_layout_tsx_26c2bb0e._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/_866deadc._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_next_c85fb1f2._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_framer-motion_dist_es_92139a2a._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_swr_dist_a9801644._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_e38022db._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/app_(chat)_layout_tsx_b685bb48._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/_78c74842._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_next_dist_compiled_db152a47._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_zod_lib_index_mjs_ee760afb._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_micromark-core-commonmark_dev_lib_36a4b45d._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_prosemirror-view_dist_index_212d9a9b.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_entities_lib_esm_3b43f604._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_markdown-it_c9117e0a._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_%40codemirror_state_dist_index_9b015ec1.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_%40codemirror_view_dist_index_201017eb.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_react-data-grid_lib_bundle_f8bf325b.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_%40ai-sdk_react_1a5af7fb._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_%40lezer_e0dd4b0b._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_%40codemirror_4de5c195._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/node_modules_342b5cd0._.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/app_(chat)_page_tsx_ba3270d6._.js\" async=\"\"></script>\n        <link rel=\"preload\" href=\"https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js\" as=\"script\"/>\n        <meta name=\"next-size-adjust\" content=\"\"/>\n        <script>(function() {\n  var html = document.documentElement;\n  var meta = document.querySelector('meta[name=\"theme-color\"]');\n  if (!meta) {\n    meta = document.createElement('meta');\n    meta.setAttribute('name', 'theme-color');\n    document.head.appendChild(meta);\n  }\n  function updateThemeColor() {\n    var isDark = html.classList.contains('dark');\n    meta.setAttribute('content', isDark ? 'hsl(240deg 10% 3.92%)' : 'hsl(0 0% 100%)');\n  }\n  var observer = new MutationObserver(updateThemeColor);\n  observer.observe(html, { attributes: true, attributeFilter: ['class'] });\n  updateThemeColor();\n})();</script>\n        <title>Next.js Chatbot Template</title>\n        <meta name=\"description\" content=\"Next.js chatbot template using the AI SDK.\"/>\n        <link rel=\"icon\" href=\"/favicon.ico?favicon.46d6a819.ico\" sizes=\"48x48\" type=\"image/x-icon\"/>\n        <script>document.querySelectorAll('body link[rel=\"icon\"], body link[rel=\"apple-touch-icon\"]').forEach(el => document.head.appendChild(el))</script>\n        <script src=\"/_next/static/chunks/node_modules_next_dist_build_polyfills_polyfill-nomodule.js\" noModule=\"\"></script>\n    </head>\n    <body class=\"antialiased\">\n        <script>!function(){try{var d=document.documentElement,c=d.classList;c.remove('light','dark');var e=localStorage.getItem('theme');if('system'===e||(!e&&true)){var t='(prefers-color-scheme: dark)',m=window.matchMedia(t);if(m.media!==t||m.matches){d.style.colorScheme = 'dark';c.add('dark')}else{d.style.colorScheme = 'light';c.add('light')}}else if(e){c.add(e|| '')}if(e==='light'||e==='dark')d.style.colorScheme=e}catch(e){}}()</script>\n        <section aria-label=\"Notifications alt+T\" tabindex=\"-1\" aria-live=\"polite\" aria-relevant=\"additions text\" aria-atomic=\"false\"></section>\n        <script>(self.__next_s=self.__next_s||[]).push([\"https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js\",{}])</script>\n        <div style=\"--sidebar-width:16rem;--sidebar-width-icon:3rem\" class=\"group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar\">\n            <div class=\"group peer hidden md:block text-sidebar-foreground\" data-state=\"collapsed\" data-collapsible=\"offcanvas\" data-variant=\"sidebar\" data-side=\"left\">\n                <div class=\"duration-200 relative h-svh w-[--sidebar-width] bg-transparent transition-[width] ease-linear group-data-[collapsible=offcanvas]:w-0 group-data-[side=right]:rotate-180 group-data-[collapsible=icon]:w-[--sidebar-width-icon]\"></div>\n                <div class=\"duration-200 fixed inset-y-0 z-10 hidden h-svh w-[--sidebar-width] transition-[left,right,width] ease-linear md:flex left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)] group-data-[collapsible=icon]:w-[--sidebar-width-icon] group-data-[side=right]:border-l group-data-[side=left]:border-r-0\">\n                    <div data-sidebar=\"sidebar\" class=\"flex h-full w-full flex-col bg-sidebar group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:border-sidebar-border group-data-[variant=floating]:shadow\">\n                        <div data-sidebar=\"header\" class=\"flex flex-col gap-2 p-2\">\n                            <ul data-sidebar=\"menu\" class=\"flex w-full min-w-0 flex-col gap-1\">\n                                <div class=\"flex flex-row justify-between items-center\">\n                                    <a class=\"flex flex-row gap-3 items-center\" href=\"/\">\n                                        <span class=\"text-lg font-semibold px-2 hover:bg-muted rounded-md cursor-pointer\">Chatbot</span>\n                                    </a>\n                                    <button class=\"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground p-2 h-fit\" type=\"button\" data-state=\"closed\">\n                                        <svg height=\"16\" stroke-linejoin=\"round\" viewBox=\"0 0 16 16\" width=\"16\" style=\"color:currentcolor\">\n                                            <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M 8.75,1 H7.25 V7.25 H1.5 V8.75 H7.25 V15 H8.75 V8.75 H14.5 V7.25 H8.75 V1.75 Z\" fill=\"currentColor\"></path>\n                                        </svg>\n                                    </button>\n                                </div>\n                            </ul>\n                        </div>\n                        <div data-sidebar=\"content\" class=\"flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden\">\n                            <div data-sidebar=\"group\" class=\"relative flex w-full min-w-0 flex-col p-2\">\n                                <div class=\"px-2 py-1 text-xs text-sidebar-foreground/50\">Today</div>\n                                <div data-sidebar=\"group-content\" class=\"w-full text-sm\">\n                                    <div class=\"flex flex-col\">\n                                        <div class=\"rounded-md h-8 flex gap-2 px-2 items-center\">\n                                            <div class=\"h-4 rounded-md flex-1 max-w-[--skeleton-width] bg-sidebar-accent-foreground/10\" style=\"--skeleton-width:44%\"></div>\n                                        </div>\n                                        <div class=\"rounded-md h-8 flex gap-2 px-2 items-center\">\n                                            <div class=\"h-4 rounded-md flex-1 max-w-[--skeleton-width] bg-sidebar-accent-foreground/10\" style=\"--skeleton-width:32%\"></div>\n                                        </div>\n                                        <div class=\"rounded-md h-8 flex gap-2 px-2 items-center\">\n                                            <div class=\"h-4 rounded-md flex-1 max-w-[--skeleton-width] bg-sidebar-accent-foreground/10\" style=\"--skeleton-width:28%\"></div>\n                                        </div>\n                                        <div class=\"rounded-md h-8 flex gap-2 px-2 items-center\">\n                                            <div class=\"h-4 rounded-md flex-1 max-w-[--skeleton-width] bg-sidebar-accent-foreground/10\" style=\"--skeleton-width:64%\"></div>\n                                        </div>\n                                        <div class=\"rounded-md h-8 flex gap-2 px-2 items-center\">\n                                            <div class=\"h-4 rounded-md flex-1 max-w-[--skeleton-width] bg-sidebar-accent-foreground/10\" style=\"--skeleton-width:52%\"></div>\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                        <div data-sidebar=\"footer\" class=\"flex flex-col gap-2 p-2\">\n                            <ul data-sidebar=\"menu\" class=\"flex w-full min-w-0 flex-col gap-1\">\n                                <li data-sidebar=\"menu-item\" class=\"group/menu-item relative\">\n                                    <button data-sidebar=\"menu-button\" data-size=\"default\" data-active=\"false\" class=\"peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-none ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-[[data-sidebar=menu-action]]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:!size-8 group-data-[collapsible=icon]:!p-2 [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground text-sm data-[state=open]:bg-sidebar-accent bg-background data-[state=open]:text-sidebar-accent-foreground h-10\" type=\"button\" id=\"radix-«R76nal7»\" aria-haspopup=\"menu\" aria-expanded=\"false\" data-state=\"closed\">\n                                        <img alt=\"anxiu@example.com\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"rounded-full\" style=\"color:transparent\" srcSet=\"/_next/image?url=https%3A%2F%2Favatar.vercel.sh%2Fanxiu%40example.com&amp;w=32&amp;q=75 1x, /_next/image?url=https%3A%2F%2Favatar.vercel.sh%2Fanxiu%40example.com&amp;w=48&amp;q=75 2x\" src=\"/_next/image?url=https%3A%2F%2Favatar.vercel.sh%2Fanxiu%40example.com&amp;w=48&amp;q=75\"/>\n                                        <span class=\"truncate\">anxiu@example.com</span>\n                                        <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-chevron-up ml-auto\">\n                                            <path d=\"m18 15-6-6-6 6\"></path>\n                                        </svg>\n                                    </button>\n                                </li>\n                            </ul>\n                        </div>\n                    </div>\n                </div>\n            </div>\n            <main class=\"relative flex min-h-svh flex-1 flex-col bg-background peer-data-[variant=inset]:min-h-[calc(100svh-theme(spacing.4))] md:peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow\">\n                <div class=\"flex flex-col min-w-0 h-dvh bg-background\">\n                    <header class=\"flex sticky top-0 bg-background py-1.5 items-center px-2 md:px-2 gap-2\">\n                        <button class=\"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 md:px-2 md:h-fit\" data-state=\"closed\">\n                            <svg height=\"16\" stroke-linejoin=\"round\" viewBox=\"0 0 16 16\" width=\"16\" style=\"color:currentcolor\">\n                                <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6.245 2.5H14.5V12.5C14.5 13.0523 14.0523 13.5 13.5 13.5H6.245V2.5ZM4.995 2.5H1.5V12.5C1.5 13.0523 1.94772 13.5 2.5 13.5H4.995V2.5ZM0 1H1.5H14.5H16V2.5V12.5C16 13.8807 14.8807 15 13.5 15H2.5C1.11929 15 0 13.8807 0 12.5V2.5V1Z\" fill=\"currentColor\"></path>\n                            </svg>\n                        </button>\n                        <button class=\"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 py-2 order-2 md:order-1 md:px-2 px-2 md:h-fit ml-auto md:ml-0\" data-state=\"closed\">\n                            <svg height=\"16\" stroke-linejoin=\"round\" viewBox=\"0 0 16 16\" width=\"16\" style=\"color:currentcolor\">\n                                <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M 8.75,1 H7.25 V7.25 H1.5 V8.75 H7.25 V15 H8.75 V8.75 H14.5 V7.25 H8.75 V1.75 Z\" fill=\"currentColor\"></path>\n                            </svg>\n                            <span class=\"md:sr-only\">New Chat</span>\n                        </button>\n                        <button class=\"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 w-fit data-[state=open]:bg-accent data-[state=open]:text-accent-foreground order-1 md:order-2 md:px-2 md:h-[34px]\" data-testid=\"model-selector\" type=\"button\" id=\"radix-«R3ajqnal7»\" aria-haspopup=\"menu\" aria-expanded=\"false\" data-state=\"closed\">Chat model\n                            <svg height=\"16\" stroke-linejoin=\"round\" viewBox=\"0 0 16 16\" width=\"16\" style=\"color:currentcolor\">\n                                <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12.0607 6.74999L11.5303 7.28032L8.7071 10.1035C8.31657 10.4941 7.68341 10.4941 7.29288 10.1035L4.46966 7.28032L3.93933 6.74999L4.99999 5.68933L5.53032 6.21966L7.99999 8.68933L10.4697 6.21966L11 5.68933L12.0607 6.74999Z\" fill=\"currentColor\"></path>\n                            </svg>\n                        </button>\n                        <button class=\"items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 w-fit data-[state=open]:bg-accent data-[state=open]:text-accent-foreground order-1 md:order-3 hidden md:flex md:px-2 md:h-[34px]\" type=\"button\" id=\"radix-«R4ajqnal7»\" aria-haspopup=\"menu\" aria-expanded=\"false\" data-state=\"closed\">\n                            <svg height=\"16\" stroke-linejoin=\"round\" viewBox=\"0 0 16 16\" width=\"16\" style=\"color:currentcolor\">\n                                <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10 4.5V6H6V4.5C6 3.39543 6.89543 2.5 8 2.5C9.10457 2.5 10 3.39543 10 4.5ZM4.5 6V4.5C4.5 2.567 6.067 1 8 1C9.933 1 11.5 2.567 11.5 4.5V6H12.5H14V7.5V12.5C14 13.8807 12.8807 15 11.5 15H4.5C3.11929 15 2 13.8807 2 12.5V7.5V6H3.5H4.5ZM11.5 7.5H10H6H4.5H3.5V12.5C3.5 13.0523 3.94772 13.5 4.5 13.5H11.5C12.0523 13.5 12.5 13.0523 12.5 12.5V7.5H11.5Z\" fill=\"currentColor\"></path>\n                            </svg>Private\n                            <svg height=\"16\" stroke-linejoin=\"round\" viewBox=\"0 0 16 16\" width=\"16\" style=\"color:currentcolor\">\n                                <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12.0607 6.74999L11.5303 7.28032L8.7071 10.1035C8.31657 10.4941 7.68341 10.4941 7.29288 10.1035L4.46966 7.28032L3.93933 6.74999L4.99999 5.68933L5.53032 6.21966L7.99999 8.68933L10.4697 6.21966L11 5.68933L12.0607 6.74999Z\" fill=\"currentColor\"></path>\n                            </svg>\n                        </button>\n                        <a target=\"_noblank\" class=\"items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-zinc-900 dark:bg-zinc-100 hover:bg-zinc-800 dark:hover:bg-zinc-200 text-zinc-50 dark:text-zinc-900 hidden md:flex py-1.5 px-2 h-fit md:h-[34px] order-4 md:ml-auto\" href=\"https://vercel.com/new/clone?repository-url=https://github.com/vercel/ai-chatbot&amp;env=AUTH_SECRET&amp;envDescription=Learn more about how to get the API Keys for the application&amp;envLink=https://github.com/vercel/ai-chatbot/blob/main/.env.example&amp;demo-title=AI Chatbot&amp;demo-description=An Open-Source AI Chatbot Template Built With Next.js and the AI SDK by Vercel.&amp;demo-url=https://chat.vercel.ai&amp;products=[{&quot;type&quot;:&quot;integration&quot;,&quot;protocol&quot;:&quot;ai&quot;,&quot;productSlug&quot;:&quot;grok&quot;,&quot;integrationSlug&quot;:&quot;xai&quot;},{&quot;type&quot;:&quot;integration&quot;,&quot;protocol&quot;:&quot;storage&quot;,&quot;productSlug&quot;:&quot;neon&quot;,&quot;integrationSlug&quot;:&quot;neon&quot;},{&quot;type&quot;:&quot;blob&quot;}]\">\n                            <svg height=\"16\" stroke-linejoin=\"round\" viewBox=\"0 0 16 16\" width=\"16\" style=\"color:currentcolor\">\n                                <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8 1L16 15H0L8 1Z\" fill=\"currentColor\"></path>\n                            </svg>Deploy with Vercel\n                        </a>\n                    </header>\n                    <div class=\"flex flex-col min-w-0 gap-6 flex-1 overflow-y-scroll pt-4\">\n                        <div class=\"max-w-3xl mx-auto md:mt-20 px-8 size-full flex flex-col justify-center\">\n                            <div class=\"text-2xl font-semibold\" style=\"opacity:0;transform:translateY(10px)\">Hello there!</div>\n                            <div class=\"text-2xl text-zinc-500\" style=\"opacity:0;transform:translateY(10px)\">How can I help you today?</div>\n                        </div>\n                        <div class=\"shrink-0 min-w-[24px] min-h-[24px]\"></div>\n                    </div>\n                    <form class=\"flex mx-auto px-4 bg-background pb-4 md:pb-6 gap-2 w-full md:max-w-3xl\">\n                        <div class=\"relative w-full flex flex-col gap-4\">\n                            <div data-testid=\"suggested-actions\" class=\"grid sm:grid-cols-2 gap-2 w-full\">\n                                <div class=\"block\" style=\"opacity:0;transform:translateY(20px)\">\n                                    <button class=\"inline-flex whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground text-left border rounded-xl px-4 py-3.5 text-sm flex-1 gap-1 sm:flex-col w-full h-auto justify-start items-start\">\n                                        <span class=\"font-medium\">What are the advantages</span>\n                                        <span class=\"text-muted-foreground\">of using Next.js?</span>\n                                    </button>\n                                </div>\n                                <div class=\"block\" style=\"opacity:0;transform:translateY(20px)\">\n                                    <button class=\"inline-flex whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground text-left border rounded-xl px-4 py-3.5 text-sm flex-1 gap-1 sm:flex-col w-full h-auto justify-start items-start\">\n                                        <span class=\"font-medium\">Write code to</span>\n                                        <span class=\"text-muted-foreground\">demonstrate djikstra&#x27;s algorithm</span>\n                                    </button>\n                                </div>\n                                <div class=\"hidden sm:block\" style=\"opacity:0;transform:translateY(20px)\">\n                                    <button class=\"inline-flex whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground text-left border rounded-xl px-4 py-3.5 text-sm flex-1 gap-1 sm:flex-col w-full h-auto justify-start items-start\">\n                                        <span class=\"font-medium\">Help me write an essay</span>\n                                        <span class=\"text-muted-foreground\">about silicon valley</span>\n                                    </button>\n                                </div>\n                                <div class=\"hidden sm:block\" style=\"opacity:0;transform:translateY(20px)\">\n                                    <button class=\"inline-flex whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground text-left border rounded-xl px-4 py-3.5 text-sm flex-1 gap-1 sm:flex-col w-full h-auto justify-start items-start\">\n                                        <span class=\"font-medium\">What is the weather</span>\n                                        <span class=\"text-muted-foreground\">in San Francisco?</span>\n                                    </button>\n                                </div>\n                            </div>\n                            <input type=\"file\" accept=\"image/*\" class=\"fixed -top-4 -left-4 size-0.5 opacity-0 pointer-events-none\" multiple=\"\" tabindex=\"-1\"/>\n                            <textarea class=\"flex w-full border border-input px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm min-h-[24px] max-h-[calc(75dvh)] overflow-hidden resize-none rounded-2xl !text-base bg-muted pb-10 dark:border-zinc-700\" data-testid=\"multimodal-input\" placeholder=\"Send a message...\" rows=\"2\" autofocus=\"\"></textarea>\n                            <div class=\"absolute bottom-0 p-2 w-fit flex flex-row justify-start\">\n                                <button class=\"inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:text-accent-foreground rounded-md rounded-bl-lg p-[7px] h-fit dark:border-zinc-700 hover:dark:bg-zinc-900 hover:bg-zinc-200\" data-testid=\"attachments-button\">\n                                    <svg height=\"14\" stroke-linejoin=\"round\" viewBox=\"0 0 16 16\" width=\"14\" style=\"color:currentcolor\" class=\"-rotate-45\">\n                                        <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10.8591 1.70735C10.3257 1.70735 9.81417 1.91925 9.437 2.29643L3.19455 8.53886C2.56246 9.17095 2.20735 10.0282 2.20735 10.9222C2.20735 11.8161 2.56246 12.6734 3.19455 13.3055C3.82665 13.9376 4.68395 14.2927 5.57786 14.2927C6.47178 14.2927 7.32908 13.9376 7.96117 13.3055L14.2036 7.06304L14.7038 6.56287L15.7041 7.56321L15.204 8.06337L8.96151 14.3058C8.06411 15.2032 6.84698 15.7074 5.57786 15.7074C4.30875 15.7074 3.09162 15.2032 2.19422 14.3058C1.29682 13.4084 0.792664 12.1913 0.792664 10.9222C0.792664 9.65305 1.29682 8.43592 2.19422 7.53852L8.43666 1.29609C9.07914 0.653606 9.95054 0.292664 10.8591 0.292664C11.7678 0.292664 12.6392 0.653606 13.2816 1.29609C13.9241 1.93857 14.2851 2.80997 14.2851 3.71857C14.2851 4.62718 13.9241 5.49858 13.2816 6.14106L13.2814 6.14133L7.0324 12.3835C7.03231 12.3836 7.03222 12.3837 7.03213 12.3838C6.64459 12.7712 6.11905 12.9888 5.57107 12.9888C5.02297 12.9888 4.49731 12.7711 4.10974 12.3835C3.72217 11.9959 3.50444 11.4703 3.50444 10.9222C3.50444 10.3741 3.72217 9.8484 4.10974 9.46084L4.11004 9.46054L9.877 3.70039L10.3775 3.20051L11.3772 4.20144L10.8767 4.70131L5.11008 10.4612C5.11005 10.4612 5.11003 10.4612 5.11 10.4613C4.98779 10.5835 4.91913 10.7493 4.91913 10.9222C4.91913 11.0951 4.98782 11.2609 5.11008 11.3832C5.23234 11.5054 5.39817 11.5741 5.57107 11.5741C5.74398 11.5741 5.9098 11.5054 6.03206 11.3832L6.03233 11.3829L12.2813 5.14072C12.2814 5.14063 12.2815 5.14054 12.2816 5.14045C12.6586 4.7633 12.8704 4.25185 12.8704 3.71857C12.8704 3.18516 12.6585 2.6736 12.2813 2.29643C11.9041 1.91925 11.3926 1.70735 10.8591 1.70735Z\" fill=\"currentColor\"></path>\n                                    </svg>\n                                </button>\n                                <button class=\"inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:text-accent-foreground ml-1 rounded-md p-[7px] h-fit dark:border-zinc-700 hover:dark:bg-zinc-900 hover:bg-zinc-200\" data-testid=\"kb-button\">\n                                    <svg height=\"14\" stroke-linejoin=\"round\" viewBox=\"0 0 16 16\" width=\"14\" style=\"color:currentcolor\">\n                                        <path fill-rule=\"evenodd\" d=\"M6 8V1h1v6.117L8.743 6.07a.5.5 0 0 1 .514 0L11 7.117V1h1v7a.5.5 0 0 1-.757.429L9 7.083 6.757 8.43A.5.5 0 0 1 6 8\"></path>\n                                        <path d=\"M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2\"></path>\n                                        <path d=\"M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z\"></path>\n                                    </svg>\n                                </button>\n                            </div>\n                            <div class=\"absolute bottom-0 right-0 p-2 w-fit flex flex-row justify-end\">\n                                <button class=\"inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 rounded-full p-1.5 h-fit border dark:border-zinc-600\" data-testid=\"send-button\" disabled=\"\">\n                                    <svg height=\"14\" stroke-linejoin=\"round\" viewBox=\"0 0 16 16\" width=\"14\" style=\"color:currentcolor\">\n                                        <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8.70711 1.39644C8.31659 1.00592 7.68342 1.00592 7.2929 1.39644L2.21968 6.46966L1.68935 6.99999L2.75001 8.06065L3.28034 7.53032L7.25001 3.56065V14.25V15H8.75001V14.25V3.56065L12.7197 7.53032L13.25 8.06065L14.3107 6.99999L13.7803 6.46966L8.70711 1.39644Z\" fill=\"currentColor\"></path>\n                                    </svg>\n                                </button>\n                            </div>\n                        </div>\n                    </form>\n                </div>\n                <!--$-->\n                <!--/$-->\n                <!--$-->\n                <!--/$-->\n            </main>\n        </div>\n        <script src=\"/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_01c45518._.js\" async=\"\"></script>\n        <script>(self.__next_f=self.__next_f||[]).push([0])</script>\n        <script>self.__next_f.push([1,\"3:\\\"$Sreact.fragment\\\"\\n5:I[\\\"[project]/node_modules/next/dist/client/components/layout-router.js [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/node_modules_next_dist_1a6ee436._.js\\\",\\\"/_next/static/chunks/app_favicon_ico_mjs_feb59115._.js\\\"],\\\"default\\\"]\\n6:I[\\\"[project]/node_modules/next/dist/client/components/render-from-template-context.js [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/node_modules_next_dist_1a6ee436._.js\\\",\\\"/_next/static/chunks/app_favicon_ico_mjs_feb59115._.js\\\"],\\\"default\\\"]\\nf:I[\\\"[project]/node_modules/next/dist/client/components/metadata/metadata-boundary.js [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/node_modules_next_dist_1a6ee436._.js\\\",\\\"/_next/static/chunks/app_favicon_ico_mjs_feb59115._.js\\\"],\\\"MetadataBoundary\\\"]\\n12:I[\\\"[project]/node_modules/next/dist/client/components/metadata/metadata-boundary.js [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/node_modules_next_dist_1a6ee436._.js\\\",\\\"/_next/static/chunks/app_favicon_ico_mjs_feb59115._.js\\\"],\\\"OutletBoundary\\\"]\\n19:I[\\\"[project]/node_modules/next/dist/client/components/metadata/async-metadata.js [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/node_modules_next_dist_1a6ee436._.js\\\",\\\"/_next/static/chunks/app_favicon_ico_mjs_feb59115._.js\\\"],\\\"AsyncMetadataOutlet\\\"]\\n1f:I[\\\"[project]/node_modules/next/dist/client/components/metadata/metadata-boundary.js [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/node_modules_next_dist_1a6ee436._.js\\\",\\\"/_next/static/chunks/app_favicon_ico_mjs_feb59115._.js\\\"],\\\"ViewportBoundary\\\"]\\n25:I[\\\"[project]/node_modules/next/dist/client/components/error-boundary.js [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/node_modules_next_dist_1a6ee436._.js\\\",\\\"/_next/static/chunks/app_favicon_ico_mjs_feb59115._.js\\\"],\\\"default\\\"]\\n26:I[\\\"[project]/components/theme-provider.tsx [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/_33c6a35b._.js\\\",\\\"/_next/static/chunks/app_layout_tsx_26c2bb0e._.js\\\"],\\\"ThemeProvider\\\"]\\n27:I[\\\"[project]/node_modules/sonner/dist/index.mjs [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/_33c6a35b._.js\\\",\\\"/_next/stat\"])</script>\n        <script>self.__next_f.push([1,\"ic/chunks/app_layout_tsx_26c2bb0e._.js\\\"],\\\"Toaster\\\"]\\n2b:\\\"$Sreact.suspense\\\"\\n2c:I[\\\"[project]/node_modules/next/dist/client/components/metadata/async-metadata.js [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/node_modules_next_dist_1a6ee436._.js\\\",\\\"/_next/static/chunks/app_favicon_ico_mjs_feb59115._.js\\\"],\\\"AsyncMetadata\\\"]\\n:HL[\\\"/_next/static/chunks/%5Broot-of-the-server%5D__4d3d4bd4._.css\\\",\\\"style\\\"]\\n:HL[\\\"/_next/static/media/gyByhwUxId8gMEwcGFWNOITd-s.p.da1ebef7.woff2\\\",\\\"font\\\",{\\\"crossOrigin\\\":\\\"\\\",\\\"type\\\":\\\"font/woff2\\\"}]\\n:HL[\\\"/_next/static/media/or3nQ6H_1_WfwkMZI_qYFrcdmhHkjko-s.p.be19f591.woff2\\\",\\\"font\\\",{\\\"crossOrigin\\\":\\\"\\\",\\\"type\\\":\\\"font/woff2\\\"}]\\n:HL[\\\"/_next/static/chunks/node_modules_react-data-grid_lib_styles_fb0a7daf.css\\\",\\\"style\\\"]\\n:N1745582624085.7869\\n2:{\\\"name\\\":\\\"Preloads\\\",\\\"env\\\":\\\"Server\\\",\\\"key\\\":null,\\\"owner\\\":null,\\\"stack\\\":[],\\\"props\\\":{\\\"preloadCallbacks\\\":[\\\"$E(()=\\u003e{ctx.componentMod.preloadStyle(fullHref,ctx.renderOpts.crossOrigin,ctx.nonce)})\\\",\\\"$E(()=\\u003e{ctx.componentMod.preloadFont(href,type,ctx.renderOpts.crossOrigin,ctx.nonce)})\\\",\\\"$E(()=\\u003e{ctx.componentMod.preloadFont(href,type,ctx.renderOpts.crossOrigin,ctx.nonce)})\\\",\\\"$E(()=\\u003e{ctx.componentMod.preloadStyle(fullHref,ctx.renderOpts.crossOrigin,ctx.nonce)})\\\"]}}\\n1:D{\\\"time\\\":8.234600000083447}\\n1:D\\\"$2\\\"\\n1:D{\\\"time\\\":9.376999999862164}\\n1:null\\n7:{\\\"name\\\":\\\"RootLayout\\\",\\\"env\\\":\\\"Server\\\",\\\"key\\\":null,\\\"owner\\\":null,\\\"stack\\\":[],\\\"props\\\":{\\\"children\\\":[\\\"$\\\",\\\"$L5\\\",null,{\\\"parallelRouterKey\\\":\\\"children\\\",\\\"error\\\":\\\"$undefined\\\",\\\"errorStyles\\\":\\\"$undefined\\\",\\\"errorScripts\\\":\\\"$undefined\\\",\\\"template\\\":[\\\"$\\\",\\\"$3\\\",null,{\\\"children\\\":[\\\"$\\\",\\\"$L6\\\",null,{},null,[],1]},null,[],0],\\\"templateStyles\\\":\\\"$undefined\\\",\\\"templateScripts\\\":\\\"$undefined\\\",\\\"notFound\\\":\\\"$Y\\\",\\\"forbidden\\\":\\\"$undefined\\\",\\\"unauthorized\\\":\\\"$undefined\\\"},null,[],1],\\\"params\\\":\\\"$Y\\\"}}\\n4:D{\\\"time\\\":12.268099999986589}\\n4:D\\\"$7\\\"\\n9:{\\\"name\\\":\\\"Layout\\\",\\\"env\\\":\\\"Server\\\",\\\"key\\\":null,\\\"owner\\\":null,\\\"stack\\\":[],\\\"props\\\":{\\\"children\\\":[\\\"$\\\",\\\"$L5\\\",null,{\\\"parallelRouterKey\\\":\\\"children\\\",\\\"error\\\":\\\"$undefined\\\",\\\"errorStyles\\\":\\\"$undefined\\\",\\\"errorScripts\\\":\\\"$undefined\\\",\\\"template\\\":[\\\"$\\\",\\\"$3\\\",null,{\\\"children\\\":[\\\"$\\\",\\\"$L6\\\",null,{},n\"])</script>\n        <script>self.__next_f.push([1,\"ull,[],1]},null,[],0],\\\"templateStyles\\\":\\\"$undefined\\\",\\\"templateScripts\\\":\\\"$undefined\\\",\\\"notFound\\\":\\\"$Y\\\",\\\"forbidden\\\":\\\"$undefined\\\",\\\"unauthorized\\\":\\\"$undefined\\\"},null,[],1],\\\"params\\\":\\\"$Y\\\"}}\\n8:D{\\\"time\\\":15.608099999837577}\\n8:D\\\"$9\\\"\\nb:{\\\"name\\\":\\\"Page\\\",\\\"env\\\":\\\"Server\\\",\\\"key\\\":null,\\\"owner\\\":null,\\\"stack\\\":[],\\\"props\\\":{\\\"params\\\":\\\"$@\\\",\\\"searchParams\\\":\\\"$@\\\"}}\\na:D{\\\"time\\\":18.30519999982789}\\na:D\\\"$b\\\"\\nd:{\\\"name\\\":\\\"\\\",\\\"env\\\":\\\"Server\\\",\\\"key\\\":null,\\\"owner\\\":null,\\\"stack\\\":[],\\\"props\\\":{}}\\nc:D{\\\"time\\\":18.88290000008419}\\nc:D\\\"$d\\\"\\ne:{\\\"name\\\":\\\"MetadataTree\\\",\\\"env\\\":\\\"Server\\\",\\\"key\\\":null,\\\"owner\\\":null,\\\"stack\\\":[],\\\"props\\\":{}}\\nc:D{\\\"time\\\":19.126300000119954}\\nc:D\\\"$e\\\"\\nc:D{\\\"time\\\":21.29300000006333}\\n11:{\\\"name\\\":\\\"__next_metadata_boundary__\\\",\\\"env\\\":\\\"Server\\\",\\\"key\\\":null,\\\"owner\\\":\\\"$e\\\",\\\"stack\\\":[],\\\"props\\\":{}}\\n10:D{\\\"time\\\":21.565899999812245}\\n10:D\\\"$11\\\"\\nc:[\\\"$\\\",\\\"$Lf\\\",null,{\\\"children\\\":\\\"$L10\\\"},\\\"$e\\\",[],1]\\n14:{\\\"name\\\":\\\"__next_outlet_boundary__\\\",\\\"env\\\":\\\"Server\\\",\\\"key\\\":null,\\\"owner\\\":null,\\\"stack\\\":[],\\\"props\\\":{\\\"ready\\\":\\\"$E(async function getViewportReady() {\\\\n        await viewport();\\\\n        return undefined;\\\\n    })\\\"}}\\n13:D{\\\"time\\\":26.31900000013411}\\n13:D\\\"$14\\\"\\n16:{\\\"name\\\":\\\"__next_outlet_boundary__\\\",\\\"env\\\":\\\"Server\\\",\\\"key\\\":null,\\\"owner\\\":null,\\\"stack\\\":[],\\\"props\\\":{\\\"ready\\\":\\\"$E(async function getMetadataReady() {\\\\n        // Only warm up metadata() call when it's blocking metadata,\\\\n        // otherwise it will be fully managed by AsyncMetadata component.\\\\n        if (!serveStreamingMetadata) {\\\\n            await metadata();\\\\n        }\\\\n        return undefined;\\\\n    })\\\"}}\\n15:D{\\\"time\\\":27.33229999989271}\\n15:D\\\"$16\\\"\\n18:{\\\"name\\\":\\\"StreamingMetadataOutlet\\\",\\\"env\\\":\\\"Server\\\",\\\"key\\\":null,\\\"owner\\\":null,\\\"stack\\\":[],\\\"props\\\":{}}\\n17:D{\\\"time\\\":27.925799999851733}\\n17:D\\\"$18\\\"\\n17:D{\\\"time\\\":28.237199999857694}\\n17:[\\\"$\\\",\\\"$L19\\\",null,{\\\"promise\\\":\\\"$@1a\\\"},\\\"$18\\\",[],1]\\n1c:{\\\"name\\\":\\\"NonIndex\\\",\\\"env\\\":\\\"Server\\\",\\\"key\\\":null,\\\"owner\\\":null,\\\"stack\\\":[],\\\"props\\\":{\\\"pagePath\\\":\\\"/\\\",\\\"statusCode\\\":200,\\\"isAction\\\":false}}\\n1b:D{\\\"time\\\":28.90789999999106}\\n1b:D\\\"$1c\\\"\\n1b:D{\\\"time\\\":29.06389999995008}\\n1b:null\\n1e:{\\\"name\\\":\\\"ViewportTree\\\",\\\"env\\\":\\\"Server\\\",\\\"key\\\":\\\"s8amyc8-fT69PJWjP6dzx\\\",\\\"owner\\\":\"])</script>\n        <script>self.__next_f.push([1,\"null,\\\"stack\\\":[],\\\"props\\\":{}}\\n1d:D{\\\"time\\\":29.311199999880046}\\n1d:D\\\"$1e\\\"\\n1d:D{\\\"time\\\":29.82590000005439}\\n21:{\\\"name\\\":\\\"__next_viewport_boundary__\\\",\\\"env\\\":\\\"Server\\\",\\\"key\\\":null,\\\"owner\\\":\\\"$1e\\\",\\\"stack\\\":[],\\\"props\\\":{}}\\n20:D{\\\"time\\\":30.07979999994859}\\n20:D\\\"$21\\\"\\n1d:[\\\"$\\\",\\\"$3\\\",\\\"s8amyc8-fT69PJWjP6dzx\\\",{\\\"children\\\":[[\\\"$\\\",\\\"$L1f\\\",null,{\\\"children\\\":\\\"$L20\\\"},\\\"$1e\\\",[],1],[\\\"$\\\",\\\"meta\\\",null,{\\\"name\\\":\\\"next-size-adjust\\\",\\\"content\\\":\\\"\\\"},\\\"$1e\\\",[],1]]},null,null,0]\\n23:{\\\"name\\\":\\\"\\\",\\\"env\\\":\\\"Server\\\",\\\"key\\\":null,\\\"owner\\\":null,\\\"stack\\\":[],\\\"props\\\":{}}\\n22:D{\\\"time\\\":30.59929999988526}\\n22:D\\\"$23\\\"\\n22:D{\\\"time\\\":30.64060000004247}\\n22:null\\n24:[]\\n\"])</script>\n        <script>self.__next_f.push([1,\"0:{\\\"P\\\":\\\"$1\\\",\\\"b\\\":\\\"development\\\",\\\"p\\\":\\\"\\\",\\\"c\\\":[\\\"\\\",\\\"\\\"],\\\"i\\\":false,\\\"f\\\":[[[\\\"\\\",{\\\"children\\\":[\\\"(chat)\\\",{\\\"children\\\":[\\\"__PAGE__\\\",{}]}]},\\\"$undefined\\\",\\\"$undefined\\\",true],[\\\"\\\",[\\\"$\\\",\\\"$3\\\",\\\"c\\\",{\\\"children\\\":[[[\\\"$\\\",\\\"link\\\",\\\"0\\\",{\\\"rel\\\":\\\"stylesheet\\\",\\\"href\\\":\\\"/_next/static/chunks/%5Broot-of-the-server%5D__4d3d4bd4._.css\\\",\\\"precedence\\\":\\\"next_static/chunks/[root-of-the-server]__4d3d4bd4._.css\\\",\\\"crossOrigin\\\":\\\"$undefined\\\",\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/_33c6a35b._.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/app_layout_tsx_26c2bb0e._.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0]],\\\"$L4\\\"]},null,[],0],{\\\"children\\\":[\\\"(chat)\\\",[\\\"$\\\",\\\"$3\\\",\\\"c\\\",{\\\"children\\\":[[[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/_866deadc._.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/node_modules_next_c85fb1f2._.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-2\\\",{\\\"src\\\":\\\"/_next/static/chunks/node_modules_framer-motion_dist_es_92139a2a._.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-3\\\",{\\\"src\\\":\\\"/_next/static/chunks/node_modules_swr_dist_a9801644._.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-4\\\",{\\\"src\\\":\\\"/_next/static/chunks/node_modules_e38022db._.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-5\\\",{\\\"src\\\":\\\"/_next/static/chunks/app_(chat)_layout_tsx_b685bb48._.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0]],\\\"$L8\\\"]},null,[],0],{\\\"children\\\":[\\\"__PAGE__\\\",[\\\"$\\\",\\\"$3\\\",\\\"c\\\",{\\\"children\\\":[\\\"$La\\\",\\\"$c\\\",[[\\\"$\\\",\\\"link\\\",\\\"0\\\",{\\\"rel\\\":\\\"stylesheet\\\",\\\"href\\\":\\\"/_next/static/chunks/node_modules_react-data-grid_lib_styles_fb0a7daf.css\\\",\\\"precedence\\\":\\\"next_static/chunks/node_modules_react-data-grid_lib_styles_fb0a7daf.css\\\",\\\"crossOrigin\\\":\\\"$undefined\\\",\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/_78c74842._.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/node_modules_next_dist_compiled_db152a47._.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-2\\\",{\\\"src\\\":\\\"/_next/static/chunks/node_modules_zod_lib_index_mjs_ee760afb._.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-3\\\",{\\\"src\\\":\\\"/_next/static/chunks/node_modules_micromark-core-commonmark_dev_lib_36a4b45d._.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-4\\\",{\\\"src\\\":\\\"/_next/static/chunks/node_modules_prosemirror-view_dist_index_212d9a9b.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-5\\\",{\\\"src\\\":\\\"/_next/static/chunks/node_modules_entities_lib_esm_3b43f604._.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-6\\\",{\\\"src\\\":\\\"/_next/static/chunks/node_modules_markdown-it_c9117e0a._.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-7\\\",{\\\"src\\\":\\\"/_next/static/chunks/node_modules_%40codemirror_state_dist_index_9b015ec1.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-8\\\",{\\\"src\\\":\\\"/_next/static/chunks/node_modules_%40codemirror_view_dist_index_201017eb.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-9\\\",{\\\"src\\\":\\\"/_next/static/chunks/node_modules_react-data-grid_lib_bundle_f8bf325b.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-10\\\",{\\\"src\\\":\\\"/_next/static/chunks/node_modules_%40ai-sdk_react_1a5af7fb._.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-11\\\",{\\\"src\\\":\\\"/_next/static/chunks/node_modules_%40lezer_e0dd4b0b._.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-12\\\",{\\\"src\\\":\\\"/_next/static/chunks/node_modules_%40codemirror_4de5c195._.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-13\\\",{\\\"src\\\":\\\"/_next/static/chunks/node_modules_342b5cd0._.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0],[\\\"$\\\",\\\"script\\\",\\\"script-14\\\",{\\\"src\\\":\\\"/_next/static/chunks/app_(chat)_page_tsx_ba3270d6._.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"},null,[],0]],[\\\"$\\\",\\\"$L12\\\",null,{\\\"children\\\":[\\\"$L13\\\",\\\"$L15\\\",\\\"$17\\\"]},null,[],1]]},null,[],0],{},null,false]},null,false]},null,false],[\\\"$\\\",\\\"$3\\\",\\\"h\\\",{\\\"children\\\":[\\\"$1b\\\",\\\"$1d\\\",\\\"$22\\\"]},null,[],0],false]],\\\"m\\\":\\\"$W24\\\",\\\"G\\\":[\\\"$25\\\",\\\"$undefined\\\"],\\\"s\\\":false,\\\"S\\\":false}\\n\"])</script>\n        <script>self.__next_f.push([1,\"4:D{\\\"time\\\":31.468100000172853}\\n29:{\\\"name\\\":\\\"NotFound\\\",\\\"env\\\":\\\"Server\\\",\\\"key\\\":null,\\\"owner\\\":null,\\\"stack\\\":[],\\\"props\\\":{}}\\n28:D{\\\"time\\\":32.41649999981746}\\n28:D\\\"$29\\\"\\n2a:{\\\"name\\\":\\\"HTTPAccessErrorFallback\\\",\\\"env\\\":\\\"Server\\\",\\\"key\\\":null,\\\"owner\\\":\\\"$29\\\",\\\"stack\\\":[],\\\"props\\\":{\\\"status\\\":404,\\\"message\\\":\\\"This page could not be found.\\\"}}\\n28:D{\\\"time\\\":32.73549999995157}\\n28:D\\\"$2a\\\"\\n28:D{\\\"time\\\":33.39559999993071}\\n28:[[\\\"$\\\",\\\"title\\\",null,{\\\"children\\\":\\\"404: This page could not be found.\\\"},\\\"$2a\\\",[],1],[\\\"$\\\",\\\"div\\\",null,{\\\"style\\\":{\\\"fontFamily\\\":\\\"system-ui,\\\\\\\"Segoe UI\\\\\\\",Roboto,Helvetica,Arial,sans-serif,\\\\\\\"Apple Color Emoji\\\\\\\",\\\\\\\"Segoe UI Emoji\\\\\\\"\\\",\\\"height\\\":\\\"100vh\\\",\\\"textAlign\\\":\\\"center\\\",\\\"display\\\":\\\"flex\\\",\\\"flexDirection\\\":\\\"column\\\",\\\"alignItems\\\":\\\"center\\\",\\\"justifyContent\\\":\\\"center\\\"},\\\"children\\\":[\\\"$\\\",\\\"div\\\",null,{\\\"children\\\":[[\\\"$\\\",\\\"style\\\",null,{\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\\\"}},\\\"$2a\\\",[],1],[\\\"$\\\",\\\"h1\\\",null,{\\\"className\\\":\\\"next-error-h1\\\",\\\"style\\\":{\\\"display\\\":\\\"inline-block\\\",\\\"margin\\\":\\\"0 20px 0 0\\\",\\\"padding\\\":\\\"0 23px 0 0\\\",\\\"fontSize\\\":24,\\\"fontWeight\\\":500,\\\"verticalAlign\\\":\\\"top\\\",\\\"lineHeight\\\":\\\"49px\\\"},\\\"children\\\":404},\\\"$2a\\\",[],1],[\\\"$\\\",\\\"div\\\",null,{\\\"style\\\":{\\\"display\\\":\\\"inline-block\\\"},\\\"children\\\":[\\\"$\\\",\\\"h2\\\",null,{\\\"style\\\":{\\\"fontSize\\\":14,\\\"fontWeight\\\":400,\\\"lineHeight\\\":\\\"49px\\\",\\\"margin\\\":0},\\\"children\\\":\\\"This page could not be found.\\\"},\\\"$2a\\\",[],1]},\\\"$2a\\\",[],1]]},\\\"$2a\\\",[],1]},\\\"$2a\\\",[],1]]\\n\"])</script>\n        <script>self.__next_f.push([1,\"4:[\\\"$\\\",\\\"html\\\",null,{\\\"lang\\\":\\\"en\\\",\\\"suppressHydrationWarning\\\":true,\\\"className\\\":\\\"geist_530f5508-module__OOnSwq__variable geist_mono_8f4ee38b-module__1fn3BW__variable\\\",\\\"children\\\":[[\\\"$\\\",\\\"head\\\",null,{\\\"children\\\":[\\\"$\\\",\\\"script\\\",null,{\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"(function() {\\\\n  var html = document.documentElement;\\\\n  var meta = document.querySelector('meta[name=\\\\\\\"theme-color\\\\\\\"]');\\\\n  if (!meta) {\\\\n    meta = document.createElement('meta');\\\\n    meta.setAttribute('name', 'theme-color');\\\\n    document.head.appendChild(meta);\\\\n  }\\\\n  function updateThemeColor() {\\\\n    var isDark = html.classList.contains('dark');\\\\n    meta.setAttribute('content', isDark ? 'hsl(240deg 10% 3.92%)' : 'hsl(0 0% 100%)');\\\\n  }\\\\n  var observer = new MutationObserver(updateThemeColor);\\\\n  observer.observe(html, { attributes: true, attributeFilter: ['class'] });\\\\n  updateThemeColor();\\\\n})();\\\"}},\\\"$7\\\",[[\\\"RootLayout\\\",\\\"D:\\\\\\\\Lecture\\\\\\\\FinalProject\\\\\\\\7-DevEnv\\\\\\\\ASCGBot\\\\\\\\.next\\\\\\\\server\\\\\\\\chunks\\\\\\\\ssr\\\\\\\\[root-of-the-server]__c7679922._.js\\\",162,278]],1]},\\\"$7\\\",[[\\\"RootLayout\\\",\\\"D:\\\\\\\\Lecture\\\\\\\\FinalProject\\\\\\\\7-DevEnv\\\\\\\\ASCGBot\\\\\\\\.next\\\\\\\\server\\\\\\\\chunks\\\\\\\\ssr\\\\\\\\[root-of-the-server]__c7679922._.js\\\",161,264]],1],[\\\"$\\\",\\\"body\\\",null,{\\\"className\\\":\\\"antialiased\\\",\\\"children\\\":[\\\"$\\\",\\\"$L26\\\",null,{\\\"attribute\\\":\\\"class\\\",\\\"defaultTheme\\\":\\\"system\\\",\\\"enableSystem\\\":true,\\\"disableTransitionOnChange\\\":true,\\\"children\\\":[[\\\"$\\\",\\\"$L27\\\",null,{\\\"position\\\":\\\"top-center\\\"},\\\"$7\\\",[[\\\"RootLayout\\\",\\\"D:\\\\\\\\Lecture\\\\\\\\FinalProject\\\\\\\\7-DevEnv\\\\\\\\ASCGBot\\\\\\\\.next\\\\\\\\server\\\\\\\\chunks\\\\\\\\ssr\\\\\\\\[root-of-the-server]__c7679922._.js\\\",184,276]],1],[\\\"$\\\",\\\"$L5\\\",null,{\\\"parallelRouterKey\\\":\\\"children\\\",\\\"error\\\":\\\"$undefined\\\",\\\"errorStyles\\\":\\\"$undefined\\\",\\\"errorScripts\\\":\\\"$undefined\\\",\\\"template\\\":[\\\"$\\\",\\\"$L6\\\",null,{},null,[],1],\\\"templateStyles\\\":\\\"$undefined\\\",\\\"templateScripts\\\":\\\"$undefined\\\",\\\"notFound\\\":[\\\"$28\\\",[]],\\\"forbidden\\\":\\\"$undefined\\\",\\\"unauthorized\\\":\\\"$undefined\\\"},null,[],1]]},\\\"$7\\\",[[\\\"RootLayout\\\",\\\"D:\\\\\\\\Lecture\\\\\\\\FinalProject\\\\\\\\7-DevEnv\\\\\\\\ASCGBot\\\\\\\\.next\\\\\\\\server\\\\\\\\chunks\\\\\\\\ssr\\\\\\\\[root-of-the-server]__c7679922._.js\\\",178,278]],1]},\\\"$7\\\",[[\\\"RootLayout\\\",\\\"D:\\\\\\\\Lecture\\\\\\\\FinalProject\\\\\\\\7-DevEnv\\\\\\\\ASCGBot\\\\\\\\.next\\\\\\\\server\\\\\\\\chunks\\\\\\\\ssr\\\\\\\\[root-of-the-server]__c7679922._.js\\\",176,264]],1]]},\\\"$7\\\",[[\\\"RootLayout\\\",\\\"D:\\\\\\\\Lecture\\\\\\\\FinalProject\\\\\\\\7-DevEnv\\\\\\\\ASCGBot\\\\\\\\.next\\\\\\\\server\\\\\\\\chunks\\\\\\\\ssr\\\\\\\\[root-of-the-server]__c7679922._.js\\\",152,263]],1]\\n\"])</script>\n        <script>self.__next_f.push([1,\"10:D{\\\"time\\\":34.13430000003427}\\n10:[\\\"$\\\",\\\"$2b\\\",null,{\\\"fallback\\\":null,\\\"children\\\":[\\\"$\\\",\\\"$L2c\\\",null,{\\\"promise\\\":\\\"$@2d\\\"},\\\"$11\\\",[],1]},\\\"$11\\\",[],1]\\n15:D{\\\"time\\\":35.01269999984652}\\n15:null\\n20:D{\\\"time\\\":36.37790000019595}\\n20:[[\\\"$\\\",\\\"meta\\\",\\\"0\\\",{\\\"charSet\\\":\\\"utf-8\\\"},\\\"$14\\\",[],0],[\\\"$\\\",\\\"meta\\\",\\\"1\\\",{\\\"name\\\":\\\"viewport\\\",\\\"content\\\":\\\"width=device-width, initial-scale=1, maximum-scale=1\\\"},\\\"$14\\\",[],0]]\\n13:D{\\\"time\\\":36.548200000077486}\\n13:null\\n\"])</script>\n        <script>self.__next_f.push([1,\"2e:I[\\\"[project]/components/chat.tsx [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/_33c6a35b._.js\\\",\\\"/_next/static/chunks/app_layout_tsx_26c2bb0e._.js\\\",\\\"/_next/static/chunks/_866deadc._.js\\\",\\\"/_next/static/chunks/node_modules_next_c85fb1f2._.js\\\",\\\"/_next/static/chunks/node_modules_framer-motion_dist_es_92139a2a._.js\\\",\\\"/_next/static/chunks/node_modules_swr_dist_a9801644._.js\\\",\\\"/_next/static/chunks/node_modules_e38022db._.js\\\",\\\"/_next/static/chunks/app_(chat)_layout_tsx_b685bb48._.js\\\",\\\"/_next/static/chunks/_78c74842._.js\\\",\\\"/_next/static/chunks/node_modules_next_dist_compiled_db152a47._.js\\\",\\\"/_next/static/chunks/node_modules_zod_lib_index_mjs_ee760afb._.js\\\",\\\"/_next/static/chunks/node_modules_micromark-core-commonmark_dev_lib_36a4b45d._.js\\\",\\\"/_next/static/chunks/node_modules_prosemirror-view_dist_index_212d9a9b.js\\\",\\\"/_next/static/chunks/node_modules_entities_lib_esm_3b43f604._.js\\\",\\\"/_next/static/chunks/node_modules_markdown-it_c9117e0a._.js\\\",\\\"/_next/static/chunks/node_modules_%40codemirror_state_dist_index_9b015ec1.js\\\",\\\"/_next/static/chunks/node_modules_%40codemirror_view_dist_index_201017eb.js\\\",\\\"/_next/static/chunks/node_modules_react-data-grid_lib_bundle_f8bf325b.js\\\",\\\"/_next/static/chunks/node_modules_%40ai-sdk_react_1a5af7fb._.js\\\",\\\"/_next/static/chunks/node_modules_%40lezer_e0dd4b0b._.js\\\",\\\"/_next/static/chunks/node_modules_%40codemirror_4de5c195._.js\\\",\\\"/_next/static/chunks/node_modules_342b5cd0._.js\\\",\\\"/_next/static/chunks/app_(chat)_page_tsx_ba3270d6._.js\\\"],\\\"Chat\\\"]\\n2f:I[\\\"[project]/components/data-stream-handler.tsx [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/_33c6a35b._.js\\\",\\\"/_next/static/chunks/app_layout_tsx_26c2bb0e._.js\\\",\\\"/_next/static/chunks/_866deadc._.js\\\",\\\"/_next/static/chunks/node_modules_next_c85fb1f2._.js\\\",\\\"/_next/static/chunks/node_modules_framer-motion_dist_es_92139a2a._.js\\\",\\\"/_next/static/chunks/node_modules_swr_dist_a9801644._.js\\\",\\\"/_next/static/chunks/node_modules_e38022db._.js\\\",\\\"/_next/static/chunks/app_(chat)_layout_tsx_b685bb48._.js\\\",\\\"/_next/static/chunks/_78c74842._.js\\\",\\\"/_next/static/chunk\"])</script>\n        <script>self.__next_f.push([1,\"s/node_modules_next_dist_compiled_db152a47._.js\\\",\\\"/_next/static/chunks/node_modules_zod_lib_index_mjs_ee760afb._.js\\\",\\\"/_next/static/chunks/node_modules_micromark-core-commonmark_dev_lib_36a4b45d._.js\\\",\\\"/_next/static/chunks/node_modules_prosemirror-view_dist_index_212d9a9b.js\\\",\\\"/_next/static/chunks/node_modules_entities_lib_esm_3b43f604._.js\\\",\\\"/_next/static/chunks/node_modules_markdown-it_c9117e0a._.js\\\",\\\"/_next/static/chunks/node_modules_%40codemirror_state_dist_index_9b015ec1.js\\\",\\\"/_next/static/chunks/node_modules_%40codemirror_view_dist_index_201017eb.js\\\",\\\"/_next/static/chunks/node_modules_react-data-grid_lib_bundle_f8bf325b.js\\\",\\\"/_next/static/chunks/node_modules_%40ai-sdk_react_1a5af7fb._.js\\\",\\\"/_next/static/chunks/node_modules_%40lezer_e0dd4b0b._.js\\\",\\\"/_next/static/chunks/node_modules_%40codemirror_4de5c195._.js\\\",\\\"/_next/static/chunks/node_modules_342b5cd0._.js\\\",\\\"/_next/static/chunks/app_(chat)_page_tsx_ba3270d6._.js\\\"],\\\"DataStreamHandler\\\"]\\na:D{\\\"time\\\":74.61549999983981}\\na:[[\\\"$\\\",\\\"$L2e\\\",\\\"bbe67584-008a-4cf2-adba-77784310e5be\\\",{\\\"id\\\":\\\"bbe67584-008a-4cf2-adba-77784310e5be\\\",\\\"initialMessages\\\":[],\\\"selectedChatModel\\\":\\\"chat-model\\\",\\\"selectedVisibilityType\\\":\\\"private\\\",\\\"isReadonly\\\":false},\\\"$b\\\",[[\\\"Page\\\",\\\"D:\\\\\\\\Lecture\\\\\\\\FinalProject\\\\\\\\7-DevEnv\\\\\\\\ASCGBot\\\\\\\\.next\\\\\\\\server\\\\\\\\chunks\\\\\\\\ssr\\\\\\\\_7947e6e2._.js\\\",1070,268]],1],[\\\"$\\\",\\\"$L2f\\\",null,{\\\"id\\\":\\\"bbe67584-008a-4cf2-adba-77784310e5be\\\"},\\\"$b\\\",[[\\\"Page\\\",\\\"D:\\\\\\\\Lecture\\\\\\\\FinalProject\\\\\\\\7-DevEnv\\\\\\\\ASCGBot\\\\\\\\.next\\\\\\\\server\\\\\\\\chunks\\\\\\\\ssr\\\\\\\\_7947e6e2._.js\\\",1081,268]],1]]\\n2d:D{\\\"time\\\":75.3609000002034}\\n2d:{\\\"metadata\\\":[[\\\"$\\\",\\\"title\\\",\\\"0\\\",{\\\"children\\\":\\\"Next.js Chatbot Template\\\"},\\\"$11\\\",[],0],[\\\"$\\\",\\\"meta\\\",\\\"1\\\",{\\\"name\\\":\\\"description\\\",\\\"content\\\":\\\"Next.js chatbot template using the AI SDK.\\\"},\\\"$11\\\",[],0],[\\\"$\\\",\\\"link\\\",\\\"2\\\",{\\\"rel\\\":\\\"icon\\\",\\\"href\\\":\\\"/favicon.ico?favicon.46d6a819.ico\\\",\\\"sizes\\\":\\\"48x48\\\",\\\"type\\\":\\\"image/x-icon\\\"},\\\"$11\\\",[],0]],\\\"error\\\":null,\\\"digest\\\":\\\"$undefined\\\"}\\n1a:D{\\\"time\\\":75.6414999999106}\\n1a:{\\\"metadata\\\":\\\"$2d:metadata\\\",\\\"error\\\":null,\\\"digest\\\":\\\"$undefined\\\"}\\n\"])</script>\n        <script>self.__next_f.push([1,\"30:I[\\\"[project]/node_modules/next/dist/client/script.js [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/_33c6a35b._.js\\\",\\\"/_next/static/chunks/app_layout_tsx_26c2bb0e._.js\\\",\\\"/_next/static/chunks/_866deadc._.js\\\",\\\"/_next/static/chunks/node_modules_next_c85fb1f2._.js\\\",\\\"/_next/static/chunks/node_modules_framer-motion_dist_es_92139a2a._.js\\\",\\\"/_next/static/chunks/node_modules_swr_dist_a9801644._.js\\\",\\\"/_next/static/chunks/node_modules_e38022db._.js\\\",\\\"/_next/static/chunks/app_(chat)_layout_tsx_b685bb48._.js\\\"],\\\"\\\"]\\n31:I[\\\"[project]/components/ui/sidebar.tsx [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/_33c6a35b._.js\\\",\\\"/_next/static/chunks/app_layout_tsx_26c2bb0e._.js\\\",\\\"/_next/static/chunks/_866deadc._.js\\\",\\\"/_next/static/chunks/node_modules_next_c85fb1f2._.js\\\",\\\"/_next/static/chunks/node_modules_framer-motion_dist_es_92139a2a._.js\\\",\\\"/_next/static/chunks/node_modules_swr_dist_a9801644._.js\\\",\\\"/_next/static/chunks/node_modules_e38022db._.js\\\",\\\"/_next/static/chunks/app_(chat)_layout_tsx_b685bb48._.js\\\"],\\\"SidebarProvider\\\"]\\n32:I[\\\"[project]/components/app-sidebar.tsx [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/_33c6a35b._.js\\\",\\\"/_next/static/chunks/app_layout_tsx_26c2bb0e._.js\\\",\\\"/_next/static/chunks/_866deadc._.js\\\",\\\"/_next/static/chunks/node_modules_next_c85fb1f2._.js\\\",\\\"/_next/static/chunks/node_modules_framer-motion_dist_es_92139a2a._.js\\\",\\\"/_next/static/chunks/node_modules_swr_dist_a9801644._.js\\\",\\\"/_next/static/chunks/node_modules_e38022db._.js\\\",\\\"/_next/static/chunks/app_(chat)_layout_tsx_b685bb48._.js\\\"],\\\"AppSidebar\\\"]\\n33:I[\\\"[project]/components/ui/sidebar.tsx [app-client] (ecmascript)\\\",[\\\"/_next/static/chunks/_33c6a35b._.js\\\",\\\"/_next/static/chunks/app_layout_tsx_26c2bb0e._.js\\\",\\\"/_next/static/chunks/_866deadc._.js\\\",\\\"/_next/static/chunks/node_modules_next_c85fb1f2._.js\\\",\\\"/_next/static/chunks/node_modules_framer-motion_dist_es_92139a2a._.js\\\",\\\"/_next/static/chunks/node_modules_swr_dist_a9801644._.js\\\",\\\"/_next/static/chunks/node_modules_e38022db._.js\\\",\\\"/_next/static/chunks/app_(chat)_layout_tsx_b685bb48._.js\\\"],\\\"SidebarInset\\\"]\\n8:D{\"])</script>\n        <script>self.__next_f.push([1,\"\\\"time\\\":103.35030000004917}\\n35:{\\\"name\\\":\\\"NotFound\\\",\\\"env\\\":\\\"Server\\\",\\\"key\\\":null,\\\"owner\\\":null,\\\"stack\\\":[],\\\"props\\\":{}}\\n34:D{\\\"time\\\":104.70919999992475}\\n34:D\\\"$35\\\"\\n36:{\\\"name\\\":\\\"HTTPAccessErrorFallback\\\",\\\"env\\\":\\\"Server\\\",\\\"key\\\":null,\\\"owner\\\":\\\"$35\\\",\\\"stack\\\":[],\\\"props\\\":{\\\"status\\\":404,\\\"message\\\":\\\"This page could not be found.\\\"}}\\n34:D{\\\"time\\\":105.03729999996722}\\n34:D\\\"$36\\\"\\n34:D{\\\"time\\\":105.76679999986663}\\n34:[[\\\"$\\\",\\\"title\\\",null,{\\\"children\\\":\\\"404: This page could not be found.\\\"},\\\"$36\\\",[],1],[\\\"$\\\",\\\"div\\\",null,{\\\"style\\\":\\\"$28:1:props:style\\\",\\\"children\\\":[\\\"$\\\",\\\"div\\\",null,{\\\"children\\\":[[\\\"$\\\",\\\"style\\\",null,{\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\\\"}},\\\"$36\\\",[],1],[\\\"$\\\",\\\"h1\\\",null,{\\\"className\\\":\\\"next-error-h1\\\",\\\"style\\\":\\\"$28:1:props:children:props:children:1:props:style\\\",\\\"children\\\":404},\\\"$36\\\",[],1],[\\\"$\\\",\\\"div\\\",null,{\\\"style\\\":\\\"$28:1:props:children:props:children:2:props:style\\\",\\\"children\\\":[\\\"$\\\",\\\"h2\\\",null,{\\\"style\\\":\\\"$28:1:props:children:props:children:2:props:children:props:style\\\",\\\"children\\\":\\\"This page could not be found.\\\"},\\\"$36\\\",[],1]},\\\"$36\\\",[],1]]},\\\"$36\\\",[],1]},\\\"$36\\\",[],1]]\\n8:[[\\\"$\\\",\\\"$L30\\\",null,{\\\"src\\\":\\\"https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js\\\",\\\"strategy\\\":\\\"beforeInteractive\\\"},\\\"$9\\\",[[\\\"Layout\\\",\\\"D:\\\\\\\\Lecture\\\\\\\\FinalProject\\\\\\\\7-DevEnv\\\\\\\\ASCGBot\\\\\\\\.next\\\\\\\\server\\\\\\\\chunks\\\\\\\\ssr\\\\\\\\[root-of-the-server]__204ea9f9._.js\\\",948,264]],1],[\\\"$\\\",\\\"$L31\\\",null,{\\\"defaultOpen\\\":false,\\\"children\\\":[[\\\"$\\\",\\\"$L32\\\",null,{\\\"user\\\":{\\\"email\\\":\\\"anxiu@example.com\\\",\\\"id\\\":\\\"fb1fed9b-865a-4efd-8ecf-a84c0d86c995\\\"}},\\\"$9\\\",[[\\\"Layout\\\",\\\"D:\\\\\\\\Lecture\\\\\\\\FinalProject\\\\\\\\7-DevEnv\\\\\\\\ASCGBot\\\\\\\\.next\\\\\\\\server\\\\\\\\chunks\\\\\\\\ssr\\\\\\\\[root-of-the-server]__204ea9f9._.js\\\",959,272]],1],[\\\"$\\\",\\\"$L33\\\",null,{\\\"children\\\":[\\\"$\\\",\\\"$L5\\\",null,{\\\"parallelRouterKey\\\":\\\"children\\\",\\\"error\\\":\\\"$undefined\\\",\\\"errorStyles\\\":\\\"$undefined\\\",\\\"errorScripts\\\":\\\"$undefined\\\",\\\"template\\\":[\\\"$\\\",\\\"$L6\\\",null,{},null,[],1],\\\"templateStyles\\\":\\\"$undefined\\\",\\\"templateScripts\\\":\\\"$und\"])</script>\n        <script>self.__next_f.push([1,\"efined\\\",\\\"notFound\\\":[\\\"$34\\\",[]],\\\"forbidden\\\":\\\"$undefined\\\",\\\"unauthorized\\\":\\\"$undefined\\\"},null,[],1]},\\\"$9\\\",[[\\\"Layout\\\",\\\"D:\\\\\\\\Lecture\\\\\\\\FinalProject\\\\\\\\7-DevEnv\\\\\\\\ASCGBot\\\\\\\\.next\\\\\\\\server\\\\\\\\chunks\\\\\\\\ssr\\\\\\\\[root-of-the-server]__204ea9f9._.js\\\",966,272]],1]]},\\\"$9\\\",[[\\\"Layout\\\",\\\"D:\\\\\\\\Lecture\\\\\\\\FinalProject\\\\\\\\7-DevEnv\\\\\\\\ASCGBot\\\\\\\\.next\\\\\\\\server\\\\\\\\chunks\\\\\\\\ssr\\\\\\\\[root-of-the-server]__204ea9f9._.js\\\",956,264]],1]]\\n\"])</script>\n    </body>\n</html>"
+            }
+          ]
+        },
+        {
+          "name": "csrf",
+          "request": {
+            "auth": {
+              "type": "bearer"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{localurl}}api/auth/csrf",
+              "host": ["{{localurl}}api"],
+              "path": ["auth", "csrf"]
+            }
+          },
+          "response": [
+            {
+              "name": "csrf",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:4000/api/auth/csrf",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "4000",
+                  "path": ["api", "auth", "csrf"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "vary",
+                  "value": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 25 Apr 2025 11:59:32 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"csrfToken\": \"e639f5e3bfd61bcd11237c77572afa06cf9fedb6f15c39a5499c79aa0b98c5e3\"\n}"
+            }
+          ]
+        }
+      ],
+      "description": "Using Auth.js in this feature implementation.\n\nIf you need to login to this system. Please follow the following steps:\n\n1. GET [http://localhost:4000/api/auth/csrf](http://localhost:4000/api/auth/csrfEndFragment) for the csrf token and cookies.\n    \n2. POST [http://localhost:4000/api/auth/callback/credentials?json=true](http://localhost:4000/api/auth/callback/credentials?json=true) for login in, with three necessary attributions.\n    \n    1. email\n        \n    2. password\n        \n    3. csrfToken"
+    },
+    {
+      "name": "Document",
+      "item": [
+        {
+          "name": "GetDocumentById",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{localurl}}api/document?id=84534ce1-84cb-4f87-9c03-c1d46ad30d92",
+              "host": ["{{localurl}}api"],
+              "path": ["document"],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "84534ce1-84cb-4f87-9c03-c1d46ad30d92"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Successful Response",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:4000/api/document?id=84534ce1-84cb-4f87-9c03-c1d46ad30d92",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "4000",
+                  "path": ["api", "document"],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": "84534ce1-84cb-4f87-9c03-c1d46ad30d92"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "set-cookie",
+                  "value": "authjs.session-token=eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2Q0JDLUhTNTEyIiwia2lkIjoiZEFFOUprRGFYNVBERXJnX3hXTk5TQVQwZUtMWmZCLW05RlE2ZjV4UGFhX0o3Z0dwM191c0VxcXZDWmk0bHZ6ZEdUZWxWZHVMN3pLZmlxNHZudDYwNkEifQ..AbTp1UiccYLaKrHgmUgBGA.ZjbHmhaus4bD_6kBbpQLdOpsNOt3LmKbktrkOR0RhsV4eR1KFcgRwuQJKN8bL2WOvGZO-DHbWQdMIIGtm2vVRmE6XPwFhhpF3lAVjFIOIv7xRidzNELNyUgJq2e9u59OG78Rh73sRU4auhDqrOFXxd1XrdvOrr7g6e3vPFJBEt7cyf3N4vugQUsdvIWnO8GbNbli0y7VwhFPjphRSOTVzz8mQp7R3bf9Pm3hDJxIStvxXFPenjuBpvW4HHPOVAaeivbDZ9fZlrPPgiDME9cgsw.TUiWPdiju7h-FK0pCWt8cIMkh2JQz9_7-KnPuqefZ1E; Path=/; Expires=Tue, 10 Jun 2025 18:09:21 GMT; HttpOnly; SameSite=Lax"
+                },
+                {
+                  "key": "vary",
+                  "value": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 11 May 2025 18:09:21 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"id\": \"84534ce1-84cb-4f87-9c03-c1d46ad30d92\",\n        \"createdAt\": \"2025-05-11T14:48:32.942Z\",\n        \"title\": \"Payroll System with Password-Based Access Control\",\n        \"content\": \"# Simple Payroll System with Password-Based Access Control\\n\\n# Function to check password\\ndef check_password(input_password):\\n    # Predefined password\\n    correct_password = 'securepassword'\\n    return input_password == correct_password\\n\\n# Function to calculate payroll\\ndef calculate_payroll(hours_worked, hourly_rate):\\n    return hours_worked * hourly_rate\\n\\n# Main function to simulate payroll access\\ndef payroll_system(input_password, hours_worked, hourly_rate):\\n    if check_password(input_password):\\n        # Calculate payroll if password is correct\\n        payroll = calculate_payroll(hours_worked, hourly_rate)\\n        print(f'Payroll calculated: ${payroll:.2f}')\\n    else:\\n        print('Access denied: Incorrect password')\\n\\n# Example usage\\ninput_password = 'securepassword'  # Simulated user input\\nhours_worked = 40  # Example hours worked\\nhourly_rate = 15.00  # Example hourly rate\\npayroll_system(input_password, hours_worked, hourly_rate)\",\n        \"kind\": \"code\",\n        \"userId\": \"fb1fed9b-865a-4efd-8ecf-a84c0d86c995\"\n    },\n    {\n        \"id\": \"84534ce1-84cb-4f87-9c03-c1d46ad30d92\",\n        \"createdAt\": \"2025-05-11T18:06:27.746Z\",\n        \"title\": \"Payroll System with Password-Based Access Control\",\n        \"content\": \"from flask import Flask, render_template, redirect, url_for, request, flash\\nfrom flask_sqlalchemy import SQLAlchemy\\nfrom flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user\\nfrom werkzeug.security import generate_password_hash, check_password_hash\\n\\n# Initialize the Flask application\\napp = Flask(__name__)\\n\\n# Set the secret key for session management\\napp.config['SECRET_KEY'] = 'your_secret_key'\\n\\n# Configure the SQLite database\\napp.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///payroll.db'\\n\\n# Initialize the database\\n# SQLAlchemy is used for ORM (Object Relational Mapping) to interact with the database\\n# Here, we are using SQLite as our database\\n\\ndb = SQLAlchemy(app)\\n\\n# Initialize the login manager for handling user sessions\\nlogin_manager = LoginManager()\\nlogin_manager.init_app(app)\\nlogin_manager.login_view = 'login'  # Redirect to login page if not authenticated\\n\\n# Define the User model for authentication\\n# This model represents the users in the system\\nclass User(UserMixin, db.Model):\\n    id = db.Column(db.Integer, primary_key=True)  # Unique identifier for each user\\n    username = db.Column(db.String(150), unique=True, nullable=False)  # Username must be unique\\n    password = db.Column(db.String(150), nullable=False)  # Password for the user\\n\\n# Define the Payroll model to store payroll information\\n# This model represents the payroll records associated with users\\nclass Payroll(db.Model):\\n    id = db.Column(db.Integer, primary_key=True)  # Unique identifier for each payroll record\\n    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)  # Foreign key to link to User\\n    salary = db.Column(db.Float, nullable=False)  # Salary amount for the payroll record\\n\\n# User loader callback for Flask-Login\\n# This function is called to load a user from the user ID stored in the session\\n@login_manager.user_loader\\ndef load_user(user_id):\\n    return User.query.get(int(user_id))  # Retrieve user by ID from the database\\n\\n# Route for handling login logic\\n@app.route('/login', methods=['GET', 'POST'])\\ndef login():\\n    if request.method == 'POST':  # Check if the request method is POST\\n        username = request.form.get('username')  # Get username from form\\n        password = request.form.get('password')  # Get password from form\\n        user = User.query.filter_by(username=username).first()  # Query user by username\\n        # Check if user exists and password is correct\\n        if user and check_password_hash(user.password, password):  # Verify password\\n            login_user(user)  # Log the user in\\n            return redirect(url_for('dashboard'))  # Redirect to dashboard\\n        else:\\n            flash('Login Unsuccessful. Please check username and password', 'danger')  # Flash error message\\n    return render_template('login.html')  # Render login template\\n\\n# Route for the user dashboard, requires login\\n@app.route('/dashboard')\\n@login_required  # Ensure user is logged in to access this route\\ndef dashboard():\\n    # Fetch payroll information for the logged-in user\\n    payroll = Payroll.query.filter_by(user_id=current_user.id).first()  # Get payroll record for current user\\n    return render_template('dashboard.html', payroll=payroll)  # Render dashboard template with payroll data\\n\\n# Route for logging out the user\\n@app.route('/logout')\\n@login_required  # Ensure user is logged in to access this route\\ndef logout():\\n    logout_user()  # Log the user out\\n    return redirect(url_for('login'))  # Redirect to login page\\n\\n# Main entry point of the application\\nif __name__ == '__main__':\\n    db.create_all()  # Create database tables if they don't exist\\n    app.run(debug=True)  # Run the Flask app in debug mode\",\n        \"kind\": \"code\",\n        \"userId\": \"fb1fed9b-865a-4efd-8ecf-a84c0d86c995\"\n    }\n]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Suggestion",
+      "item": [
+        {
+          "name": "GetSuggestionsByDocumentId",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{localurl}}api/suggestions/?documentId=74111652-0896-4311-98b8-78e4c3a3b0cd",
+              "host": ["{{localurl}}api"],
+              "path": ["suggestions", ""],
+              "query": [
+                {
+                  "key": "documentId",
+                  "value": "74111652-0896-4311-98b8-78e4c3a3b0cd"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Successful Response",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:4000/api/suggestions/?documentId=74111652-0896-4311-98b8-78e4c3a3b0cd",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "4000",
+                  "path": ["api", "suggestions", ""],
+                  "query": [
+                    {
+                      "key": "documentId",
+                      "value": "74111652-0896-4311-98b8-78e4c3a3b0cd"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "set-cookie",
+                  "value": "authjs.session-token=eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2Q0JDLUhTNTEyIiwia2lkIjoiZEFFOUprRGFYNVBERXJnX3hXTk5TQVQwZUtMWmZCLW05RlE2ZjV4UGFhX0o3Z0dwM191c0VxcXZDWmk0bHZ6ZEdUZWxWZHVMN3pLZmlxNHZudDYwNkEifQ..5BciJIvcDsY836Xtzz68zg.M0gPpNkDOD1SMgJArV-AYTFJt8kXoCStEcvbHVJRjruh5lKJ7AFSY4hOeQds6l9g5HSVEgGJviLMFPO84iLfu1nBiW_j35MW2QDF-xByHue3A6QfQsua6rqtdL-h6Umx00yOQfbVDzmiWsRpi344kqTq-s9vgFFy8LH50KuI_7vpq3uIcpFuaCWBQFifFqCu7REdzIEBOlDf-yvR_4G09u48PKTaOwhZpxt1QnzmxWLgEQxWVcz5suTkKj2tKjvz0sJ2rRZrU9pv2Iwj18xhgQ.xD1a2dKK7QOxyq-3MstJdmXNaFinhcmlCygG6uz4ob0; Path=/; Expires=Tue, 10 Jun 2025 15:46:02 GMT; HttpOnly; SameSite=Lax"
+                },
+                {
+                  "key": "vary",
+                  "value": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 11 May 2025 15:46:03 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"id\": \"61134103-f786-4780-acd4-e6a7266cac49\",\n        \"documentId\": \"74111652-0896-4311-98b8-78e4c3a3b0cd\",\n        \"documentCreatedAt\": \"2025-04-25T12:16:41.093Z\",\n        \"originalText\": \"PEP 8, or Python Enhancement Proposal 8, is the style guide for Python code.\",\n        \"suggestedText\": \"PEP 8, which stands for Python Enhancement Proposal 8, serves as the official style guide for Python code.\",\n        \"description\": \"This change clarifies the meaning of PEP 8 by explaining the acronym and emphasizes its role as the official style guide.\",\n        \"isResolved\": false,\n        \"userId\": \"fb1fed9b-865a-4efd-8ecf-a84c0d86c995\",\n        \"createdAt\": \"2025-04-25T12:16:50.171Z\"\n    },\n    {\n        \"id\": \"c12f91cb-f5ee-4c58-bb45-3a9fadcc8169\",\n        \"documentId\": \"74111652-0896-4311-98b8-78e4c3a3b0cd\",\n        \"documentCreatedAt\": \"2025-04-25T12:16:41.093Z\",\n        \"originalText\": \"Following PEP 8 helps developers maintain a uniform coding style, making it easier to read and understand code written by others.\",\n        \"suggestedText\": \"Adhering to PEP 8 enables developers to maintain a consistent coding style, thereby enhancing the readability and comprehensibility of code written by others.\",\n        \"description\": \"The revision uses 'Adhering to' instead of 'Following' for a more formal tone and replaces 'easier to read and understand' with 'enhancing the readability and comprehensibility' for improved clarity.\",\n        \"isResolved\": false,\n        \"userId\": \"fb1fed9b-865a-4efd-8ecf-a84c0d86c995\",\n        \"createdAt\": \"2025-04-25T12:16:50.171Z\"\n    },\n    {\n        \"id\": \"ebbc0fc6-d81d-44e1-a95e-1176a98a5479\",\n        \"documentId\": \"74111652-0896-4311-98b8-78e4c3a3b0cd\",\n        \"documentCreatedAt\": \"2025-04-25T12:16:41.093Z\",\n        \"originalText\": \"Use 4 spaces per indentation level; do not use tabs.\",\n        \"suggestedText\": \"Always use 4 spaces for each level of indentation and avoid using tabs altogether.\",\n        \"description\": \"This change emphasizes the importance of consistency in indentation and clarifies the instruction by using 'always' and 'altogether'.\",\n        \"isResolved\": false,\n        \"userId\": \"fb1fed9b-865a-4efd-8ecf-a84c0d86c995\",\n        \"createdAt\": \"2025-04-25T12:16:50.171Z\"\n    },\n    {\n        \"id\": \"211fa1a8-82b6-4883-bb78-4bb09e43aae4\",\n        \"documentId\": \"74111652-0896-4311-98b8-78e4c3a3b0cd\",\n        \"documentCreatedAt\": \"2025-04-25T12:16:41.093Z\",\n        \"originalText\": \"Prefer absolute imports over relative imports.\",\n        \"suggestedText\": \"It is recommended to prefer absolute imports instead of relative imports for better clarity and maintainability.\",\n        \"description\": \"This suggestion adds context to the guideline by explaining why absolute imports are preferred, enhancing the reader's understanding.\",\n        \"isResolved\": false,\n        \"userId\": \"fb1fed9b-865a-4efd-8ecf-a84c0d86c995\",\n        \"createdAt\": \"2025-04-25T12:16:50.171Z\"\n    },\n    {\n        \"id\": \"525b1cd0-42fc-406a-afba-e58c23086ab5\",\n        \"documentId\": \"74111652-0896-4311-98b8-78e4c3a3b0cd\",\n        \"documentCreatedAt\": \"2025-04-25T12:16:41.093Z\",\n        \"originalText\": \"By adhering to these conventions, developers can ensure that their code is not only functional but also easy to read and understand by others in the Python community.\",\n        \"suggestedText\": \"By following these conventions, developers can ensure that their code is not only functional but also easily readable and understandable by others within the Python community.\",\n        \"description\": \"The revision replaces 'adhering to' with 'following' for simplicity and changes 'easy to read and understand' to 'easily readable and understandable' for improved flow.\",\n        \"isResolved\": false,\n        \"userId\": \"fb1fed9b-865a-4efd-8ecf-a84c0d86c995\",\n        \"createdAt\": \"2025-04-25T12:16:50.171Z\"\n    }\n]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Third'Party",
+      "item": [
+        {
+          "name": "SecureScan",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"code\": \"import getpass\\n\\n# Employee data\\nemployees = [\\n    {\\\"name\\\": \\\"Alice\\\", \\\"salary\\\": 5000, \\\"password\\\": \\\"alice123\\\"},\\n    {\\\"name\\\": \\\"Bob\\\", \\\"salary\\\": 5500, \\\"password\\\": \\\"bob123\\\"},\\n    {\\\"name\\\": \\\"Charlie\\\", \\\"salary\\\": 6000, \\\"password\\\": \\\"charlie123\\\"},\\n    {\\\"name\\\": \\\"David\\\", \\\"salary\\\": 6500, \\\"password\\\": \\\"david123\\\"},\\n    {\\\"name\\\": \\\"Eve\\\", \\\"salary\\\": 7000, \\\"password\\\": \\\"eve123\\\"},\\n    {\\\"name\\\": \\\"Frank\\\", \\\"salary\\\": 7500, \\\"password\\\": \\\"frank123\\\"},\\n    {\\\"name\\\": \\\"Grace\\\", \\\"salary\\\": 8000, \\\"password\\\": \\\"grace123\\\"},\\n    {\\\"name\\\": \\\"Heidi\\\", \\\"salary\\\": 8500, \\\"password\\\": \\\"heidi123\\\"},\\n    {\\\"name\\\": \\\"Ivan\\\", \\\"salary\\\": 9000, \\\"password\\\": \\\"ivan123\\\"},\\n    {\\\"name\\\": \\\"Judy\\\", \\\"salary\\\": 9500, \\\"password\\\": \\\"judy123\\\"},\\n    {\\\"name\\\": \\\"Mallory\\\", \\\"salary\\\": 10000, \\\"password\\\": \\\"mallory123\\\"}\\n]\\n\\ndef authenticate_employee():\\n    username = input(\\\"Enter your name: \\\")\\n    password = getpass.getpass(\\\"Enter your password: \\\")\\n\\n    for employee in employees:\\n        if employee[\\\"name\\\"] == username and employee[\\\"password\\\"] == password:\\n            return employee\\n    return None\\n\\ndef display_payroll(employee):\\n    print(f\\\"Welcome {employee['name']}!\\\")\\n    print(f\\\"Your salary is: ${employee['salary']}\\\")\\n\\ndef main():\\n    employee = authenticate_employee()\\n    if employee:\\n        display_payroll(employee)\\n    else:\\n        print(\\\"Authentication failed. Please check your credentials.\\\")\\n\\nif __name__ == \\\"__main__\\\":\\n    main()\\n\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://agenticscg-pyapi.onrender.com/api/v1/secure-scan/python",
+              "protocol": "https",
+              "host": ["agenticscg-pyapi", "onrender", "com"],
+              "path": ["api", "v1", "secure-scan", "python"]
+            }
+          },
+          "response": [
+            {
+              "name": "success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"code\": \"import getpass\\n\\n# Employee data\\nemployees = [\\n    {\\\"name\\\": \\\"Alice\\\", \\\"salary\\\": 5000, \\\"password\\\": \\\"alice123\\\"},\\n    {\\\"name\\\": \\\"Bob\\\", \\\"salary\\\": 5500, \\\"password\\\": \\\"bob123\\\"},\\n    {\\\"name\\\": \\\"Charlie\\\", \\\"salary\\\": 6000, \\\"password\\\": \\\"charlie123\\\"},\\n    {\\\"name\\\": \\\"David\\\", \\\"salary\\\": 6500, \\\"password\\\": \\\"david123\\\"},\\n    {\\\"name\\\": \\\"Eve\\\", \\\"salary\\\": 7000, \\\"password\\\": \\\"eve123\\\"},\\n    {\\\"name\\\": \\\"Frank\\\", \\\"salary\\\": 7500, \\\"password\\\": \\\"frank123\\\"},\\n    {\\\"name\\\": \\\"Grace\\\", \\\"salary\\\": 8000, \\\"password\\\": \\\"grace123\\\"},\\n    {\\\"name\\\": \\\"Heidi\\\", \\\"salary\\\": 8500, \\\"password\\\": \\\"heidi123\\\"},\\n    {\\\"name\\\": \\\"Ivan\\\", \\\"salary\\\": 9000, \\\"password\\\": \\\"ivan123\\\"},\\n    {\\\"name\\\": \\\"Judy\\\", \\\"salary\\\": 9500, \\\"password\\\": \\\"judy123\\\"},\\n    {\\\"name\\\": \\\"Mallory\\\", \\\"salary\\\": 10000, \\\"password\\\": \\\"mallory123\\\"}\\n]\\n\\ndef authenticate_employee():\\n    username = input(\\\"Enter your name: \\\")\\n    password = getpass.getpass(\\\"Enter your password: \\\")\\n\\n    for employee in employees:\\n        if employee[\\\"name\\\"] == username and employee[\\\"password\\\"] == password:\\n            return employee\\n    return None\\n\\ndef display_payroll(employee):\\n    print(f\\\"Welcome {employee['name']}!\\\")\\n    print(f\\\"Your salary is: ${employee['salary']}\\\")\\n\\ndef main():\\n    employee = authenticate_employee()\\n    if employee:\\n        display_payroll(employee)\\n    else:\\n        print(\\\"Authentication failed. Please check your credentials.\\\")\\n\\nif __name__ == \\\"__main__\\\":\\n    main()\\n\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://127.0.0.1:8000/api/v1/secure-scan/python",
+                  "protocol": "http",
+                  "host": ["127", "0", "0", "1"],
+                  "port": "8000",
+                  "path": ["api", "v1", "secure-scan", "python"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "date",
+                  "value": "Mon, 26 May 2025 07:09:55 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "uvicorn"
+                },
+                {
+                  "key": "content-length",
+                  "value": "549"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"errors\": [],\n    \"generated_at\": \"2025-05-26T07:09:56Z\",\n    \"metrics\": {\n        \"C:\\\\Users\\\\Anxiu\\\\AppData\\\\Local\\\\Temp\\\\tmpc41yrq4y.py\": {\n            \"CONFIDENCE.HIGH\": 0,\n            \"CONFIDENCE.LOW\": 0,\n            \"CONFIDENCE.MEDIUM\": 0,\n            \"CONFIDENCE.UNDEFINED\": 0,\n            \"SEVERITY.HIGH\": 0,\n            \"SEVERITY.LOW\": 0,\n            \"SEVERITY.MEDIUM\": 0,\n            \"SEVERITY.UNDEFINED\": 0,\n            \"loc\": 32,\n            \"nosec\": 0,\n            \"skipped_tests\": 0\n        },\n        \"_totals\": {\n            \"CONFIDENCE.HIGH\": 0,\n            \"CONFIDENCE.LOW\": 0,\n            \"CONFIDENCE.MEDIUM\": 0,\n            \"CONFIDENCE.UNDEFINED\": 0,\n            \"SEVERITY.HIGH\": 0,\n            \"SEVERITY.LOW\": 0,\n            \"SEVERITY.MEDIUM\": 0,\n            \"SEVERITY.UNDEFINED\": 0,\n            \"loc\": 32,\n            \"nosec\": 0,\n            \"skipped_tests\": 0\n        }\n    },\n    \"results\": []\n}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

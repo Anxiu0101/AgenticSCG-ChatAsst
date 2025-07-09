@@ -26,7 +26,7 @@ import { getWeather } from '@/lib/ai/tools/get-weather';
 import { addPlanningStep } from '@/lib/ai/tools/add-planning-step';
 import { myProvider } from '@/lib/ai/providers';
 import { auditCodeSecurity } from '@/lib/ai/tools/audit-code-security';
-import { GoogleGenerativeAIProviderOptions } from "@ai-sdk/google";
+import { GoogleGenerativeAIProviderOptions } from '@ai-sdk/google';
 
 // export const maxDuration = 60;
 
@@ -97,22 +97,21 @@ export async function POST(request: Request) {
           system: systemPrompt({ selectedChatModel }),
           messages,
           maxSteps: 25,
-          experimental_activeTools:
-            [
-              'chat-model-reasoning',
-              'gpt-reasoning-model',
-              'gemini-reasoning-model',
-              'deepseak-reasoning-model',
-            ].includes(selectedChatModel)
-              ? [
-                  'getWeather',
-                  'addPlanningStep',
-                  'createDocument',
-                  'updateDocument',
-                  'auditCodeSecurity',
-                  'requestSuggestions',
-                ]
-              : [],
+          experimental_activeTools: [
+            'chat-model-reasoning',
+            'gpt-reasoning-model',
+            'gemini-reasoning-model',
+            'deepseak-reasoning-model',
+          ].includes(selectedChatModel)
+            ? [
+                'getWeather',
+                'addPlanningStep',
+                'createDocument',
+                'updateDocument',
+                'auditCodeSecurity',
+                'requestSuggestions',
+              ]
+            : [],
           // experimental_providerMetadata > providerOptions
           experimental_providerMetadata: {
             files: {
