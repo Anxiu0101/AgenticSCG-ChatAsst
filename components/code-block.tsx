@@ -22,7 +22,11 @@ export function CodeBlock({
       <div className="not-prose flex flex-col">
         <pre
           {...props}
-          className={`text-sm w-full overflow-x-auto dark:bg-zinc-900 p-4 border border-zinc-200 dark:border-zinc-700 rounded-xl dark:text-zinc-50 text-zinc-900`}
+          className={`text-sm w-full overflow-x-auto p-4 border rounded-xl 
+          border-zinc-200 text-zinc-900
+          dark:bg-zinc-900
+          dark:border-zinc-700 
+          dark:text-zinc-100`}
         >
           <code className="whitespace-pre-wrap break-words">{children}</code>
         </pre>
@@ -30,12 +34,14 @@ export function CodeBlock({
     );
   } else {
     return (
-      <code
-        className={`text-sm bg-zinc-100 dark:bg-zinc-800 py-0.5 px-1 rounded-md whitespace-pre break-words`}
-        {...props}
-      >
-        {children}
-      </code>
+        <code
+            className={`${
+                className || ""
+            } text-sm bg-zinc-100 dark:bg-zinc-800 dark:text-zinc-100 py-0.5 px-1 rounded-md`}
+            {...props}
+        >
+          {children}
+        </code>
     );
   }
 }
