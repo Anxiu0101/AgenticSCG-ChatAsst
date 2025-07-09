@@ -26,6 +26,7 @@ import { getWeather } from '@/lib/ai/tools/get-weather';
 import { addPlanningStep } from '@/lib/ai/tools/add-planning-step';
 import { myProvider } from '@/lib/ai/providers';
 import { auditCodeSecurity } from '@/lib/ai/tools/audit-code-security';
+import { getTracer } from '@/agents/telemetry';
 import { GoogleGenerativeAIProviderOptions } from '@ai-sdk/google';
 
 // export const maxDuration = 60;
@@ -120,6 +121,12 @@ export async function POST(request: Request) {
           },
           experimental_transform: smoothStream({ chunking: 'word' }),
           experimental_generateMessageId: generateUUID,
+          experimental_telemetry: {
+            // isEnabled: isProductionEnvironment,
+            isEnabled: true,
+            tracer: getTracer({ isEnabled: true }),
+            functionId: 'stream-text',
+          },
           tools: {
             getWeather,
             addPlanningStep: addPlanningStep({
@@ -167,11 +174,6 @@ export async function POST(request: Request) {
                 console.error('Failed to save chat');
               }
             }
-          },
-          experimental_telemetry: {
-            // isEnabled: isProductionEnvironment,
-            isEnabled: true,
-            // functionId: 'stream-text',
           },
         });
 

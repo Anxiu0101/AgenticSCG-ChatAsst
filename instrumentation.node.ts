@@ -1,0 +1,32 @@
+/*instrumentation.node.ts*/
+import { OTLPTraceExporter } from '@opentelemetry/exporter-trace-otlp-http'
+import Resource from '@opentelemetry/resources'
+import { NodeSDK } from '@opentelemetry/sdk-node'
+import { SimpleSpanProcessor } from '@opentelemetry/sdk-trace-node'
+import { ATTR_SERVICE_NAME } from '@opentelemetry/semantic-conventions'
+
+const otlpEndpoint =
+    process.env.OTEL_EXPORTER_OTLP_ENDPOINT ??
+    'http://localhost:4318/v1/traces';
+
+try {
+    const sdk = new NodeSDK({
+        // @ts-expect-error
+        resource: new Resource({
+            [ATTR_SERVICE_NAME]: 'next-app',
+        }),
+        spanProcessors: [new SimpleSpanProcessor(new OTLPTraceExporter({
+            url: otlpEndpoint,
+        }))],
+    })
+
+    console.log('OpenTelemetry configuration:', {
+        serviceName: 'ai-agent-local',
+        otlpEndpoint,
+        runtime: process.env.NEXT_RUNTIME,
+    });
+
+    sdk.start()
+} catch (error) {
+    console.error('Fail to start telemetry sdk', error);
+}
