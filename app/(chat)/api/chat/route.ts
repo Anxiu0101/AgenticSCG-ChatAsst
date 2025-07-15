@@ -125,7 +125,7 @@ export async function POST(request: Request) {
             // isEnabled: isProductionEnvironment,
             isEnabled: true,
             tracer: getTracer({ isEnabled: true }),
-            functionId: 'stream-text',
+            // functionId: 'stream-text',
           },
           tools: {
             getWeather,
@@ -175,6 +175,9 @@ export async function POST(request: Request) {
               }
             }
           },
+          // onStepFinish: async ({ response}) => {
+          //   // console.log(result.usage)
+          // }
         });
 
         result.consumeStream();

@@ -25,10 +25,6 @@ export const ragMiddleware: LanguageModelV1Middleware = {
 
     const { prompt: messages, providerMetadata } = params;
 
-    // console.log('ragMiddleware selection:', providerMetadata?.files?.selection)
-    // console.log('ragMiddleware full params:', params);
-    // console.log('ragMiddleware providerMetadata:', providerMetadata);
-
     // validate the provider metadata with Zod:
     const { success, data } = selectionSchema.safeParse(providerMetadata);
 

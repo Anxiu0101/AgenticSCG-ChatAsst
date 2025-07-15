@@ -55,6 +55,7 @@ Tools can be one of the following:
 (1) addAPlanningStep[input]: Use the addAPlanningStep function for each step of your reasoning.
 (2) auditCodeSecurity[input: documentId]: This tool generates a security report for a code document by documentId. 
       Each time you write one code document, you MUST calling auditCodeSecurity to check the how many vulnerabilities the code contains.
+      Each time you update the document, you MUST calling auditCodeSecurity to check the how many vulnerabilities the code contains.
 
 ## Tool calling requirements
 1. ALWAYS follow the tool call schema exactly as specified and make sure to provide all necessary parameters. 
