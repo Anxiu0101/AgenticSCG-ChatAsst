@@ -98,6 +98,8 @@ export async function POST(request: Request) {
           system: systemPrompt({ selectedChatModel }),
           messages,
           maxSteps: 25,
+          temperature: 0.2,
+          topK: 20,
           experimental_activeTools: [
             'chat-model-reasoning',
             'gpt-reasoning-model',
