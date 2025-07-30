@@ -39,9 +39,9 @@ export const myProvider = isTestEnvironment
   : customProvider({
       languageModels: {
         'chat-model': registry.languageModel('openai:gpt-4o-mini'),
-        'chat-gemini': registry.languageModel('google:gemini-2.5-flash'),
+        'chat-gemini': registry.languageModel('google:gemini-1.5-flash'),
         'chat-model-reasoning': wrapLanguageModel({
-          model: openai('gpt-4o-2024-08-06'),
+          model: openai('gpt-4o-mini'),
           middleware: [
             ragMiddleware,
             // only extracting the reasoning part inside <think></think>. But didn't reasoning.
@@ -65,8 +65,8 @@ export const myProvider = isTestEnvironment
           ],
         }),
         'gemini-reasoning-model': wrapLanguageModel({
-          model: google('gemini-2.5-pro-exp-03-25', {
-            useSearchGrounding: true,
+          model: google('gemini-1.5-flash', {
+            // useSearchGrounding: true,
           }),
           middleware: [
             ragMiddleware,
