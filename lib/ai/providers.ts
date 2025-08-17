@@ -7,6 +7,8 @@ import {
 import { openai, createOpenAI } from '@ai-sdk/openai';
 import { google, createGoogleGenerativeAI } from '@ai-sdk/google';
 import { createAnthropic } from '@ai-sdk/anthropic';
+import { createQwen } from 'qwen-ai-provider';
+import { createDeepSeek } from '@ai-sdk/deepseek';
 import { isTestEnvironment } from '@/lib/constants';
 import {
   artifactModel,
@@ -21,11 +23,22 @@ const registry = createProviderRegistry(
     anthropic: createAnthropic({ apiKey: process.env.ANTHROPIC_API_KEY }),
     openai: createOpenAI({ apiKey: process.env.OPENAI_API_KEY }),
     google: createGoogleGenerativeAI({ apiKey: process.env.GEMINI_API_KEY }),
+    qwen: createQwen({
+      apiKey: process.env.QWEN_API_KEY ?? '',
+      baseURL: process.env.QWEN_API_URL ?? '',
+    }),
+    deepseek: createDeepSeek({
+      apiKey: process.env.QEN_API_KEY ?? '',
+    }),
   },
   {
     separator: ':',
   },
 );
+
+const deepseakModel = createDeepSeek({
+  apiKey: process.env.DEEPSEEK_API_KEY ?? '',
+});
 
 export const myProvider = isTestEnvironment
   ? customProvider({
@@ -48,8 +61,9 @@ export const myProvider = isTestEnvironment
             // extractReasoningMiddleware({ tagName: 'think' }),
           ],
         }),
+        'chat-deepseek': deepseakModel('deepseek-chat'),
         'deepseak-reasoning-model': wrapLanguageModel({
-          model: openai('gpt-4o-2024-08-06'),
+          model: deepseakModel('deepseek-chat'),
           middleware: [
             ragMiddleware,
             // only extracting the reasoning part inside <think></think>. But didn't reasoning.

@@ -10,10 +10,27 @@
     "@ai-sdk/provider" "1.1.3"
     "@ai-sdk/provider-utils" "2.2.8"
 
+"@ai-sdk/deepseek@0.2.14":
+  version "0.2.14"
+  resolved "https://registry.yarnpkg.com/@ai-sdk/deepseek/-/deepseek-0.2.14.tgz#1000d80490eb4e083d97a8cbc99fec7bfcad9c14"
+  integrity sha512-TISD1FzBWuQkHEHoVustoJILV33ZNgfYxeTkq1xU2vHEZuWTGZV7/IlXixyFsfqDCdVgrbLeIABk5FuCw7niLg==
+  dependencies:
+    "@ai-sdk/openai-compatible" "0.2.14"
+    "@ai-sdk/provider" "1.1.3"
+    "@ai-sdk/provider-utils" "2.2.8"
+
 "@ai-sdk/google@^1.2.21":
   version "1.2.22"
   resolved "https://registry.yarnpkg.com/@ai-sdk/google/-/google-1.2.22.tgz#9993e4781c9a773cd17d47490b9efdc90895abd2"
   integrity sha512-Ppxu3DIieF1G9pyQ5O1Z646GYR0gkC57YdBqXJ82qvCdhEhZHu0TWhmnOoeIWe2olSbuDeoOY+MfJrW8dzS3Hw==
+  dependencies:
+    "@ai-sdk/provider" "1.1.3"
+    "@ai-sdk/provider-utils" "2.2.8"
+
+"@ai-sdk/openai-compatible@0.2.14":
+  version "0.2.14"
+  resolved "https://registry.yarnpkg.com/@ai-sdk/openai-compatible/-/openai-compatible-0.2.14.tgz#f31e3dd1d767f3a44efaef2a0f0b2389d5c2b8a1"
+  integrity sha512-icjObfMCHKSIbywijaoLdZ1nSnuRnWgMEMLgwoxPJgxsUHMx0aVORnsLUid4SPtdhHI3X2masrt6iaEQLvOSFw==
   dependencies:
     "@ai-sdk/provider" "1.1.3"
     "@ai-sdk/provider-utils" "2.2.8"
@@ -35,7 +52,7 @@
     nanoid "^3.3.8"
     secure-json-parse "^2.7.0"
 
-"@ai-sdk/provider-utils@2.2.8":
+"@ai-sdk/provider-utils@2.2.8", "@ai-sdk/provider-utils@^2.1.6":
   version "2.2.8"
   resolved "https://registry.yarnpkg.com/@ai-sdk/provider-utils/-/provider-utils-2.2.8.tgz#ad11b92d5a1763ab34ba7b5fc42494bfe08b76d1"
   integrity sha512-fqhG+4sCVv8x7nFzYnFo19ryhAa3w096Kmc3hWxMQfW/TubPOmt3A6tYZhl4mUfQWWQMsuSkLrtjlWuXBVSGQA==
@@ -51,7 +68,7 @@
   dependencies:
     json-schema "^0.4.0"
 
-"@ai-sdk/provider@1.1.3":
+"@ai-sdk/provider@1.1.3", "@ai-sdk/provider@^1.0.7":
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/@ai-sdk/provider/-/provider-1.1.3.tgz#ebdda8077b8d2b3f290dcba32c45ad19b2704681"
   integrity sha512-qZMxYJ0qqX/RfnuIaab+zp8UAeJn/ygXXAffR5I4N0n1IrvA6qBsjc8hXLmBiMV2zoXlifkacF7sEFnYnjBcqg==
@@ -5677,6 +5694,14 @@ queue-microtask@^1.2.2:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/queue-microtask/-/queue-microtask-1.2.3.tgz#4929228bbc724dfac43e0efb058caf7b6cfb6243"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
+
+qwen-ai-provider@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/qwen-ai-provider/-/qwen-ai-provider-0.1.1.tgz#f854379514eed919fe01de20007f6238a8ad2b41"
+  integrity sha512-7dVu97U7fbOGgCYdaOunC4NQqC+7Or3/Gsbx+P16+Ny4VxST7WJxfUCogQl6D2EDxIJdHGz4akHm+5fyEulmyw==
+  dependencies:
+    "@ai-sdk/provider" "^1.0.7"
+    "@ai-sdk/provider-utils" "^2.1.6"
 
 react-data-grid@7.0.0-beta.47:
   version "7.0.0-beta.47"

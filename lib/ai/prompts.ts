@@ -27,6 +27,7 @@ This is a guide for using artifacts tools: \`createDocument\` and \`updateDocume
 
 **When NOT to use \`updateDocument\`:**
 - Immediately after creating a document
+- auditCodeSecurity detected 0 vulnerability.
 
 Do not update document right after creating it. Wait for user feedback or request to update it.
 `;
@@ -56,6 +57,7 @@ Tools can be one of the following:
 (2) auditCodeSecurity[input: documentId]: This tool generates a security report for a code document by documentId. 
       Each time you write one code document, you MUST calling auditCodeSecurity to check the how many vulnerabilities the code contains.
       Each time you update the document, you MUST calling auditCodeSecurity to check the how many vulnerabilities the code contains.
+      If the report contains 0 vulnerability totally, NO NEED More updated.
 
 ## Tool calling requirements
 1. ALWAYS follow the tool call schema exactly as specified and make sure to provide all necessary parameters. 
