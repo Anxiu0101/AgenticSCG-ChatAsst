@@ -16,12 +16,12 @@ There are two major techniques used in AgenticSCG are: [AI SDK](https://sdk.verc
 
 To successfully run the full system, each component must be set up with its respective environment and dependencies. The following table outlines the required services and their runtime environments.
 
-| Facilities           | Description                                                  | Key Dependencies                        | Link                                                         |
-| -------------------- | ------------------------------------------------------------ | --------------------------------------- | ------------------------------------------------------------ |
-| AgenticSCG-ChatAsst  | The main component of chatbot web page.                      | `nodejs v20.15.1`<br /> `yarn v1.22.22` |                                                              |
-| AgenticSCG-PyAPI     | The web server export python service to AgenticSCG-ChatAsst. | `python v3.12.4`                        | [Link](https://github.com/Anxiu0101/AgenticSCG-PyAPI)        |
-| AgenticSCG-Telemetry | The telemetry component for request monitor and analysis.    | `Docker v28.3.2`                        | [Link]([Anxiu0101/AgenticSCG-Telemetry](https://github.com/Anxiu0101/AgenticSCG-Telemetry)) |
-| PostgreSQL Database  | Provide persistence capabilities.                            | `PostgreSQL v17.4`                      | [Link](https://www.postgresql.org/download/)                 |
+| Facilities           | Description                                                  | Key Dependencies                        | Link                                                        |
+| -------------------- | ------------------------------------------------------------ | --------------------------------------- | ----------------------------------------------------------- |
+| AgenticSCG-ChatAsst  | The main component of chatbot web page.                      | `nodejs v20.15.1`<br /> `yarn v1.22.22` |                                                             |
+| AgenticSCG-PyAPI     | The web server export python service to AgenticSCG-ChatAsst. | `python v3.12.4`                        | [Link](https://github.com/Anxiu0101/AgenticSCG-PyAPI)       |
+| AgenticSCG-Telemetry | The telemetry component for request monitor and analysis.    | `Docker v28.3.2`                        | [Link](https://github.com/Anxiu0101/AgenticSCG-Telemetry) |
+| PostgreSQL Database  | Provide persistence capabilities.                            | `PostgreSQL v17.4`                      | [Link](https://www.postgresql.org/download/)                |
 
 The dependency versions listed in the table are recommended but not strictly required. However, alternative versions have not been tested and may result in incomplete or unstable functionality.
 
